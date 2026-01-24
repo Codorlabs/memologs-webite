@@ -290,7 +290,7 @@ export default function HeroSection() {
   const showFloatingCards = isDesktop && easedProgress < 1;
 
   return (
-    <section ref={sectionRef} className="relative pt-24 pb-32 md:pt-40 md:pb-40 overflow-hidden">
+    <section ref={sectionRef} className="relative pt-28 pb-24 md:pt-36 md:pb-32 overflow-hidden bg-background-light">
       {/* Floating Pattern Cards - Desktop Only */}
       {showFloatingCards && (
         <>
@@ -308,28 +308,28 @@ export default function HeroSection() {
       )}
 
       <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center z-10 relative">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-background-dark border border-background-dark mb-2 animate-[fadeIn_0.5s_ease-out]">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-navy border border-primary/20 mb-6 animate-[fadeIn_0.5s_ease-out]">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          <span className="text-xs font-semibold uppercase tracking-wider text-white">
+          <span className="text-xs font-bold uppercase tracking-wider text-primary">
             New Feature: Revenue Retro
           </span>
         </div>
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-navy mb-6 max-w-4xl leading-[1.1]">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-navy mb-6 max-w-4xl leading-[1.1]">
           The memory system for <br className="hidden md:block" />
-          <span className="text-navy bg-clip-text text-transparent bg-gradient-to-r from-navy via-[#00cc9b] to-primary">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-navy via-primary-dark to-primary">
             revenue decisions.
           </span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-500 font-medium mb-10 max-w-2xl leading-relaxed">
+        <p className="text-lg md:text-xl text-text-secondary font-medium mb-10 max-w-2xl leading-relaxed">
           Stop losing your best insights to the void. Capture context, track
           outcomes, and learn from every decision.
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 mb-20">
-          <button className="h-14 px-8 rounded-full bg-navy text-primary font-bold px-8 py-4 rounded-full shadow-xl hover:scale-105 transition-transform transition-all flex items-center gap-2">
+          <button className="h-14 px-8 rounded-full bg-navy text-primary font-bold shadow-xl hover:scale-105 transition-all flex items-center gap-2">
             <span className="material-symbols-outlined">play_arrow</span>
             Join Waitlist
           </button>
-          <button className="h-14 px-8 rounded-full bg-white text-[#1d1d1f] border border-gray-200 text-lg font-bold shadow-sm hover:bg-gray-50 transition-all flex items-center gap-2">
+          <button className="h-14 px-8 rounded-full bg-white text-navy border border-gray-200 font-semibold shadow-sm hover:bg-gray-50 transition-all flex items-center gap-2">
             Schedule a Call
           </button>
         </div>

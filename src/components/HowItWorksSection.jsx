@@ -10,7 +10,7 @@ export default function HowItWorksSection() {
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-[#00FFC2]/5 rounded-full blur-3xl pointer-events-none"></div>
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
         <div className="text-center mb-20 max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black text-[#1d1d1f] mb-4 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1d1d1f] mb-4 tracking-tight">
             Intelligence in three steps
           </h2>
           <p className="text-xl md:text-2xl text-gray-500 font-light font-display">

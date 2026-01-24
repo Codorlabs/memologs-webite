@@ -2,15 +2,15 @@ import React from "react";
 
 export default function StackSection() {
   return (
-    <section className="py-32 bg-[#FBFBFD] relative overflow-hidden">
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-blue-50/30 rounded-full blur-[120px] pointer-events-none"></div>
+    <section className="py-24 md:py-32 bg-background-light relative overflow-hidden">
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-        <div className="mb-20 md:text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1d1d1f] mb-6 tracking-tight">
+        <div className="mb-16 md:mb-20 md:text-center max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 tracking-tight">
             Why your current stack <br className="hidden md:block" /> isn't
             enough
           </h2>
-          <p className="text-xl text-gray-500 font-medium leading-relaxed">
+          <p className="text-lg md:text-xl text-text-secondary font-medium leading-relaxed">
             Existing tools capture the output, but miss the reasoning.
           </p>
         </div>
@@ -39,10 +39,10 @@ export default function StackSection() {
               </div>
             </div>
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-[#1d1d1f] mb-3">
+              <h3 className="text-2xl font-bold text-navy mb-3">
                 Dashboards
               </h3>
-              <p className="text-gray-500 leading-relaxed font-medium">
+              <p className="text-text-secondary leading-relaxed font-medium">
                 They show data, not decisions. You see the drop in conversion,
                 but have zero context on why.
               </p>
@@ -68,10 +68,10 @@ export default function StackSection() {
               </div>
             </div>
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-[#1d1d1f] mb-3">
+              <h3 className="text-2xl font-bold text-navy mb-3">
                 Notion
               </h3>
-              <p className="text-gray-500 leading-relaxed font-medium">
+              <p className="text-text-secondary leading-relaxed font-medium">
                 Too unstructured. Context gets buried in nested pages, untagged
                 archives, and forgotten workspaces.
               </p>
@@ -84,16 +84,16 @@ export default function StackSection() {
                 <span className="material-symbols-outlined text-8xl text-transparent bg-clip-text bg-gradient-to-b from-gray-300 to-gray-400 drop-shadow-sm">
                   check
                 </span>
-                <div className="absolute -bottom-3 bg-[#1d1d1f] text-white text-[10px] font-bold uppercase tracking-wide px-4 py-1.5 rounded-full shadow-lg border border-gray-700">
+                <div className="absolute -bottom-3 bg-navy text-primary text-[10px] font-bold uppercase tracking-wide px-4 py-1.5 rounded-full shadow-lg border border-white/10">
                   Done ≠ Learned
                 </div>
               </div>
             </div>
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-[#1d1d1f] mb-3">
+              <h3 className="text-2xl font-bold text-navy mb-3">
                 Task Tools
               </h3>
-              <p className="text-gray-500 leading-relaxed font-medium">
+              <p className="text-text-secondary leading-relaxed font-medium">
                 Focus on output, not outcome. Great for tracking who did the
                 work, terrible for learning if it mattered.
               </p>

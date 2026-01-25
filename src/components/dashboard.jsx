@@ -68,43 +68,9 @@ export default function Dashboard({ patternCardsOpacity = 1 }) {
           box-shadow: 0 0 20px rgba(255, 59, 48, 0.15);
         }
       `}</style>
-      <header className="hidden md:flex sticky top-0 z-50 items-center justify-between whitespace-nowrap border-b border-white/10 glass-panel px-6 py-4">
-        <div className="flex items-center gap-4">
-          <div className="flex items-center justify-center size-10 rounded-xl bg-primary/10 border border-primary/20 text-primary">
-            <span className="material-symbols-outlined icon-glow-success">
-              data_exploration
-            </span>
-          </div>
-          <h2 className="text-white text-xl font-bold leading-tight tracking-tight">
-            MemoLogs{" "}
-            <span className="text-slate-500 font-normal">
-              | Learning Review
-            </span>
-          </h2>
-        </div>
-        <div className="flex items-center gap-4">
-          <button className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-medium text-slate-300 transition-colors">
-            <span className="material-symbols-outlined text-[18px]">
-              calendar_today
-            </span>
-            <span>Oct 1 - Oct 31, 2023</span>
-            <span className="material-symbols-outlined text-[18px]">
-              expand_more
-            </span>
-          </button>
-          <div className="h-6 w-px bg-white/10 hidden md:block"></div>
-          <button className="flex items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/5 hover:bg-white/10 border border-primary/30 text-primary text-sm font-bold leading-normal tracking-wide transition-all shadow-glow-primary">
-            <span className="material-symbols-outlined mr-2 text-[18px]">
-              download
-            </span>
-            <span className="truncate">Export Report</span>
-          </button>
-          
-        </div>
-      </header>
       <div className="hidden md:flex flex-1 justify-center py-8 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col max-w-[1200px] flex-1 gap-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 pb-2">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pb-2">
             <div className="flex flex-col gap-2 text-left">
               <p className="text-slate-400 text-sm font-medium uppercase tracking-wider">
                 Dashboard Overview
@@ -121,6 +87,14 @@ export default function Dashboard({ patternCardsOpacity = 1 }) {
                 <span className="text-white font-semibold">3 incidents</span>{" "}
                 across engineering and marketing.
               </p>
+            </div>
+            <div className="flex items-center gap-4">
+              <button className="flex items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/5 hover:bg-white/10 border border-primary/30 text-primary text-sm font-bold leading-normal tracking-wide transition-all shadow-glow-primary">
+                <span className="material-symbols-outlined mr-2 text-[18px]">
+                  download
+                </span>
+                <span className="truncate">Export Report</span>
+              </button>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -399,37 +373,6 @@ export default function Dashboard({ patternCardsOpacity = 1 }) {
                       </td>
                       <td className="px-6 py-4 text-slate-300">
                         Early teaser emails increased Day 1 conversion by 14%.
-                      </td>
-                      <td className="px-6 py-4 text-right">
-                        <button className="text-primary hover:text-primary-dark font-medium text-xs">
-                          Read Full
-                        </button>
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-white/5 transition-colors">
-                      <td className="px-6 py-4 whitespace-nowrap text-slate-300">
-                        Oct 19
-                      </td>
-                      <td className="px-6 py-4">
-                        <div className="flex items-center gap-3">
-                          <div className="size-8 rounded bg-purple-500/20 flex items-center justify-center text-purple-500 border border-purple-500/20">
-                            <span className="material-symbols-outlined text-lg">
-                              palette
-                            </span>
-                          </div>
-                          <span className="font-medium text-white">
-                            Homepage Redesign A/B
-                          </span>
-                        </div>
-                      </td>
-                      <td className="px-6 py-4">
-                        <span className="inline-flex items-center gap-1 rounded-md bg-emerald-500/10 px-2 py-1 text-xs font-medium text-emerald-500 ring-1 ring-inset ring-emerald-500/20">
-                          Positive
-                        </span>
-                      </td>
-                      <td className="px-6 py-4 text-slate-300">
-                        Simplifying nav reduced bounce rate but hurt discovery
-                        of secondary features.
                       </td>
                       <td className="px-6 py-4 text-right">
                         <button className="text-primary hover:text-primary-dark font-medium text-xs">

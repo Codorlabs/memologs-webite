@@ -2,19 +2,19 @@ import React from "react";
 
 export default function SignalSection() {
   return (
-    <section className="py-24 md:py-32 bg-background-light relative overflow-hidden">
+    <section className="py-16 md:py-20 bg-background-light relative overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
       }}></div>
       
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
         {/* Header Section */}
-        <div className="text-center mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 bg-navy border border-primary/20 rounded-full px-4 py-2 mb-6">
+        <div className="text-center mb-10 md:mb-12">
+          <div className="inline-flex items-center gap-2 bg-navy border border-primary/20 rounded-full px-4 py-2 mb-4">
             <span className="material-symbols-outlined text-primary text-sm">filter_alt</span>
             <span className="text-sm font-semibold text-primary">Signal vs Noise</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4 tracking-tight">
             Focus on decisions that <span className="bg-clip-text text-transparent bg-gradient-to-r from-navy via-primary-dark to-primary">actually matter</span>
           </h2>
           <p className="text-lg md:text-xl text-text-secondary font-medium max-w-2xl mx-auto leading-relaxed">
@@ -24,12 +24,12 @@ export default function SignalSection() {
         </div>
 
         {/* Visual Signal Meter */}
-        <div className="flex items-center justify-center gap-4 mb-16">
+        <div className="flex items-center justify-center gap-6 mb-10">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-gray-300"></div>
             <span className="text-sm font-medium text-text-secondary">Noise</span>
           </div>
-          <div className="w-48 h-2 bg-gradient-to-r from-gray-200 via-gray-300 via-40% to-primary rounded-full relative">
+          <div className="w-1/2 h-2 bg-gradient-to-r from-gray-200 via-gray-300 via-40% to-primary rounded-full relative">
             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full shadow-lg shadow-primary/30 border-2 border-white"></div>
           </div>
           <div className="flex items-center gap-2">
@@ -232,7 +232,7 @@ export default function SignalSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16 md:mt-20">
+        <div className="text-center mt-10 md:mt-12">
           <div className="inline-flex items-center gap-4 bg-navy border border-primary/20 rounded-2xl px-8 py-5 shadow-lg">
             <span className="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
             <p className="text-lg md:text-xl text-white font-medium">

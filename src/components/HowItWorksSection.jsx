@@ -3,13 +3,13 @@ import React from "react";
 export default function HowItWorksSection() {
   return (
     <section
-      className="py-32 bg-surface-gray relative overflow-hidden"
+      className="py-20 md:py-24 bg-surface-gray relative overflow-hidden"
       id="how-it-works"
     >
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-[#00FFC2]/5 rounded-full blur-3xl pointer-events-none"></div>
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-        <div className="text-center mb-20 max-w-2xl mx-auto">
+        <div className="text-center mb-12 max-w-2xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1d1d1f] mb-4 tracking-tight">
             Intelligence in three steps
           </h2>

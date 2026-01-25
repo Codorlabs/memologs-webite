@@ -2,10 +2,10 @@ import React from "react";
 
 export default function StackSection() {
   return (
-    <section className="py-24 md:py-32 bg-background-light relative overflow-hidden">
+    <section className="py-16 md:py-20 bg-background-light relative overflow-hidden">
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-        <div className="mb-16 md:mb-20 md:text-center max-w-3xl mx-auto">
+        <div className="mb-10 md:mb-12 md:text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 tracking-tight">
             Why your current stack <br className="hidden md:block" /> isn't
             enough

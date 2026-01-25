@@ -1,8 +1,10 @@
 import React from "react";
+import { useWaitlistModal } from "../contexts/WaitlistModalContext";
 
 export default function CtaSection() {
+  const { openModal } = useWaitlistModal();
   return (
-    <section className="relative bg-navy py-24 md:py-32 overflow-hidden">
+    <section className="relative bg-navy py-16 md:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,194,0.08)_0%,transparent_65%)]"></div>
       <div className="absolute inset-0 pointer-events-none">
         <svg
@@ -32,32 +34,48 @@ export default function CtaSection() {
         </svg>
       </div>
       <div className="max-w-[1200px] mx-auto px-6 relative z-10 text-center">
-        <div className="inline-block mb-8 px-5 py-2 rounded-full border border-primary/20 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
+        <div className="inline-block mb-6 px-5 py-2 rounded-full border border-primary/20 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
           Now available for growth teams
         </div>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
           Stop repeating expensive decisions.
         </h2>
-        <p className="text-lg md:text-xl text-text-light-secondary mb-14 max-w-2xl mx-auto font-medium leading-relaxed">
+        <p className="text-lg md:text-xl text-text-light-secondary mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
           Build your team's organizational memory with MemoLogs. The
           intelligence platform for compound growth.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-          <button className="group relative h-14 px-10 rounded-full bg-gradient-to-r from-primary to-primary-dark text-navy text-lg font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-all duration-300">
-            <span className="relative z-10">Get Started for Free</span>
+          <button onClick={openModal} className="group relative h-14 px-10 rounded-full bg-gradient-to-r from-primary to-primary-dark text-navy text-lg font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <span className="relative z-10">Join Waitlist</span>
             <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
           </button>
-          <button className="h-14 px-10 rounded-full border border-white/30 bg-transparent text-white text-lg font-semibold hover:bg-white/10 transition-all backdrop-blur-md">
-            Talk to Sales
+          <button className="h-14 px-10 rounded-full border border-white/30 bg-transparent text-white text-lg font-semibold hover:bg-white/10 transition-all backdrop-blur-md cursor-pointer">
+            Schedule a Call
           </button>
         </div>
-        <footer className="mt-24 md:mt-32 pt-12 md:pt-16 border-t border-white/10">
+        <footer className="mt-16 md:mt-20 pt-10 md:pt-12 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-xl text-primary border border-primary/20">
-                <span className="material-symbols-outlined text-[24px]">
-                  memory
-                </span>
+                <svg width="24" height="24" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                  <g stroke="#2FFFD6" strokeWidth="6" strokeLinecap="round">
+                    <line x1="64" y1="64" x2="64" y2="28" />
+                    <line x1="64" y1="64" x2="96" y2="44" />
+                    <line x1="64" y1="64" x2="96" y2="84" />
+                    <line x1="64" y1="64" x2="64" y2="100" />
+                    <line x1="64" y1="64" x2="32" y2="84" />
+                    <line x1="64" y1="64" x2="32" y2="44" />
+                  </g>
+                  <g fill="#2FFFD6">
+                    <circle cx="64" cy="64" r="12" />
+                    <circle cx="64" cy="28" r="8" />
+                    <circle cx="96" cy="44" r="8" />
+                    <circle cx="96" cy="84" r="8" />
+                    <circle cx="64" cy="100" r="8" />
+                    <circle cx="32" cy="84" r="8" />
+                    <circle cx="32" cy="44" r="8" />
+                  </g>
+                </svg>
               </div>
               <span className="text-xl font-bold tracking-tight text-white">
                 MemoLogs
@@ -99,7 +117,7 @@ export default function CtaSection() {
             </div>
           </div>
           <div className="mt-12 text-center text-xs font-semibold text-text-light-muted uppercase tracking-[0.2em]">
-            © 2024 MemoLogs Inc. Built for teams that learn.
+            © 2026 MemoLogs Inc. Built for teams that learn.
           </div>
         </footer>
       </div>

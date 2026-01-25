@@ -9,13 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.13.3",
+    "form-data": "^4.0.5",
     "react": "latest",
     "react-dom": "latest"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "latest",
     "@tailwindcss/container-queries": "latest",
     "@tailwindcss/forms": "latest",
+    "@tailwindcss/postcss": "latest",
     "@vitejs/plugin-react": "latest",
     "autoprefixer": "latest",
     "postcss": "latest",

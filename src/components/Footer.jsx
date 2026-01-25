@@ -6,9 +6,25 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 flex items-center justify-center bg-gray-800 rounded text-gray-400 border border-gray-700">
-            <span className="material-symbols-outlined text-[16px]">
-              memory
-            </span>
+            <svg width="24" height="24" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="#2FFFD6" strokeWidth="6" strokeLinecap="round">
+                <line x1="64" y1="64" x2="64" y2="28" />
+                <line x1="64" y1="64" x2="96" y2="44" />
+                <line x1="64" y1="64" x2="96" y2="84" />
+                <line x1="64" y1="64" x2="64" y2="100" />
+                <line x1="64" y1="64" x2="32" y2="84" />
+                <line x1="64" y1="64" x2="32" y2="44" />
+              </g>
+              <g fill="#2FFFD6">
+                <circle cx="64" cy="64" r="12" />
+                <circle cx="64" cy="28" r="8" />
+                <circle cx="96" cy="44" r="8" />
+                <circle cx="96" cy="84" r="8" />
+                <circle cx="64" cy="100" r="8" />
+                <circle cx="32" cy="84" r="8" />
+                <circle cx="32" cy="44" r="8" />
+              </g>
+            </svg>
           </div>
           <span className="font-bold text-gray-400">MemoLogs</span>
         </div>

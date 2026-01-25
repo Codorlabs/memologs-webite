@@ -3,7 +3,7 @@ import React from "react";
 export default function ProblemSection() {
   return (
     <section
-      className="bg-surface-gray py-24 md:py-32 relative overflow-hidden"
+      className="bg-surface-gray py-16 md:py-20 relative overflow-hidden"
       id="problem"
     >
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">

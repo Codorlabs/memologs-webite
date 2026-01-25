@@ -2,9 +2,9 @@ import React from "react";
 
 export default function ChangesSection() {
   return (
-    <section className="py-24 md:py-32 bg-background-light relative">
+    <section className="py-16 md:py-20 bg-background-light relative">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-10 md:mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-navy tracking-tight">
             What changes after MemoLogs
           </h2>
@@ -104,7 +104,7 @@ export default function ChangesSection() {
             </div>
           </div>
         </div>
-        <div className="mt-20 text-center max-w-3xl mx-auto">
+        <div className="mt-12 text-center max-w-3xl mx-auto">
           <p className="text-3xl md:text-4xl lg:text-5xl font-medium text-navy tracking-tight leading-[1.2]">
             That’s not reporting. <br />
             <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-navy via-primary-dark to-primary">

@@ -2,9 +2,9 @@ import React from "react";
 
 export default function DecisionLoopSection() {
   return (
-    <section className="py-24 bg-[#0A0F1D] border-y border-[#1a2235]" id="solution">
+    <section className="py-16 md:py-20 bg-[#0A0F1D] border-y border-[#1a2235]" id="solution">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-black text-white">
             The Decision Loop
           </h2>
@@ -70,8 +70,8 @@ export default function DecisionLoopSection() {
             </div>
           </div>
         </div>
-        <div className="mt-20 pt-16 border-t border-[#1a2235]">
-          <div className="text-center mb-10">
+        <div className="mt-12 pt-10 border-t border-[#1a2235]">
+          <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white">
               Over time, this becomes:
             </h3>

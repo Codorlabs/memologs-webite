@@ -11,6 +11,7 @@ import CtaSection from "./components/CtaSection.jsx";
 import Footer from "./components/Footer.jsx";
 import { WaitlistModalProvider } from "./contexts/WaitlistModalContext.jsx";
 
+
 export default function App() {
   return (
     <WaitlistModalProvider>

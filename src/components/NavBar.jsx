@@ -52,12 +52,12 @@ export default function NavBar() {
           >
             How it Works
           </a>
-          <a
+          {/* <a
             className="text-sm font-semibold text-text-secondary hover:text-navy transition-colors"
             href="#pricing"
           >
             Pricing
-          </a>
+          </a> */}
         </div>
         <div className="flex items-center gap-4">
           <button 

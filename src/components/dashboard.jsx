@@ -15,7 +15,7 @@ export default function Dashboard({ patternCardsOpacity = 1 }) {
     >
       <div className="md:hidden p-4">
         <img
-          src="/src/dashboard.png"
+          src="/dashboard.png"
           alt="MemoLogs learning review dashboard"
           className="w-full h-auto rounded-2xl"
         />

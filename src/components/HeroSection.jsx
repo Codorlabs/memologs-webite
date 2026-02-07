@@ -3,10 +3,6 @@ import Dashboard from "./dashboard";
 import { useWaitlistModal } from "../contexts/WaitlistModalContext";
 
 const WORDS = ["revenue", "growth", "marketing"];
-const MAX_WORD_LENGTH = WORDS.reduce(
-  (maxLength, word) => Math.max(maxLength, word.length),
-  0
-);
 
 export default function HeroSection() {
   const { openModal } = useWaitlistModal();
@@ -58,9 +54,7 @@ export default function HeroSection() {
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-navy mb-4 max-w-4xl leading-[1.1]">
           The memory system for <br className="hidden md:block" />
           <span className="bg-clip-text text-transparent bg-linear-to-r from-navy via-primary-dark to-primary">
-            <span
-              className={`inline-block align-bottom min-w-[${MAX_WORD_LENGTH}ch] sm:min-w-0`}
-            >
+            <span className="hero-typewriter-span inline-block align-bottom text-center md:text-left">
               {typedText}
             </span>{" "}
             decisions.

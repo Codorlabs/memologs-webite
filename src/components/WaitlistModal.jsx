@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function WaitlistModal({ isOpen, onClose }) {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [organization, setOrganization] = useState("");
+  const [website, setWebsite] = useState("");
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
@@ -10,6 +14,11 @@ export default function WaitlistModal({ isOpen, onClose }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
+    if (!firstName.trim() || !lastName.trim()) {
+      setErrorMessage("Please enter your first and last name");
+      return;
+    }
+
     if (!email || !email.includes("@")) {
       setErrorMessage("Please enter a valid email address");
       return;
@@ -22,6 +31,14 @@ export default function WaitlistModal({ isOpen, onClose }) {
     try {
       // Use browser's native FormData API (axios handles it automatically)
       const formData = new FormData();
+      formData.append("first_name", firstName.trim());
+      formData.append("last_name", lastName.trim());
+      if (organization.trim()) {
+        formData.append("organization", organization.trim());
+      }
+      if (website.trim()) {
+        formData.append("website", website.trim());
+      }
       formData.append("email", email);
 
       const response = await axios.post(
@@ -31,6 +48,10 @@ export default function WaitlistModal({ isOpen, onClose }) {
       
       if (response.data?.ok && response.data?.data?.message) {
         setSuccessMessage(response.data.data.message);
+        setFirstName("");
+        setLastName("");
+        setOrganization("");
+        setWebsite("");
         setEmail("");
         // Close modal after 3 seconds
         setTimeout(() => {
@@ -54,6 +75,10 @@ export default function WaitlistModal({ isOpen, onClose }) {
         // Request was sent successfully (201 Created), but CORS blocked the response
         // Treat this as success since the backend received and processed the request
         setSuccessMessage("Thank you for your submission. Your form has been submitted successfully.");
+        setFirstName("");
+        setLastName("");
+        setOrganization("");
+        setWebsite("");
         setEmail("");
         setTimeout(() => {
           onClose();
@@ -107,6 +132,92 @@ export default function WaitlistModal({ isOpen, onClose }) {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label
+                htmlFor="firstName"
+                className="block text-sm font-semibold text-navy mb-2"
+              >
+                First Name
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                value={firstName}
+                onChange={(e) => {
+                  setFirstName(e.target.value);
+                  setErrorMessage("");
+                }}
+                placeholder="Jane"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-navy"
+                required
+                disabled={isLoading}
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="lastName"
+                className="block text-sm font-semibold text-navy mb-2"
+              >
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                value={lastName}
+                onChange={(e) => {
+                  setLastName(e.target.value);
+                  setErrorMessage("");
+                }}
+                placeholder="Doe"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-navy"
+                required
+                disabled={isLoading}
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="organization"
+                className="block text-sm font-semibold text-navy mb-2"
+              >
+                Organization (Optional)
+              </label>
+              <input
+                type="text"
+                id="organization"
+                value={organization}
+                onChange={(e) => {
+                  setOrganization(e.target.value);
+                  setErrorMessage("");
+                }}
+                placeholder="Acme Inc."
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-navy"
+                disabled={isLoading}
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="website"
+                className="block text-sm font-semibold text-navy mb-2"
+              >
+                Website (Optional)
+              </label>
+              <input
+                type="url"
+                id="website"
+                value={website}
+                onChange={(e) => {
+                  setWebsite(e.target.value);
+                  setErrorMessage("");
+                }}
+                placeholder="https://example.com"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-navy"
+                disabled={isLoading}
+              />
+            </div>
+
             <div>
               <label
                 htmlFor="email"

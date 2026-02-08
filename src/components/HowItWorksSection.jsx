@@ -11,11 +11,11 @@ export default function HowItWorksSection() {
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
         <div className="text-center mb-12 max-w-2xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1d1d1f] mb-4 tracking-tight">
-            Intelligence in three steps
+            Decision memory in three steps
           </h2>
           <p className="text-xl md:text-2xl text-gray-500 font-light font-display">
             No heavy setup. No rigid workflows. <br className="hidden md:block" />
-            Just better judgment over time.
+            Just better decisions over time.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -51,8 +51,7 @@ export default function HowItWorksSection() {
               1. Log the decision
             </h3>
             <p className="text-gray-500 leading-relaxed">
-              Capture context without leaving your workflow. Log decisions
-              directly from Slack or your browser.
+              Capture why a decision was made - in under a minute.
             </p>
           </div>
           <div className="flex flex-col h-full group">
@@ -77,8 +76,7 @@ export default function HowItWorksSection() {
               2. Capture the conditions
             </h3>
             <p className="text-gray-500 leading-relaxed">
-              Tag your bets with context. Track audience, budget, and hypothesis
-              parameters effortlessly.
+              Record the conditions under which the decision was made — audience, spend, and constraints that mattered.
             </p>
           </div>
           <div className="flex flex-col h-full group">
@@ -112,8 +110,8 @@ export default function HowItWorksSection() {
               3. Learn once. Remember forever.
             </h3>
             <p className="text-gray-500 leading-relaxed">
-              The system automatically links past failures to current
-              decisions, preventing expensive repeats.
+              Similar past decisions resurface at the moment they matter — 
+              before you repeat a costly mistake.
             </p>
           </div>
         </div>

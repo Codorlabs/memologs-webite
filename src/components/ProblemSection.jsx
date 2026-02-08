@@ -11,16 +11,13 @@ export default function ProblemSection() {
           {/* Left Column */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-navy tracking-tight mb-8 leading-[1.15]">
-              Your team isn't forgetting metrics. <br />
+              Stop losing decision memory - <br />
               <span className="inline-block bg-navy text-primary py-1 px-4 mt-2 rounded-lg text-3xl md:text-4xl">
-                They're forgetting decisions.
+                and paying for the same mistakes twice.
               </span>
             </h2>
             
             <div className="mb-8">
-              <h3 className="text-sm font-bold text-text-secondary uppercase tracking-wider mb-4">
-                Every growth team
-              </h3>
               <div className="space-y-4">
                 <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4 transition-all hover:shadow-md hover:-translate-y-0.5">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0 mt-0.5">
@@ -28,10 +25,10 @@ export default function ProblemSection() {
                   </div>
                   <div>
                     <h4 className="font-bold text-navy text-base mb-1">
-                      Tests constantly
+                      Why it was made
                     </h4>
                     <p className="text-sm text-text-secondary">
-                      Launching new experiments every week.
+                      Capture the context and reasoning behind every bet.
                     </p>
                   </div>
                 </div>
@@ -41,10 +38,10 @@ export default function ProblemSection() {
                   </div>
                   <div>
                     <h4 className="font-bold text-navy text-base mb-1">
-                      Changes variables
+                      What you expected
                     </h4>
                     <p className="text-sm text-text-secondary">
-                      Budgets, creatives, and targeting shift daily.
+                      Document the hypothesis before the data comes in.
                     </p>
                   </div>
                 </div>
@@ -54,10 +51,10 @@ export default function ProblemSection() {
                   </div>
                   <div>
                     <h4 className="font-bold text-navy text-base mb-1">
-                      Moves fast
+                      What actually happened
                     </h4>
                     <p className="text-sm text-text-secondary">
-                      Execution speed is prioritized under pressure.
+                      Close the loop and build real institutional memory.
                     </p>
                   </div>
                 </div>
@@ -145,11 +142,10 @@ export default function ProblemSection() {
               {/* Bottom Message */}
               <div className="mt-8 pt-6 border-t border-white/10 text-center">
                 <p className="text-lg font-bold text-white leading-snug">
-                  That's not a tooling problem.
+                  That's why you need
                   <br />
-                  That's a{" "}
                   <span className="text-navy bg-primary px-2 py-0.5 rounded">
-                    memory problem
+                    Memologs
                   </span>
                   .
                 </p>

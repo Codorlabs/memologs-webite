@@ -6,6 +6,7 @@ import StackSection from "./components/StackSection.jsx";
 import DecisionLoopSection from "./components/DecisionLoopSection.jsx";
 import SignalSection from "./components/SignalSection.jsx";
 import HowItWorksSection from "./components/HowItWorksSection.jsx";
+import AnswersSection from "./components/AnswersSection.jsx";
 import ChangesSection from "./components/ChangesSection.jsx";
 import CtaSection from "./components/CtaSection.jsx";
 import Footer from "./components/Footer.jsx";
@@ -22,6 +23,7 @@ export default function App() {
         <DecisionLoopSection />
         <SignalSection />
         <HowItWorksSection />
+        <AnswersSection />
         <ChangesSection />
         <CtaSection />
         {/* <Footer /> */}

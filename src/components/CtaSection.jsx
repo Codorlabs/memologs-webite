@@ -41,8 +41,8 @@ export default function CtaSection() {
           Stop repeating expensive decisions.
         </h2>
         <p className="text-lg md:text-xl text-text-light-secondary mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
-          Build your team's organizational memory with MemoLogs. The
-          intelligence platform for compound growth.
+        Build your team’s organizational memory with Memologs -  
+        the decision memory system that compounds over time.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
           <button onClick={openModal} className="group relative h-14 px-10 rounded-full bg-gradient-to-r from-primary to-primary-dark text-navy text-lg font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-all duration-300 cursor-pointer">

@@ -7,11 +7,11 @@ export default function StackSection() {
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
         <div className="mb-10 md:mb-12 md:text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 tracking-tight">
-            Why your current stack <br className="hidden md:block" /> isn't
-            enough
+            Why your current stack <br className="hidden md:block" /> can't
+            remember decisions
           </h2>
           <p className="text-lg md:text-xl text-text-secondary font-medium leading-relaxed">
-            Existing tools capture the output, but miss the reasoning.
+            Existing tools capture what happened, not why a decision was made or whether it should be repeated.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -43,8 +43,7 @@ export default function StackSection() {
                 Dashboards
               </h3>
               <p className="text-text-secondary leading-relaxed font-medium">
-                They show data, not decisions. You see the drop in conversion,
-                but have zero context on why.
+                They show metrics, not decisions. You see results, not the decisions behind them
               </p>
             </div>
           </div>
@@ -72,8 +71,7 @@ export default function StackSection() {
                 Notion
               </h3>
               <p className="text-text-secondary leading-relaxed font-medium">
-                Too unstructured. Context gets buried in nested pages, untagged
-                archives, and forgotten workspaces.
+                Stores information, not memory. Decisions fade as pages pile up.
               </p>
             </div>
           </div>
@@ -94,8 +92,7 @@ export default function StackSection() {
                 Task Tools
               </h3>
               <p className="text-text-secondary leading-relaxed font-medium">
-                Focus on output, not outcome. Great for tracking who did the
-                work, terrible for learning if it mattered.
+                They track activity, not outcomes. Useless for knowing if the decision mattered.
               </p>
             </div>
           </div>

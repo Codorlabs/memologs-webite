@@ -61,8 +61,8 @@ export default function HeroSection() {
           </span>
         </h1>
         <p className="text-lg md:text-xl text-text-secondary font-medium mb-8 max-w-2xl leading-relaxed">
-          Stop losing your best insights to the void. Capture context, track
-          outcomes, and learn from every decision.
+          Capture high-stakes decisions, track what actually happened, and
+          stop repeating expensive mistakes.
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
           <button 

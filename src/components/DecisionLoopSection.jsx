@@ -9,7 +9,7 @@ export default function DecisionLoopSection() {
             The Decision Loop
           </h2>
           <p className="text-lg text-gray-400 mt-4">
-            Transforming scattered thoughts into structured learning.
+            How Memologs turns decisions into memory.
           </p>
         </div>
         <div className="relative">
@@ -63,9 +63,9 @@ export default function DecisionLoopSection() {
                   school
                 </span>
               </div>
-              <h4 className="font-bold text-[#00FFC2] mb-2">Learning</h4>
+              <h4 className="font-bold text-[#00FFC2] mb-2">Memory</h4>
               <p className="text-sm text-gray-400 px-2">
-                Retrospective wisdom.
+                Whether to do this again.
               </p>
             </div>
           </div>

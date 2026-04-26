@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import GeoLiftDemo from "@/components/GeoLiftDemo";
+import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
   title: "Incrementality IQ — Causal Measurement | MemoLogs",
@@ -27,7 +28,7 @@ export default function IncrementalityIQPage() {
                 <span className="iq-fchip"><span className="iq-fchip-dot"></span>Results in minutes</span>
               </div>
               <div className="cta-row iq-cta-row">
-                <Link href="/#contact" className="btn btn-primary btn-lg">Start a 90-day pilot →</Link>
+                <PilotCTA className="btn btn-primary btn-lg">Start a 90-day pilot →</PilotCTA>
                 <a href="#workflow" className="btn btn-ghost btn-lg">See the workflow</a>
               </div>
               <div className="iq-hero-micro">
@@ -470,7 +471,7 @@ export default function IncrementalityIQPage() {
               <h3>See it on your account.</h3>
               <p>Scoping call · 30 min · free · zero obligation.</p>
             </div>
-            <Link href="/#contact" className="btn btn-primary btn-lg">Book a pilot →</Link>
+            <PilotCTA className="btn btn-primary btn-lg">Book a pilot →</PilotCTA>
           </div>
 
           <div className="sp-nav-next">

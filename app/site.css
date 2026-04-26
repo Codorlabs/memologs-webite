@@ -1325,9 +1325,10 @@ input[type="range"]::-moz-range-thumb {
   text-transform: uppercase; color: var(--ink-4);
   margin-bottom: 14px;
 }
-.foot a { display: block; padding: 4px 0; font-size: 14px; color: var(--ink-2); }
+.foot a, .foot .foot-link-btn { display: block; padding: 4px 0; font-size: 14px; color: var(--ink-2); }
 .foot a.brand{display: inline-flex;}
-.foot a:hover { color: var(--ink); }
+.foot a:hover, .foot .foot-link-btn:hover { color: var(--ink); }
+.foot .foot-link-btn { background: none; border: none; cursor: pointer; text-align: left; font: inherit; font-size: 14px; }
 .foot-rule { height: 1px; background: var(--rule-soft); margin: 48px 0 20px; }
 .foot-meta {
   display: flex; justify-content: space-between; align-items: center;
@@ -2464,4 +2465,56 @@ input[type="range"]::-moz-range-thumb {
 
 @media (prefers-reduced-motion: reduce) {
   .cs-hot, .cs-orb, .aud-hub-core, .aud-agent, .aud-chip::before { animation: none; }
+}
+
+/* Pilot CTA modal */
+.pm-overlay {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  background: rgba(5, 9, 18, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: pm-fade 0.18s ease-out;
+}
+.pm-dialog {
+  position: relative;
+  width: 100%; max-width: 480px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: var(--ink-card);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  animation: pm-rise 0.2s ease-out;
+}
+.pm-close {
+  position: absolute; top: 12px; right: 12px;
+  width: 32px; height: 32px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: transparent; border: none; cursor: pointer;
+  color: rgba(255,255,255,.55); font-size: 24px; line-height: 1;
+  border-radius: 999px;
+}
+.pm-close:hover { background: rgba(255,255,255,.08); color: var(--ink); }
+.pm-head { margin-bottom: 20px; padding-right: 28px; }
+.pm-title { font-family: var(--serif); font-size: 24px; font-weight: 700; margin: 0 0 6px; letter-spacing: -0.02em; }
+.pm-sub { font-size: 13px; color: rgba(255,255,255,.65); margin: 0; line-height: 1.5; }
+.pm-thank-close { margin-top: 20px; }
+.cc-error {
+  padding: 10px 12px;
+  background: rgba(255, 80, 80, 0.08);
+  border: 1px solid rgba(255, 80, 80, 0.3);
+  border-radius: var(--radius-sm);
+}
+.cc-error p { margin: 0; color: #ff8080; font-size: 13px; }
+
+@keyframes pm-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes pm-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }

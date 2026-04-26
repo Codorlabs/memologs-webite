@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
   title: "Audience IQ — Buyer-Graded Segments | MemoLogs",
@@ -23,7 +24,7 @@ export default function AudienceIQPage() {
                 <span className="iq-fchip"><span className="iq-fchip-dot"></span>Real-time cross-platform sync</span>
               </div>
               <div className="cta-row iq-cta-row">
-                <Link href="/#contact" className="btn btn-primary btn-lg">Start a 90-day pilot →</Link>
+                <PilotCTA className="btn btn-primary btn-lg">Start a 90-day pilot →</PilotCTA>
                 <a href="#agents" className="btn btn-ghost btn-lg">Meet the six agents</a>
               </div>
               <div className="iq-hero-micro">
@@ -489,7 +490,7 @@ export default function AudienceIQPage() {
               <h3>Meet your next best customers.</h3>
               <p>Scoping call · 30 min · free · zero obligation.</p>
             </div>
-            <Link href="/#contact" className="btn btn-primary btn-lg">Book a pilot →</Link>
+            <PilotCTA className="btn btn-primary btn-lg">Book a pilot →</PilotCTA>
           </div>
 
           <div className="sp-nav-next">

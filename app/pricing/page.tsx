@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
   title: "Pricing — MemoLogs",
@@ -35,7 +36,7 @@ export default function PricingPage() {
                 <li>Weekly executive readout</li>
                 <li>Final board-ready impact report</li>
               </ul>
-              <div className="price-cta"><Link href="/#contact" className="btn btn-ghost">Start a pilot →</Link></div>
+              <div className="price-cta"><PilotCTA className="btn btn-ghost">Start a pilot →</PilotCTA></div>
             </div>
 
             <div className="price-col featured">
@@ -54,7 +55,7 @@ export default function PricingPage() {
                 <li>Dedicated customer success team</li>
                 <li>Slack + email support, 1-business-day SLA</li>
               </ul>
-              <div className="price-cta"><Link href="/#contact" className="btn btn-primary" >Book a scoping call →</Link></div>
+              <div className="price-cta"><PilotCTA className="btn btn-primary" modalTitle="Book a scoping call">Book a scoping call →</PilotCTA></div>
             </div>
 
             <div className="price-col">
@@ -72,7 +73,7 @@ export default function PricingPage() {
                 <li>Quarterly executive business review</li>
                 <li>Named phone support</li>
               </ul>
-              <div className="price-cta"><Link href="/#contact" className="btn btn-ghost">Talk to sales →</Link></div>
+              <div className="price-cta"><PilotCTA className="btn btn-ghost" modalTitle="Talk to sales" modalSubtitle="Tell us about your account. A solutions architect will reach out within one business day.">Talk to sales →</PilotCTA></div>
             </div>
           </div>
 

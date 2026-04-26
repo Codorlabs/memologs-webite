@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
   title: "Media Copilot — AI Campaign Command | MemoLogs",
@@ -29,7 +30,7 @@ export default function CopilotPage() {
               </div>
 
               <div className="cta-row iq-cta-row">
-                <Link href="/#contact" className="btn btn-primary btn-lg">Start a 90-day pilot →</Link>
+                <PilotCTA className="btn btn-primary btn-lg">Start a 90-day pilot →</PilotCTA>
                 <a href="#conversations" className="btn btn-ghost btn-lg">See real conversations</a>
               </div>
 
@@ -622,7 +623,7 @@ export default function CopilotPage() {
               <h3>Stop asking dashboards.<br />Start asking the data.</h3>
               <p>Scoping call · 30 min · free · zero obligation.</p>
             </div>
-            <Link href="/#contact" className="btn btn-primary btn-lg">Book a pilot →</Link>
+            <PilotCTA className="btn btn-primary btn-lg">Book a pilot →</PilotCTA>
           </div>
 
           <div className="sp-nav-next">

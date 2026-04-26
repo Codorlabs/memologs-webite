@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
   title: "Case Studies — MemoLogs",
@@ -93,7 +94,7 @@ export default function CaseStudiesPage() {
               <h3>Want this result on your account?</h3>
               <p>Every pilot uses the same methodology. Start with a 30-minute scoping call.</p>
             </div>
-            <Link href="/#contact" className="btn btn-primary btn-lg">Book a pilot →</Link>
+            <PilotCTA className="btn btn-primary btn-lg">Book a pilot →</PilotCTA>
           </div>
         </div>
       </section>

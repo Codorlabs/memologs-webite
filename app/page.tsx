@@ -2,6 +2,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import PillarTabs from "@/components/PillarTabs";
 import InflationCalculator from "@/components/InflationCalculator";
 import ContactForm from "@/components/ContactForm";
+import PilotCTA from "@/components/PilotCTA";
 import StatsBand from "@/components/StatsBand";
 import Link from "next/link";
 
@@ -22,7 +23,7 @@ export default function Home() {
                 Causal measurement, creative AI, and audience AI in one platform — with a decision memory that makes every next call smarter. Prove what worked. Kill what didn&apos;t. Compound the rest.
               </p>
               <div className="cta-row">
-                <a href="#contact" className="btn btn-primary btn-lg">Start a 90-day pilot</a>
+                <PilotCTA className="btn btn-primary btn-lg">Start a 90-day pilot</PilotCTA>
                 <a href="#calculator" className="btn btn-ghost btn-lg">See your inflation factor →</a>
               </div>
               <div className="hero-micro">

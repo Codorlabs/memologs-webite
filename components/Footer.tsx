@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import PilotCTA from "@/components/PilotCTA";
 
 export default function Footer() {
   return (
@@ -47,7 +50,7 @@ export default function Footer() {
           <div>
             <div className="foot-col-title">Resources</div>
             <a href="/#calculator">Inflation calculator</a>
-            <a href="/#contact">Book a pilot</a>
+            <PilotCTA className="foot-link-btn">Book a pilot</PilotCTA>
             <a href="mailto:hello@memologs.ai">hello@memologs.ai</a>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
   title: "Multi-brand Retail Case Study — MemoLogs",
@@ -68,7 +69,7 @@ export default function RetailCaseStudyPage() {
         <div className="wrap">
           <div className="sp-cta-inline">
             <div><h3>See what your account is missing.</h3><p>90-day pilot · flat fee · pilot credited to contract.</p></div>
-            <Link href="/#contact" className="btn btn-primary btn-lg">Start a pilot →</Link>
+            <PilotCTA className="btn btn-primary btn-lg">Start a pilot →</PilotCTA>
           </div>
           <div className="sp-nav-next">
             <span>← <Link href="/case-studies">All case studies</Link></span>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HowItWorksScroll from "@/components/HowItWorksScroll";
+import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
   title: "How It Works — The 90-Day MemoLogs Pilot | MemoLogs",
@@ -29,7 +30,7 @@ export default function HowItWorksPage() {
                 <span className="iq-fchip"><span className="iq-fchip-dot"></span>Tri-model causal verdict by week 5</span>
               </div>
               <div className="cta-row iq-cta-row">
-                <Link href="/#contact" className="btn btn-primary btn-lg">Start a 90-day pilot →</Link>
+                <PilotCTA className="btn btn-primary btn-lg">Start a 90-day pilot →</PilotCTA>
                 <a href="#journey" className="btn btn-ghost btn-lg">See the journey</a>
               </div>
               <div className="iq-hero-micro">
@@ -527,7 +528,7 @@ export default function HowItWorksPage() {
               <h3>Ready to see what week 5 looks like?</h3>
               <p>30-minute scoping call. We&apos;ll audit your attribution, size the likely inflation, and tell you if a pilot makes sense — before you commit a dollar.</p>
             </div>
-            <Link href="/#contact" className="btn btn-primary btn-lg">Book the call →</Link>
+            <PilotCTA className="btn btn-primary btn-lg" modalTitle="Book a scoping call">Book the call →</PilotCTA>
           </div>
 
           <div className="sp-nav-next">

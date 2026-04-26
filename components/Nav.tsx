@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PilotCTA from "@/components/PilotCTA";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -70,9 +71,7 @@ export default function Nav() {
           <a href="#contact" className="link-muted">
             Sign in
           </a>
-          <a href="#contact" className="btn btn-primary">
-            Book a pilot →
-          </a>
+          <PilotCTA className="btn btn-primary">Book a pilot →</PilotCTA>
         </div>
       </div>
     </header>

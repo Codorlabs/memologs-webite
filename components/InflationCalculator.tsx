@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import PilotCTA from '@/components/PilotCTA';
 
 export default function InflationCalculator() {
   const [spend, setSpend] = useState(500000);
@@ -132,7 +133,7 @@ export default function InflationCalculator() {
         </div>
 
         <div className="calc-cta">
-          <a href="#contact" className="btn btn-primary">Prove it on your real data →</a>
+          <PilotCTA className="btn btn-primary">Prove it on your real data →</PilotCTA>
           <span className="calc-micro">GeoTwin™ pilot. 90 days. Pilot fee credited to contract.</span>
         </div>
       </div>

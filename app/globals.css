@@ -1,0 +1,71 @@
+﻿@import "./site.css";
+@import "./sub.css";
+
+
+
+:root {
+  color-scheme: dark;
+
+  /* Neutrals — Deep Space Navy family
+     --bg is the canvas; --bg-alt/--bg-warm are one and two steps brighter
+     for alternating sections; --ink-card is the very-dark panel used on
+     hero spotlight, calculator output, CTA block. */
+  --bg:           #0A0F1D;  /* Deep Space Navy — canvas */
+  --bg-alt:       #0F1628;  /* +1 step brighter for banded sections */
+  --bg-warm:      #141C31;  /* +2 step brighter for nested surfaces */
+  --ink-card:     #070B16;  /* Pure-depth panel, darker than canvas */
+
+  /* "ink" tokens now mean foreground TEXT on dark (Titanium White → dim) */
+  --ink:          #FBFBFD;  /* Titanium White — highest-contrast copy */
+  --ink-2:        #D9DCE4;  /* body copy */
+  --ink-3:        #8A93A6;  /* secondary / mono labels */
+  --ink-4:        #5A6377;  /* tertiary / fine print */
+
+  /* Lines — hairlines on dark */
+  --rule:         rgba(255,255,255,0.12);
+  --rule-soft:    rgba(255,255,255,0.06);
+
+  /* Brand — Emerald
+     --teal = brand emerald, --teal-deep = emerald used for emphasis text
+     (same hue, kept legible on dark), --teal-soft = low-alpha emerald wash. */
+  --teal:         #00FFC2;  /* MemoLogs Emerald */
+  --teal-deep:    #00FFC2;  /* Same on dark — no darker variant needed */
+  --teal-soft:    rgba(0,255,194,0.12);
+
+  /* Accents — retuned for dark bg */
+  --amber:        #FFB347;
+  --amber-soft:   rgba(255,179,71,0.18);
+  --coral:        #FF6B5B;
+  --coral-soft:   rgba(255,107,91,0.18);
+
+  /* Type — Inter only, per brand guide */
+  --serif:  'Inter', system-ui, -apple-system, sans-serif;
+  --sans:   'Inter', system-ui, -apple-system, sans-serif;
+  --mono:   'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  /* Scale */
+  --radius:       10px;
+  --radius-lg:    16px;
+  --radius-sm:    6px;
+
+  --shadow-sm:    0 1px 2px rgba(0,0,0,.4), 0 2px 6px rgba(0,0,0,.3);
+  --shadow-md:    0 4px 20px rgba(0,0,0,.4), 0 1px 3px rgba(0,0,0,.3);
+  --shadow-lg:    0 30px 80px -20px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.04);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--bg);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; cursor: pointer; border: none; background: none; }
+input, select, textarea { font: inherit; color: inherit; }

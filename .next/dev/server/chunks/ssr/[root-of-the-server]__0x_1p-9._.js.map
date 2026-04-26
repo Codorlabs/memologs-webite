@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///D:/projects/memologs-webite/app/providers.jsx"],"sourcesContent":["'use client';\r\n\r\nimport { PostHogProvider } from 'posthog-js/react';\r\nimport { useEffect } from 'react';\r\nimport posthog from 'posthog-js';\r\nimport { WaitlistModalProvider } from '@/src/contexts/WaitlistModalContext';\r\n\r\nfunction PostHogInit() {\r\n  useEffect(() => {\r\n    if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_POSTHOG_KEY) {\r\n      posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {\r\n        api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://app.posthog.com',\r\n        defaults: '2025-05-24',\r\n        capture_exceptions: true,\r\n      });\r\n    }\r\n  }, []);\r\n  return null;\r\n}\r\n\r\nexport default function Providers({ children }) {\r\n  return (\r\n    <WaitlistModalProvider>\r\n      <PostHogInit />\r\n      {children}\r\n    </WaitlistModalProvider>\r\n  );\r\n}\r\n"],"names":["PostHogInit","Providers","children","WaitlistModalProvider"],"mappings":";;;;;AAEA;AACA;AACA;;;;;;AAJA;;;;;;AAOA,SAASA;IACP,IAAA,kNAAS,EAAC;QACR;;IAOF,GAAG,EAAE;IACL,OAAO;AACT;AAEe,SAASC,UAAU,EAAEC,QAAQ,EAAE;IAC5C,qBACE,8OAACC;;0BACC,8OAACH;;;;;YACAE;;;;;;;AAGP"}}]
+}

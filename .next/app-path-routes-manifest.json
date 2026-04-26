@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/audience-iq/page": "/audience-iq",
+  "/case-studies/fintech/page": "/case-studies/fintech",
+  "/case-studies/page": "/case-studies",
+  "/case-studies/retail/page": "/case-studies/retail",
+  "/copilot/page": "/copilot",
+  "/creative-iq/page": "/creative-iq",
+  "/favicon.ico/route": "/favicon.ico",
+  "/how-it-works/page": "/how-it-works",
+  "/incrementality-iq/page": "/incrementality-iq",
+  "/memory-iq/page": "/memory-iq",
+  "/page": "/",
+  "/pricing/page": "/pricing"
+}

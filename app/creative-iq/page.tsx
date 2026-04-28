@@ -16,7 +16,7 @@ export default function CreativeIQPage() {
           <div className="cq-hero-grid">
             <div className="cq-hero-lead">
               <span className="iq-chip iq-chip-accent">Creative Fatigue Detection</span>
-              <h1 id="cq-h1">See creative die <em>before</em> the metrics do.</h1>
+              <h1 id="cq-h1">Know when creative dies <em>before</em> the metrics do.</h1>
               <p className="lede">We don&apos;t generate ads. We diagnose them. <b>Creative IQ</b> reads seven leading fatigue signals at the asset level — so you know which specific hook, frame, or caption is dying, 11 to 18 days before CPA spikes reveal the damage.</p>
               <div className="iq-feature-chips">
                 <span className="iq-fchip"><span className="iq-fchip-dot"></span>Asset-level, not campaign-level</span>

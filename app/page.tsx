@@ -45,7 +45,7 @@ export default function Home() {
       <section className="diag">
         <div className="wrap">
           <div className="section-head">
-            <h2 className="section-title">Built to measure the <em>clicks</em>.<br />Not the causality.</h2>
+            <h2 className="section-title">Built to measure the <em>causality</em>.<br />Not the clicks.</h2>
             <p className="section-sub">Here&apos;s what&apos;s actually going wrong under the hood of most modern marketing stacks — and what it quietly costs you every month you leave it alone.</p>
           </div>
 

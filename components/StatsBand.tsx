@@ -5,16 +5,19 @@ import styles from './StatsBand.module.css';
 
 interface Stat {
   prefix?: string;
+  suffix?: string;
   target: number;
   decimals?: number;
-  unit: string;
+  label: string;
   desc: string;
 }
 
 const STATS: Stat[] = [
-  { prefix: '$', target: 130, unit: 'billion', desc: 'in ad-attributed revenue' },
-  { prefix: '$', target: 25,  unit: 'billion', desc: 'ad spend tracked' },
-  { target: 2.1, decimals: 1, unit: 'trillion', desc: 'impressions measured' },
+  { target: 2.4, decimals: 1, suffix: '×', label: 'Attribution Inflation', desc: 'uncovered on avg' },
+  { target: 23, suffix: '%', label: 'Creative Fatigue', desc: 'of live creatives flagged' },
+  { target: 37, suffix: '%', label: 'CAC Reduction', desc: 'across active campaigns' },
+  { target: 90, label: 'Days to Payback', desc: 'after pilot kickoff' },
+  { target: 2, suffix: '×', label: 'Faster Pivots', desc: 'on budget reallocation' },
 ];
 
 function useCountUp(target: number, decimals = 0, trigger: boolean) {
@@ -53,8 +56,9 @@ function StatItem({ stat, trigger }: { stat: Stat; trigger: boolean }) {
       <div className={styles.num}>
         {stat.prefix && <span className={styles.prefix}>{stat.prefix}</span>}
         {display}
+        {stat.suffix && <span className={styles.suffix}>{stat.suffix}</span>}
       </div>
-      <div className={styles.unit}>{stat.unit}</div>
+      <div className={styles.label}>{stat.label}</div>
       <div className={styles.desc}>{stat.desc}</div>
     </div>
   );

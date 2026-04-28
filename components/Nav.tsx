@@ -112,7 +112,9 @@ export default function Nav() {
         <Link href="/case-studies" onClick={() => setMenuOpen(false)}>Case studies</Link>
         <Link href="/pricing" onClick={() => setMenuOpen(false)}>Pricing</Link>
         <a href="#contact" className="link-muted" onClick={() => { setMenuOpen(false); setMobilePlatformOpen(false); }}>Sign in</a>
-        <PilotCTA className="btn btn-primary" onClick={() => { setMenuOpen(false); setMobilePlatformOpen(false); }}>Book a pilot →</PilotCTA>
+        <span onClick={() => { setMenuOpen(false); setMobilePlatformOpen(false); }}>
+          <PilotCTA className="btn btn-primary">Book a pilot →</PilotCTA>
+        </span>
       </nav>
     </header>
   );

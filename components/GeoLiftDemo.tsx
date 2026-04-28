@@ -146,7 +146,7 @@ export default function GeoLiftDemo() {
       </div> */}
 
       <div className="geo-grid">
-        <div style={{ display: 'flex', gap: '12px', height: '210px' }}>
+        <div className='geo-grid-in' style={{  }}>
 
           {/* ── MAP ── */}
           <div style={{ flex: '0 0 46%' }} aria-label="US geo-lift map">
@@ -189,9 +189,33 @@ export default function GeoLiftDemo() {
             </span>
 
             {phase === 'select' ? (
-              <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', color: 'rgba(255,255,255,0.22)', textAlign: 'center', padding: '0 20px' }}>
-                Select test + control markets
-              </div>
+              <svg viewBox={`-10 -8 ${W + 20} ${H + 16}`} style={{ width: '100%', height: '100%' }} preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="rankFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#00FFC2" stopOpacity="0.18" />
+                    <stop offset="100%" stopColor="#00FFC2" stopOpacity="0.02" />
+                  </linearGradient>
+                </defs>
+
+                {/* Baseline and light grid */}
+                <line x1={0} y1={H - 2} x2={W} y2={H - 2} stroke="rgba(255,255,255,0.14)" strokeDasharray="3 3" />
+                <line x1={0} y1={H * 0.66} x2={W} y2={H * 0.66} stroke="rgba(255,255,255,0.08)" strokeDasharray="2 3" />
+                <line x1={0} y1={H * 0.33} x2={W} y2={H * 0.33} stroke="rgba(255,255,255,0.08)" strokeDasharray="2 3" />
+
+                {/* Candidate fit-score curve */}
+                <path d="M0,96 C40,88 72,80 104,72 C136,64 168,58 200,56 C230,54 260,48 320,36" fill="none" stroke="#00FFC2" strokeWidth="2" />
+                <path d="M0,96 C40,88 72,80 104,72 C136,64 168,58 200,56 C230,54 260,48 320,36 L320,120 L0,120 Z" fill="url(#rankFill)" />
+
+                {/* Best candidate marker */}
+                <line x1={268} y1={8} x2={268} y2={120} stroke="rgba(255,179,71,0.55)" strokeDasharray="4 3" />
+                <circle cx={268} cy={46} r={4} fill="#FFB347" />
+
+                {/* Labels */}
+                <text x={8} y={12} fontSize="7.5" fill="rgba(255,255,255,0.42)" fontFamily="JetBrains Mono, monospace">control combinations ranked by fit score</text>
+                <text x={W - 4} y={12} fontSize="8" fill="#FFB347" textAnchor="end" fontFamily="JetBrains Mono, monospace">best candidate: 98.6% match</text>
+                <text x={W - 4} y={24} fontSize="7.5" fill="rgba(255,255,255,0.45)" textAnchor="end" fontFamily="JetBrains Mono, monospace">test city: Chicago (CHI)</text>
+                <text x={8} y={H - 8} fontSize="7" fill="rgba(255,255,255,0.35)" fontFamily="JetBrains Mono, monospace">14 market combinations scored by ML</text>
+              </svg>
             ) : (
               <svg viewBox={`-10 -8 ${W + 20} ${H + 16}`} style={{ width: '100%', height: '100%' }} preserveAspectRatio="none">
                 <defs>

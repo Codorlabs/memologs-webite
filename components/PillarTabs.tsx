@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
 import GeoLiftDemo from './GeoLiftDemo';
 
@@ -14,10 +14,44 @@ const tabs = [
 
 export default function PillarTabs() {
   const [active, setActive] = useState('incr');
+  const [expandedPanels, setExpandedPanels] = useState<Record<string, boolean>>({});
+  const touchStartX = useRef<number | null>(null);
+  const isSwiping = useRef(false);
+
+  function isPanelExpanded(tabId: string) {
+    return Boolean(expandedPanels[tabId]);
+  }
+
+  function togglePanelExpanded(tabId: string) {
+    setExpandedPanels((prev) => ({ ...prev, [tabId]: !prev[tabId] }));
+  }
+
+  function handleTabClick(tabId: string) {
+    if (isSwiping.current) return;
+    setActive(tabId);
+  }
 
   return (
     <div className="pillar-tabs-shell">
-      <div className="pillar-tabs" role="tablist">
+      <div
+        className="pillar-tabs"
+        role="tablist"
+        onTouchStart={(e) => {
+          touchStartX.current = e.touches[0]?.clientX ?? null;
+          isSwiping.current = false;
+        }}
+        onTouchMove={(e) => {
+          if (touchStartX.current === null) return;
+          const dx = Math.abs((e.touches[0]?.clientX ?? touchStartX.current) - touchStartX.current);
+          if (dx > 8) isSwiping.current = true;
+        }}
+        onTouchEnd={() => {
+          touchStartX.current = null;
+          setTimeout(() => {
+            isSwiping.current = false;
+          }, 0);
+        }}
+      >
         {tabs.map(tab => (
           <button
             key={tab.id}
@@ -25,7 +59,7 @@ export default function PillarTabs() {
             data-tab={tab.id}
             role="tab"
             aria-selected={active === tab.id}
-            onClick={() => setActive(tab.id)}
+            onClick={() => handleTabClick(tab.id)}
           >
             <span className="ptab-num">{tab.num}</span>
             <span className="ptab-name">{tab.name}</span>
@@ -40,12 +74,22 @@ export default function PillarTabs() {
           <div className="ppanel-copy">
             <div className="ppanel-tag">01 · Incrementality IQ</div>
             <h3>Prove what actually drove revenue.</h3>
-            <p>Always-on causal experimentation in live markets. Tri-model consensus with <b>GeoTwin™</b> (synthetic control), <b>CausalCore™</b> (Bayesian time-series), and <b>DiffLens™</b> (difference-in-differences) — reconciled into one boardroom-ready verdict with automated placebo validation, so every lift claim is audit-grade.</p>
-            <ul className="ppanel-list">
-              <li><b>Design before you spend.</b> ML picks optimal test &amp; control markets. Statistical power guaranteed before dollar one.</li>
-              <li><b>GeoTwin™ synthetic markets.</b> A weighted blend of control cities that mirrors your test market in real time — then we watch the gap.</li>
-              <li><b>CausalCore™ validation.</b> Counterfactual model runs in parallel on non-campaign windows. If phantom lift appears there, we catch it.</li>
-            </ul>
+            <div className={`ppanel-readmore${isPanelExpanded('incr') ? ' expanded' : ''}`}>
+              <p>Always-on causal experimentation in live markets. Tri-model consensus with <b>GeoTwin™</b> (synthetic control), <b>CausalCore™</b> (Bayesian time-series), and <b>DiffLens™</b> (difference-in-differences) — reconciled into one boardroom-ready verdict with automated placebo validation, so every lift claim is audit-grade.</p>
+              <ul className="ppanel-list">
+                <li><b>Design before you spend.</b> ML picks optimal test &amp; control markets. Statistical power guaranteed before dollar one.</li>
+                <li><b>GeoTwin™ synthetic markets.</b> A weighted blend of control cities that mirrors your test market in real time — then we watch the gap.</li>
+                <li><b>CausalCore™ validation.</b> Counterfactual model runs in parallel on non-campaign windows. If phantom lift appears there, we catch it.</li>
+              </ul>
+            </div>
+            <button
+              type="button"
+              className="ppanel-readmore-btn"
+              aria-expanded={isPanelExpanded('incr')}
+              onClick={() => togglePanelExpanded('incr')}
+            >
+              {isPanelExpanded('incr') ? 'Read less' : 'Read more'}
+            </button><br></br>
             <Link className="learn-more" href="/incrementality-iq">See the methodology →</Link>
           </div>
           <div className="ppanel-demo">
@@ -62,12 +106,22 @@ export default function PillarTabs() {
           <div className="ppanel-copy">
             <div className="ppanel-tag">02 · Creative IQ</div>
             <h3>Know when your creative dies — before the metrics do.</h3>
-            <p>7-signal fatigue detection at the asset level. Meta Andromeda entity-ID clustering. AI refresh recommendations with predicted replacement performance.</p>
-            <ul className="ppanel-list">
-              <li><b>11–18 days earlier.</b> Teams using Creative IQ spot fatigue before CPA reveals it.</li>
-              <li><b>Asset-level visibility.</b> We flag the specific hook, the specific frame, the specific caption — not just &ldquo;campaign is tired.&rdquo;</li>
-              <li><b>Refresh playbook.</b> The AI queues variants weighted by what worked in analogous fatigue cycles.</li>
-            </ul>
+            <div className={`ppanel-readmore${isPanelExpanded('creative') ? ' expanded' : ''}`}>
+              <p>7-signal fatigue detection at the asset level. Meta Andromeda entity-ID clustering. AI refresh recommendations with predicted replacement performance.</p>
+              <ul className="ppanel-list">
+                <li><b>11–18 days earlier.</b> Teams using Creative IQ spot fatigue before CPA reveals it.</li>
+                <li><b>Asset-level visibility.</b> We flag the specific hook, the specific frame, the specific caption — not just &ldquo;campaign is tired.&rdquo;</li>
+                <li><b>Refresh playbook.</b> The AI queues variants weighted by what worked in analogous fatigue cycles.</li>
+              </ul>
+            </div>
+            <button
+              type="button"
+              className="ppanel-readmore-btn"
+              aria-expanded={isPanelExpanded('creative')}
+              onClick={() => togglePanelExpanded('creative')}
+            >
+              {isPanelExpanded('creative') ? 'Read less' : 'Read more'}
+            </button><br></br>
             <Link className="learn-more" href="/creative-iq">See fatigue signals →</Link>
           </div>
           <div className="ppanel-demo">
@@ -102,19 +156,19 @@ export default function PillarTabs() {
                     <span className="cs-card-refresh">Refresh now →</span>
                   </div>
                 </div>
-                <span className="cs-orb cs-orb-ctr" style={{"--t":"-8%","--l":"54%"} as React.CSSProperties}>
+                <span className="cs-orb cs-orb-ctr" >
                   <span className="cs-orb-val">−38%</span>
                   <span className="cs-orb-lab">CTR decay</span>
                 </span>
-                <span className="cs-orb cs-orb-freq" style={{"--t":"14%","--l":"92%"} as React.CSSProperties}>
+                <span className="cs-orb cs-orb-freq" >
                   <span className="cs-orb-val">11.2×</span>
                   <span className="cs-orb-lab">Frequency</span>
                 </span>
-                <span className="cs-orb cs-orb-cpa" style={{"--t":"66%","--l":"96%"} as React.CSSProperties}>
+                <span className="cs-orb cs-orb-cpa" >
                   <span className="cs-orb-val">+27%</span>
                   <span className="cs-orb-lab">CPA drift</span>
                 </span>
-                <span className="cs-orb cs-orb-over" style={{"--t":"86%","--l":"10%"} as React.CSSProperties}>
+                <span className="cs-orb cs-orb-over">
                   <span className="cs-orb-val">64%</span>
                   <span className="cs-orb-lab">Overlap</span>
                 </span>
@@ -139,12 +193,22 @@ export default function PillarTabs() {
           <div className="ppanel-copy">
             <div className="ppanel-tag">03 · Audience IQ</div>
             <h3>Find the customers who actually convert.</h3>
-            <p>First-party data enrichment. Six AI agents working in parallel. Cross-platform audience sync in real time — no CSVs, no lag.</p>
-            <ul className="ppanel-list">
-              <li><b>Enrichment beyond lookalike.</b> Append demographics, psychographics, and purchase-intent to your first-party data.</li>
-              <li><b>Six agents, always running.</b> Prospecting · retargeting · lookalike expansion · suppression · bid management · creative matching.</li>
-              <li><b>Cross-platform sync.</b> Optimized audiences pushed to Meta, Google, TikTok instantly.</li>
-            </ul>
+            <div className={`ppanel-readmore${isPanelExpanded('audience') ? ' expanded' : ''}`}>
+              <p>First-party data enrichment. Six AI agents working in parallel. Cross-platform audience sync in real time — no CSVs, no lag.</p>
+              <ul className="ppanel-list">
+                <li><b>Enrichment beyond lookalike.</b> Append demographics, psychographics, and purchase-intent to your first-party data.</li>
+                <li><b>Six agents, always running.</b> Prospecting · retargeting · lookalike expansion · suppression · bid management · creative matching.</li>
+                <li><b>Cross-platform sync.</b> Optimized audiences pushed to Meta, Google, TikTok instantly.</li>
+              </ul>
+            </div>
+            <button
+              type="button"
+              className="ppanel-readmore-btn"
+              aria-expanded={isPanelExpanded('audience')}
+              onClick={() => togglePanelExpanded('audience')}
+            >
+              {isPanelExpanded('audience') ? 'Read less' : 'Read more'}
+            </button><br></br>
             <Link className="learn-more" href="/audience-iq">Meet the six agents →</Link>
           </div>
           <div className="ppanel-demo">
@@ -240,12 +304,22 @@ export default function PillarTabs() {
           <div className="ppanel-copy">
             <div className="ppanel-tag">04 · AI Co-Pilot</div>
             <h3>Ask your data anything.<br />Act on everything.</h3>
-            <p>Conversational Q&amp;A across every signal in your stack. Proactive alerts surface issues before they become problems. One-click board-ready reports.</p>
-            <ul className="ppanel-list">
-              <li><b>Answer, not query.</b> Ask &ldquo;Why did CPA spike on Tuesday?&rdquo; — get the reason, not the filter combinations to find it.</li>
-              <li><b>Proactive by default.</b> Creative fatigue, budget waste, audience saturation — the Co-Pilot flags them first.</li>
-              <li><b>Board-ready in one click.</b> Monthly performance reports generated automatically. No analyst hours.</li>
-            </ul>
+            <div className={`ppanel-readmore${isPanelExpanded('copilot') ? ' expanded' : ''}`}>
+              <p>Conversational Q&amp;A across every signal in your stack. Proactive alerts surface issues before they become problems. One-click board-ready reports.</p>
+              <ul className="ppanel-list">
+                <li><b>Answer, not query.</b> Ask &ldquo;Why did CPA spike on Tuesday?&rdquo; — get the reason, not the filter combinations to find it.</li>
+                <li><b>Proactive by default.</b> Creative fatigue, budget waste, audience saturation — the Co-Pilot flags them first.</li>
+                <li><b>Board-ready in one click.</b> Monthly performance reports generated automatically. No analyst hours.</li>
+              </ul>
+            </div>
+            <button
+              type="button"
+              className="ppanel-readmore-btn"
+              aria-expanded={isPanelExpanded('copilot')}
+              onClick={() => togglePanelExpanded('copilot')}
+            >
+              {isPanelExpanded('copilot') ? 'Read less' : 'Read more'}
+            </button><br></br>
             <Link className="learn-more" href="/copilot">Try example prompts →</Link>
           </div>
           <div className="ppanel-demo">
@@ -280,12 +354,22 @@ export default function PillarTabs() {
           <div className="ppanel-copy">
             <div className="ppanel-tag">05 · Memory IQ</div>
             <h3>Stop paying for the same<br />mistake twice.</h3>
-            <p>Every strategic decision logged with context, hypothesis, action, and outcome. Memory IQ pattern-matches new decisions against historical outcomes — and warns you before you walk into a wall you&apos;ve already hit.</p>
-            <ul className="ppanel-list">
-              <li><b>The Decision Loop.</b> Context → Hypothesis → Action → Outcome → Memory. Tribal knowledge becomes infrastructure.</li>
-              <li><b>Pattern warnings.</b> &ldquo;3 of the last 4 times we scaled paid social above $800K in Oct, branded search efficiency dropped. Suggest $650K cap.&rdquo;</li>
-              <li><b>Survives turnover.</b> Average marketing team loses 30–40% of institutional knowledge when a senior hire leaves. Not with Memory IQ.</li>
-            </ul>
+            <div className={`ppanel-readmore${isPanelExpanded('memory') ? ' expanded' : ''}`}>
+              <p>Every strategic decision logged with context, hypothesis, action, and outcome. Memory IQ pattern-matches new decisions against historical outcomes — and warns you before you walk into a wall you&apos;ve already hit.</p>
+              <ul className="ppanel-list">
+                <li><b>The Decision Loop.</b> Context → Hypothesis → Action → Outcome → Memory. Tribal knowledge becomes infrastructure.</li>
+                <li><b>Pattern warnings.</b> &ldquo;3 of the last 4 times we scaled paid social above $800K in Oct, branded search efficiency dropped. Suggest $650K cap.&rdquo;</li>
+                <li><b>Survives turnover.</b> Average marketing team loses 30–40% of institutional knowledge when a senior hire leaves. Not with Memory IQ.</li>
+              </ul>
+            </div>
+            <button
+              type="button"
+              className="ppanel-readmore-btn"
+              aria-expanded={isPanelExpanded('memory')}
+              onClick={() => togglePanelExpanded('memory')}
+            >
+              {isPanelExpanded('memory') ? 'Read less' : 'Read more'}
+            </button><br></br>
             <Link className="learn-more" href="/memory-iq">Inside the decision log →</Link>
           </div>
           <div className="ppanel-demo">

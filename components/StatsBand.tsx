@@ -83,8 +83,8 @@ export default function StatsBand() {
     <div className="metrics-band" ref={ref}>
       <div className="wrap">
         <div className="mb-head">
-          <h2 className="mb-title">The numbers behind the platform.</h2>
-          <p className='mb-sub'>Measured across $300M+ in managed media — real pilots, real lift.</p>
+          <h2 className="display">The numbers behind the platform.</h2>
+          <p className='lede'>Measured across $300M+ in managed media — real pilots, real lift.</p>
         </div>
         <div className={styles.wrap}>
           {STATS.map((s, i) => (

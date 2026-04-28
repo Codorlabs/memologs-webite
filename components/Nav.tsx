@@ -6,9 +6,10 @@ import PilotCTA from "@/components/PilotCTA";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobilePlatformOpen, setMobilePlatformOpen] = useState(false);
 
   return (
-    <header className="nav">
+    <header className={`nav ${menuOpen ? "is-open" : ""}`}>
       <div className="nav-inner">
         <Link href="/" className="brand" aria-label="MemoLogs home">
           {/* <svg className="brand-mark" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -32,6 +33,22 @@ export default function Nav() {
             MemoLogs<span className="dot-accent">.</span>
           </span>
         </Link>
+
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          onClick={() => {
+            const next = !menuOpen;
+            setMenuOpen(next);
+            if (!next) setMobilePlatformOpen(false);
+          }}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
         <nav className="nav-links">
           <div className="nav-item has-dropdown">
@@ -74,6 +91,29 @@ export default function Nav() {
           <PilotCTA className="btn btn-primary">Book a pilot →</PilotCTA>
         </div>
       </div>
+
+      <nav className={`nav-mobile ${menuOpen ? "is-open" : ""}`} aria-hidden={!menuOpen}>
+        <button
+          type="button"
+          className={`nav-mobile-parent ${mobilePlatformOpen ? "is-open" : ""}`}
+          aria-expanded={mobilePlatformOpen}
+          onClick={() => setMobilePlatformOpen((prev) => !prev)}
+        >
+          Platform <span className="caret">▾</span>
+        </button>
+        <div className={`nav-mobile-sub ${mobilePlatformOpen ? "is-open" : ""}`}>
+          <Link href="/incrementality-iq" onClick={() => { setMenuOpen(false); setMobilePlatformOpen(false); }}>Incrementality IQ</Link>
+          <Link href="/creative-iq" onClick={() => { setMenuOpen(false); setMobilePlatformOpen(false); }}>Creative IQ</Link>
+          <Link href="/audience-iq" onClick={() => { setMenuOpen(false); setMobilePlatformOpen(false); }}>Audience IQ</Link>
+          <Link href="/copilot" onClick={() => { setMenuOpen(false); setMobilePlatformOpen(false); }}>AI Co-Pilot</Link>
+          <Link href="/memory-iq" onClick={() => { setMenuOpen(false); setMobilePlatformOpen(false); }}>Memory IQ</Link>
+        </div>
+        <Link href="/how-it-works" onClick={() => setMenuOpen(false)}>How it works</Link>
+        <Link href="/case-studies" onClick={() => setMenuOpen(false)}>Case studies</Link>
+        <Link href="/pricing" onClick={() => setMenuOpen(false)}>Pricing</Link>
+        <a href="#contact" className="link-muted" onClick={() => { setMenuOpen(false); setMobilePlatformOpen(false); }}>Sign in</a>
+        <PilotCTA className="btn btn-primary" onClick={() => { setMenuOpen(false); setMobilePlatformOpen(false); }}>Book a pilot →</PilotCTA>
+      </nav>
     </header>
   );
 }

@@ -118,29 +118,79 @@ export default function HeroCarousel() {
           <span className="hc-tag">What the platform actually does</span>
         </div>
         <div className="hc-body verbs">
-          <div className="verb-row">
-            <span className="verb-word">Measures</span>
-            <span className="verb-obj">causality</span>
-            <span className="verb-prod">Incrementality IQ</span>
-          </div>
-          <div className="verb-row">
-            <span className="verb-word">Fixes</span>
-            <span className="verb-obj">creative</span>
-            <span className="verb-prod">Creative IQ</span>
-          </div>
-          <div className="verb-row">
-            <span className="verb-word">Targets</span>
-            <span className="verb-obj">buyers</span>
-            <span className="verb-prod">Audience IQ</span>
-          </div>
-          <div className="verb-row verb-row-accent">
-            <span className="verb-word">Remembers</span>
-            <span className="verb-obj"><em>why</em> it all worked</span>
-            <span className="verb-prod">Memory IQ</span>
+          <div className="verb-grid">
+            <div className="verb-card">
+              <div className="verb-glyph" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
+                  <rect x="6" y="16" width="5" height="12" rx="1" opacity="0.55" />
+                  <rect x="21" y="6" width="5" height="22" rx="1" fill="currentColor" stroke="none" />
+                  <path d="M13 11 L19 7" />
+                  <path d="M16.5 7 L19 7 L19 9.5" />
+                </svg>
+              </div>
+              <div className="verb-card-body">
+                <span className="verb-word">Measures</span>
+                <span className="verb-obj">causality</span>
+              </div>
+              <span className="verb-prod">Incrementality IQ</span>
+            </div>
+
+            <div className="verb-card">
+              <div className="verb-glyph" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
+                  <path d="M4 11 Q9 9 14 13 T26 22" />
+                  <line x1="22" y1="11" x2="22" y2="18" strokeDasharray="1.5 2" opacity="0.6" />
+                  <circle cx="22" cy="21" r="2.5" fill="currentColor" stroke="none" />
+                </svg>
+              </div>
+              <div className="verb-card-body">
+                <span className="verb-word">Catches</span>
+                <span className="verb-obj">creative fatigue</span>
+              </div>
+              <span className="verb-prod">Creative IQ</span>
+            </div>
+
+            <div className="verb-card">
+              <div className="verb-glyph" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6">
+                  <circle cx="16" cy="16" r="11" opacity="0.4" />
+                  <circle cx="16" cy="16" r="7" opacity="0.75" />
+                  <circle cx="16" cy="16" r="3" fill="currentColor" stroke="none" />
+                  <circle cx="7" cy="10" r="1.6" fill="currentColor" stroke="none" opacity="0.75" />
+                  <circle cx="25" cy="22" r="1.6" fill="currentColor" stroke="none" opacity="0.75" />
+                </svg>
+              </div>
+              <div className="verb-card-body">
+                <span className="verb-word">Grades</span>
+                <span className="verb-obj">buyers</span>
+              </div>
+              <span className="verb-prod">Audience IQ</span>
+            </div>
+
+            <div className="verb-card verb-card-accent">
+              <div className="verb-glyph" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6">
+                  <line x1="8" y1="8" x2="16" y2="16" opacity="0.55" />
+                  <line x1="24" y1="8" x2="16" y2="16" opacity="0.55" />
+                  <line x1="8" y1="24" x2="16" y2="16" opacity="0.55" />
+                  <line x1="24" y1="24" x2="16" y2="16" opacity="0.55" />
+                  <circle cx="16" cy="16" r="4" fill="currentColor" stroke="none" />
+                  <circle cx="8" cy="8" r="2.4" fill="currentColor" stroke="none" opacity="0.85" />
+                  <circle cx="24" cy="8" r="2.4" fill="currentColor" stroke="none" opacity="0.85" />
+                  <circle cx="8" cy="24" r="2.4" fill="currentColor" stroke="none" opacity="0.85" />
+                  <circle cx="24" cy="24" r="2.4" fill="currentColor" stroke="none" opacity="0.85" />
+                </svg>
+              </div>
+              <div className="verb-card-body">
+                <span className="verb-word">Remembers</span>
+                <span className="verb-obj"><em>why</em> it worked</span>
+              </div>
+              <span className="verb-prod">Memory IQ</span>
+            </div>
           </div>
         </div>
         <div className="hc-foot verbs-foot">
-          <div className="verbs-foot-line">The only platform that does all four — and lets each one teach the next.</div>
+          <div className="verbs-foot-line">All four. One memory. Each one teaches the next.</div>
         </div>
       </div>
 

@@ -521,26 +521,57 @@ input, select, textarea { font: inherit; color: inherit; }
 .hc-body.verbs {
   display: flex;
   flex-direction: column;
-  gap: 14px;
   padding: 6px 0;
   min-height: 280px;
   justify-content: center;
 }
-.verb-row {
+.verb-grid {
   display: grid;
-  grid-template-columns: minmax(120px, auto) 1fr auto;
-  align-items: baseline;
-  gap: 14px;
-  padding: 14px 16px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 10px;
-  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
-.verb-row:hover {
+.verb-card {
+  position: relative;
+  padding: 16px 16px 32px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 130px;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+  overflow: hidden;
+}
+.verb-card::before {
+  content: "";
+  position: absolute;
+  top: -40%; right: -30%;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,255,194,0.10), transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.verb-card:hover {
   background: rgba(0,255,194,0.04);
-  border-color: rgba(0,255,194,0.22);
-  transform: translateX(2px);
+  border-color: rgba(0,255,194,0.24);
+  transform: translateY(-2px);
+}
+.verb-card:hover::before { opacity: 1; }
+.verb-glyph {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--teal);
+  background: rgba(0,255,194,0.06);
+  border: 1px solid rgba(0,255,194,0.18);
+  border-radius: 8px;
+}
+.verb-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 .verb-word {
   font-family: var(--serif);
@@ -549,12 +580,14 @@ input, select, textarea { font: inherit; color: inherit; }
   letter-spacing: -0.02em;
   color: #fff;
   font-style: italic;
+  line-height: 1.05;
 }
 .verb-obj {
   font-family: var(--sans);
-  font-size: 16px;
-  color: rgba(255,255,255,0.78);
-  letter-spacing: -0.01em;
+  font-size: 14px;
+  color: rgba(255,255,255,0.72);
+  letter-spacing: -0.005em;
+  line-height: 1.3;
 }
 .verb-obj em {
   font-style: italic;
@@ -562,19 +595,27 @@ input, select, textarea { font: inherit; color: inherit; }
   font-weight: 600;
 }
 .verb-prod {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 9.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.42);
   white-space: nowrap;
 }
-.verb-row-accent {
-  background: rgba(0,255,194,0.07);
-  border-color: rgba(0,255,194,0.32);
+.verb-card-accent {
+  background: linear-gradient(160deg, rgba(0,255,194,0.10), rgba(0,255,194,0.02));
+  border-color: rgba(0,255,194,0.36);
+  box-shadow: 0 14px 36px -14px rgba(0,255,194,0.22);
 }
-.verb-row-accent .verb-word { color: var(--teal); }
-.verb-row-accent .verb-prod { color: rgba(0,255,194,0.8); }
+.verb-card-accent .verb-word { color: var(--teal); }
+.verb-card-accent .verb-prod { color: rgba(0,255,194,0.72); }
+.verb-card-accent .verb-glyph {
+  background: rgba(0,255,194,0.14);
+  border-color: rgba(0,255,194,0.45);
+}
 .verbs-foot {
   padding-top: 18px;
   margin-top: 6px;

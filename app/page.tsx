@@ -22,19 +22,25 @@ export default function Home() {
                 MemoLogs <em>thinks.</em>
               </h1>
               <p className="lede">
-                Causal measurement, creative AI, and audience AI in one platform — with a decision memory that makes every next call smarter. Prove what worked. Kill what didn&apos;t. Compound the rest.
+                Causal measurement, creative AI, and audience AI — held together by a memory that learns from every campaign you&apos;ll ever run. The only platform that <em>measures causality, fixes creative, targets buyers,</em> and remembers <em>why</em> it all worked.
               </p>
               <div className="cta-row">
                 <PilotCTA className="btn btn-primary btn-lg">Start a 90-day pilot</PilotCTA>
                 <a href="#calculator" className="btn btn-ghost btn-lg">See your inflation factor →</a>
               </div>
-              <div className="hero-micro">
-                
-                <span><span className="sep">·</span> Flat fee — never % of spend</span>
-                
-                <span><span className="sep">·</span>Results in week 5, not week 12</span>
-                
-                <span><span className="sep">·</span>Sits alongside your stack</span>
+              <div className="hero-micro hero-micro-imperatives">
+                <span><b>Prove</b> what worked.</span>
+                <span className="sep">·</span>
+                <span><b>Kill</b> what didn&apos;t.</span>
+                <span className="sep">·</span>
+                <span><b>Compound</b> the rest.</span>
+              </div>
+              <div className="hero-micro hero-micro-meta">
+                <span>Flat fee — never % of spend</span>
+                <span className="sep">·</span>
+                <span>Results in week 5, not week 12</span>
+                <span className="sep">·</span>
+                <span>Sits alongside your stack</span>
               </div>
             </div>
             <HeroCarousel />
@@ -149,14 +155,34 @@ export default function Home() {
             </article>
           </div>
 
-          <div className="diag-close">
-            <div className="dclose-rule"></div>
-            <div className="dclose-copy">
-              <span className="dclose-lab">One root cause</span>
-              <p>Four symptoms above. Many more under the hood. Every one is a downstream effect of the same problem: your stack measures <em>clicks</em> and <em>last-touch</em>, not <em>causality</em> and <em>memory</em>. MemoLogs fixes all — by fixing the one.</p>
-              <Link className="dclose-link" href="/how-it-works">See the full diagnostic →</Link>
+          <aside className="diag-close" aria-label="The root cause beneath the symptoms">
+            <div className="dclose-converge" aria-hidden="true">
+              <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="rgba(0,255,194,0.55)" strokeWidth="1.2" fill="none" strokeLinecap="round">
+                  <line x1="6"   y1="10" x2="60" y2="40" />
+                  <line x1="6"   y1="70" x2="60" y2="40" />
+                  <line x1="114" y1="10" x2="60" y2="40" />
+                  <line x1="114" y1="70" x2="60" y2="40" />
+                </g>
+                <g className="dclose-converge-dots">
+                  <circle cx="6"   cy="10" r="2.6" fill="#00FFC2" />
+                  <circle cx="6"   cy="70" r="2.6" fill="#00FFC2" />
+                  <circle cx="114" cy="10" r="2.6" fill="#00FFC2" />
+                  <circle cx="114" cy="70" r="2.6" fill="#00FFC2" />
+                </g>
+                <circle cx="60" cy="40" r="8" fill="#070B16" stroke="#00FFC2" strokeWidth="1.6" />
+                <circle cx="60" cy="40" r="3" fill="#00FFC2" className="dclose-converge-core" />
+              </svg>
             </div>
-          </div>
+            <div className="dclose-eyebrow">
+              <span className="dclose-rule-line"></span>
+              <span className="dclose-lab">One root cause</span>
+              <span className="dclose-rule-line"></span>
+            </div>
+            <p className="dclose-lead">Four symptoms above. Many more under the hood. Every one is a downstream effect of the same problem: your stack measures <em>clicks</em> and <em>last-touch</em>, not <em>causality</em> and <em>memory</em>.</p>
+            <p className="dclose-punch">MemoLogs fixes all — by measuring <em>true causality</em> across every campaign, and locking every lesson into a <em>memory the next one inherits</em>.</p>
+            <Link className="btn btn-ghost btn-lg dclose-cta" href="/how-it-works">See the full diagnostic →</Link>
+          </aside>
         </div>
       </section>
 

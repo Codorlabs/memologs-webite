@@ -16,11 +16,12 @@ export default function Home() {
         <div className="wrap">
           <div className="hero-grid">
             <div className="hero-lead">
-              <div className="eyebrow"><span className="dot"></span> AI Marketing Intelligence Platform</div>
-              <h1 className="display" id="hero-h1">
-                Your stack measures.<br />
-                MemoLogs <em>thinks.</em>
+              <h1 className="display hero-display" id="hero-h1">
+                AI Marketing<br />Intelligence Platform
               </h1>
+              <p className="hero-tagline">
+                MemoLogs <em>thinks.</em> Your stack <em>measures.</em>
+              </p>
               <p className="lede">
                 Causal measurement, creative AI, and audience AI — held together by a memory that learns from every campaign you&apos;ll ever run. The only platform that <em>measures causality, fixes creative, targets buyers,</em> and remembers <em>why</em> it all worked.
               </p>
@@ -154,35 +155,124 @@ export default function Home() {
               </div>
             </article>
           </div>
+        </div>
+      </section>
 
-          <aside className="diag-close" aria-label="The root cause beneath the symptoms">
-            <div className="dclose-converge" aria-hidden="true">
-              <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
-                <g stroke="rgba(0,255,194,0.55)" strokeWidth="1.2" fill="none" strokeLinecap="round">
-                  <line x1="6"   y1="10" x2="60" y2="40" />
-                  <line x1="6"   y1="70" x2="60" y2="40" />
-                  <line x1="114" y1="10" x2="60" y2="40" />
-                  <line x1="114" y1="70" x2="60" y2="40" />
-                </g>
-                <g className="dclose-converge-dots">
-                  <circle cx="6"   cy="10" r="2.6" fill="#00FFC2" />
-                  <circle cx="6"   cy="70" r="2.6" fill="#00FFC2" />
-                  <circle cx="114" cy="10" r="2.6" fill="#00FFC2" />
-                  <circle cx="114" cy="70" r="2.6" fill="#00FFC2" />
-                </g>
-                <circle cx="60" cy="40" r="8" fill="#070B16" stroke="#00FFC2" strokeWidth="1.6" />
-                <circle cx="60" cy="40" r="3" fill="#00FFC2" className="dclose-converge-core" />
-              </svg>
-            </div>
-            <div className="dclose-eyebrow">
-              <span className="dclose-rule-line"></span>
-              <span className="dclose-lab">One root cause</span>
-              <span className="dclose-rule-line"></span>
-            </div>
-            <p className="dclose-lead">Four symptoms above. Many more under the hood. Every one is a downstream effect of the same problem: your stack measures <em>clicks</em> and <em>last-touch</em>, not <em>causality</em> and <em>memory</em>.</p>
-            <p className="dclose-punch">MemoLogs fixes all — by measuring <em>true causality</em> across every campaign, and locking every lesson into a <em>memory the next one inherits</em>.</p>
-            <Link className="btn btn-ghost btn-lg dclose-cta" href="/how-it-works">See the full diagnostic →</Link>
-          </aside>
+      {/* ═══════════ DIAGNOSTIC / ORBIT ═══════════ */}
+      <section className="diag-orbit">
+        <div className="wrap">
+          <div className="mb-head">
+            <h2 className="mb-title">One root cause.</h2>
+          </div>
+
+          <div className="orbit-stage" role="img" aria-label="Eight marketing-stack symptoms orbiting one root cause">
+            <svg className="orbit-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="orbitCore" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%"  stopColor="#00FFC2" stopOpacity="0.95" />
+                  <stop offset="60%" stopColor="#00D4A3" stopOpacity="0.55" />
+                  <stop offset="100%" stopColor="#00FFC2" stopOpacity="0.15" />
+                </radialGradient>
+              </defs>
+
+              {/* Orbit ellipses */}
+              <ellipse cx="400" cy="200" rx="320" ry="130"
+                fill="none" stroke="rgba(0,255,194,0.14)" strokeDasharray="2 6" />
+              <ellipse cx="400" cy="200" rx="260" ry="100"
+                fill="none" stroke="rgba(255,255,255,0.05)" strokeDasharray="2 6" />
+
+              {/* Connector lines (center → symptom) */}
+              <g className="orbit-lines" stroke="rgba(0,255,194,0.32)" strokeWidth="1">
+                <line x1="400" y1="200" x2="400" y2="70" />
+                <line x1="400" y1="200" x2="626" y2="108" />
+                <line x1="400" y1="200" x2="720" y2="200" />
+                <line x1="400" y1="200" x2="626" y2="292" />
+                <line x1="400" y1="200" x2="400" y2="330" />
+                <line x1="400" y1="200" x2="174" y2="292" />
+                <line x1="400" y1="200" x2="80"  y2="200" />
+                <line x1="400" y1="200" x2="174" y2="108" />
+              </g>
+
+              {/* Outward pulses from center along each line */}
+              <g className="orbit-pulses" fill="#00FFC2" aria-hidden="true">
+                <circle r="3" cx="0" cy="0">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" begin="0s"
+                    path="M 400 200 L 400 70" />
+                </circle>
+                <circle r="3" cx="0" cy="0">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.3s"
+                    path="M 400 200 L 626 108" />
+                </circle>
+                <circle r="3" cx="0" cy="0">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.6s"
+                    path="M 400 200 L 720 200" />
+                </circle>
+                <circle r="3" cx="0" cy="0">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.9s"
+                    path="M 400 200 L 626 292" />
+                </circle>
+                <circle r="3" cx="0" cy="0">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.2s"
+                    path="M 400 200 L 400 330" />
+                </circle>
+                <circle r="3" cx="0" cy="0">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.5s"
+                    path="M 400 200 L 174 292" />
+                </circle>
+                <circle r="3" cx="0" cy="0">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.8s"
+                    path="M 400 200 L 80 200" />
+                </circle>
+                <circle r="3" cx="0" cy="0">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" begin="2.1s"
+                    path="M 400 200 L 174 108" />
+                </circle>
+              </g>
+
+              {/* Central core: outer halo + ring + nucleus */}
+              <g className="orbit-core">
+                <circle className="orbit-ripple" cx="400" cy="200" r="26"
+                  fill="none" stroke="#00FFC2" strokeOpacity="0.5" strokeWidth="1.4" />
+                <circle cx="400" cy="200" r="34" fill="url(#orbitCore)" className="orbit-core-glow" />
+                <circle cx="400" cy="200" r="18" fill="none" stroke="#00FFC2" strokeWidth="1.6" />
+                <circle cx="400" cy="200" r="6"  fill="#070B16" stroke="#00FFC2" strokeWidth="1.2" />
+                <circle cx="400" cy="200" r="2.4" fill="#00FFC2" />
+              </g>
+
+              {/* Symptom dots (coral) */}
+              <g className="orbit-dots" fill="#FF6B5B">
+                <circle cx="400" cy="70"  r="5" />
+                <circle cx="626" cy="108" r="5" />
+                <circle cx="720" cy="200" r="5" />
+                <circle cx="626" cy="292" r="5" />
+                <circle cx="400" cy="330" r="5" />
+                <circle cx="174" cy="292" r="5" />
+                <circle cx="80"  cy="200" r="5" />
+                <circle cx="174" cy="108" r="5" />
+              </g>
+
+              {/* Symptom labels */}
+              <g className="orbit-labels" fill="rgba(230,235,255,0.9)"
+                 fontFamily="Inter, system-ui, sans-serif" fontSize="14">
+                <text x="400" y="52"  textAnchor="middle">Creative fatigue blind spot</text>
+                <text x="630" y="90"  textAnchor="middle">MMM 98 days late</text>
+                <text x="734" y="195" textAnchor="start">Walled-garden silos</text>
+                <text x="630" y="314" textAnchor="middle">Last-touch bias</text>
+                <text x="400" y="356" textAnchor="middle">Memory walks with the VP</text>
+                <text x="170" y="314" textAnchor="middle">Audiences fragmenting</text>
+                <text x="66"  y="195" textAnchor="end">Attribution 3–10× inflated</text>
+                <text x="170" y="90"  textAnchor="middle">iOS / cookie signal loss</text>
+              </g>
+            </svg>
+          </div>
+
+          <p className="orbit-headline">
+            MemoLogs fixes all — by measuring <em>true causality</em> across every campaign, and locking every lesson into a <em>memory the next one inherits</em>.
+          </p>
+
+          <p className="orbit-sub">
+            Your stack measures <em>clicks</em> and <em>last-touch</em>, not <em>causality</em> and <em>memory</em>.
+          </p>
         </div>
       </section>
 

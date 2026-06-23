@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+import { analytics } from "@/lib/analytics";
 
 export default function WaitlistModal({ isOpen, onClose }) {
   const [firstName, setFirstName] = useState("");
@@ -9,6 +10,7 @@ export default function WaitlistModal({ isOpen, onClose }) {
   const [organization, setOrganization] = useState("");
   const [website, setWebsite] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -42,6 +44,9 @@ export default function WaitlistModal({ isOpen, onClose }) {
         formData.append("website", website.trim());
       }
       formData.append("email", email);
+      if (phone.trim()) {
+        formData.append("phone", phone.trim());
+      }
 
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/accounts/lead`,
@@ -49,12 +54,18 @@ export default function WaitlistModal({ isOpen, onClose }) {
       );
       
       if (response.data?.ok && response.data?.data?.message) {
+        analytics.track(
+          "CompleteRegistration",
+          { contentName: "Waitlist", organization },
+          { email, phone, firstName, lastName }
+        );
         setSuccessMessage(response.data.data.message);
         setFirstName("");
         setLastName("");
         setOrganization("");
         setWebsite("");
         setEmail("");
+        setPhone("");
         // Close modal after 3 seconds
         setTimeout(() => {
           onClose();
@@ -82,6 +93,7 @@ export default function WaitlistModal({ isOpen, onClose }) {
         setOrganization("");
         setWebsite("");
         setEmail("");
+        setPhone("");
         setTimeout(() => {
           onClose();
           setSuccessMessage("");
@@ -238,6 +250,27 @@ export default function WaitlistModal({ isOpen, onClose }) {
                 placeholder="your@email.com"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-navy"
                 required
+                disabled={isLoading}
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="phone"
+                className="block text-sm font-semibold text-navy mb-2"
+              >
+                Phone (Optional)
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                value={phone}
+                onChange={(e) => {
+                  setPhone(e.target.value);
+                  setErrorMessage("");
+                }}
+                placeholder="+1 555 123 4567"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-navy"
                 disabled={isLoading}
               />
             </div>

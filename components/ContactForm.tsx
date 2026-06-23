@@ -2,11 +2,13 @@
 
 import { useState } from 'react';
 import { submitLead } from '@/lib/submitLead';
+import { analytics } from '@/lib/analytics';
 
 export default function ContactForm() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [company, setCompany] = useState('');
   const [spend, setSpend] = useState('');
   const [broken, setBroken] = useState('');
@@ -23,6 +25,7 @@ export default function ContactForm() {
       firstName,
       lastName,
       email,
+      phone,
       organization: company,
       spend,
       message: broken,
@@ -30,6 +33,11 @@ export default function ContactForm() {
 
     setIsLoading(false);
     if (result.ok) {
+      analytics.track(
+        'Lead',
+        { contentName: 'Contact Form — Book a Call', currency: 'USD', spend },
+        { email, phone, firstName, lastName },
+      );
       setSubmitted(true);
     } else {
       setErrorMessage(result.error || 'Failed to submit. Please try again.');
@@ -87,6 +95,19 @@ export default function ContactForm() {
             placeholder="you@company.com"
             required
             autoComplete="email"
+            disabled={isLoading}
+          />
+        </label>
+
+        <label>
+          <span>Phone <em>(optional)</em></span>
+          <input
+            type="tel"
+            name="phone"
+            value={phone}
+            onChange={(e) => { setPhone(e.target.value); setErrorMessage(''); }}
+            placeholder="+1 555 123 4567"
+            autoComplete="tel"
             disabled={isLoading}
           />
         </label>

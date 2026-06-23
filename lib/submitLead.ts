@@ -4,6 +4,7 @@ export type LeadInput = {
   firstName: string;
   lastName: string;
   email: string;
+  phone?: string;
   organization?: string;
   website?: string;
   spend?: string;
@@ -24,6 +25,7 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
   formData.append('first_name', input.firstName.trim());
   formData.append('last_name', input.lastName.trim());
   formData.append('email', input.email);
+  if (input.phone?.trim()) formData.append('phone', input.phone.trim());
   if (input.organization?.trim()) formData.append('organization', input.organization.trim());
   if (input.website?.trim()) formData.append('website', input.website.trim());
   if (input.spend) formData.append('spend', input.spend);

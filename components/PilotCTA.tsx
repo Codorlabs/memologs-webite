@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { submitLead } from '@/lib/submitLead';
 
 type Props = {
@@ -76,15 +77,14 @@ export default function PilotCTA({
     }
   }
 
-  return (
-    <>
-      <button type="button" className={className} onClick={() => setOpen(true)}>
-        {children}
-      </button>
-
-      {open && (
-        <div className="pm-overlay" onClick={close} role="dialog" aria-modal="true" aria-label={modalTitle}>
-          <div className="pm-dialog" onClick={(e) => e.stopPropagation()}>
+  // Portal the modal to document.body so the fixed-position overlay
+  // always covers the full viewport — never trapped inside a card's
+  // stacking context (transform / overflow / etc).
+  const modal =
+    open && typeof document !== 'undefined'
+      ? createPortal(
+          <div className="pm-overlay" onClick={close} role="dialog" aria-modal="true" aria-label={modalTitle}>
+            <div className="pm-dialog" onClick={(e) => e.stopPropagation()}>
             <button type="button" className="pm-close" onClick={close} aria-label="Close">×</button>
 
             {submitted ? (
@@ -195,8 +195,17 @@ export default function PilotCTA({
               </>
             )}
           </div>
-        </div>
-      )}
+        </div>,
+        document.body,
+      )
+      : null;
+
+  return (
+    <>
+      <button type="button" className={className} onClick={() => setOpen(true)}>
+        {children}
+      </button>
+      {modal}
     </>
   );
 }

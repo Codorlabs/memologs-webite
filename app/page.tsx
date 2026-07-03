@@ -512,7 +512,7 @@ export default function Home() {
                     </g>
                   </svg>
 
-                  <p><b>Your data stays yours.</b> SOC 2 compliant. No re-sold signals.</p>
+                  <p><b>Your data stays yours.</b>No re-sold signals.</p>
                 </div>
               </div>
             </div>

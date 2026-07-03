@@ -6547,19 +6547,24 @@
   0%, 100% { opacity: 1; transform: scale(1); }
   50%      { opacity: 0.55; transform: scale(1.35); }
 }
-.cq-hero-h1 {
+.cq-hero-h1,
+.cq-hero-lead h1.cq-hero-h1 {
   font-family: 'Inter', sans-serif;
   font-weight: 800;
   font-size: clamp(38px, 5.5vw, 68px);
-  line-height: 1.02;
+  line-height: 1.15;              /* was 1.02 — too tight; italic "p" in loop clipped */
   letter-spacing: -0.03em;
   color: var(--ink);
   margin: 0 0 20px;
+  padding-bottom: 0.06em;         /* extra room for gradient-text descenders */
 }
 .cq-hero-h1 .accent {
   background: linear-gradient(90deg, var(--teal), #C8B8FF, #FFB347);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   font-style: italic;
+  display: inline-block;
+  padding-bottom: 0.05em;         /* italic descender room */
+  line-height: 1.2;
 }
 .cq-hero-sub {
   font-size: 17px;
@@ -8790,3 +8795,155 @@
   border-color: rgba(184,166,255,0.20);
 }
 .cq-pf.cq-pf-roadmap:hover { border-color: rgba(184,166,255,0.35); }
+
+/* ═══════════════════════════════════════════════════════════════
+   Creative IQ page — comprehensive mobile responsive overrides
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Hero can grow tall enough — background blobs stay clipped via
+   the ::before/::after positioning, not overflow:hidden. */
+.cq-hero-v2 { overflow: visible !important; }
+.cq-hero-v2::before, .cq-hero-v2::after {
+  z-index: 0;
+  /* keep the drift blobs behind everything */
+}
+/* Prevent any accidental text truncation on the hero sub */
+.cq-hero-sub { max-width: 640px; }
+.cq-hero-lead { min-width: 0; }
+
+@media (max-width: 980px) {
+  /* Hero: stack cleanly, shrink type + product frame */
+  .cq-hero-v2 { padding: 56px 0 68px !important; }
+  .cq-hero-layout { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .cq-hero-h1 { font-size: clamp(30px, 8vw, 44px) !important; }
+  .cq-hero-sub { font-size: 15.5px !important; line-height: 1.55 !important; max-width: none !important; }
+  .cq-hero-pillars { grid-template-columns: 1fr 1fr !important; max-width: none !important; }
+  .cq-hero-frame { transform: none !important; max-width: 560px; margin: 0 auto !important; }
+  .cq-hero-frame:hover { transform: none !important; }
+  .cq-hero-statband { grid-template-columns: 1fr 1fr !important; gap: 12px !important; padding: 18px 20px !important; }
+  .cq-hero-statband .cq-stat-tile:nth-child(3) { grid-column: 1 / -1; border-left: 0 !important; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 16px !important; padding-left: 4px !important; margin-top: 4px !important; }
+  .cq-hero-frame .cq-hero-mini-ring { display: none; }
+  .cq-hero-frame .cq-today-row { grid-template-columns: 44px 1fr auto !important; gap: 10px !important; }
+  .cq-hero-tags { display: none; }
+  .cq-hero-frame-ready { padding: 8px 10px !important; }
+  .cq-hero-frame-ready .cq-hero-ready-body { min-width: 0; }
+  .cq-hero-frame-ready .cq-hero-ready-body em { display: none; }
+  .cq-hero-frame-ready .cq-hero-ready-parts { display: none; }
+}
+
+@media (max-width: 640px) {
+  /* Hero even tighter */
+  .cq-hero-v2 { padding: 44px 0 56px !important; }
+  .cq-hero-h1 { font-size: 28px !important; letter-spacing: -0.02em !important; }
+  .cq-hero-sub { font-size: 14.5px !important; }
+  .cq-hero-pillars { grid-template-columns: 1fr !important; }
+  .cq-hero-eyebrow { font-size: 10px !important; padding: 4px 10px !important; }
+  .cq-hero-statband { grid-template-columns: 1fr !important; padding: 14px 16px !important; }
+  .cq-hero-statband .cq-stat-tile { grid-template-columns: 44px 1fr !important; gap: 12px !important; padding: 6px 2px !important; }
+  .cq-hero-statband .cq-stat-tile + .cq-stat-tile { border-left: 0 !important; border-top: 1px solid rgba(255,255,255,0.06); padding-left: 2px !important; padding-top: 14px !important; margin-top: 4px !important; }
+  .cq-hero-statband .cq-stat-ico { width: 44px !important; height: 44px !important; }
+  .cq-hero-statband .cq-stat-ico svg { width: 22px !important; height: 22px !important; }
+  .cq-hero-statband .cq-stat-body b { font-size: 24px !important; margin-bottom: 3px !important; }
+  .cq-hero-statband .cq-stat-body em { font-size: 10px !important; }
+  .iq-cta-row { flex-direction: column; align-items: stretch !important; gap: 8px !important; }
+  .cq-hero-v2 .iq-cta-row .btn.btn-lg { padding: 12px 16px !important; font-size: 13px !important; text-align: center; }
+
+  /* Product frame — drastically simpler on phone */
+  .cq-hero-frame { max-width: 100%; border-radius: 14px !important; }
+  .cq-hero-frame-body { padding: 10px !important; }
+  .cq-hero-frame .cq-today-filters { padding: 6px 8px !important; flex-wrap: wrap !important; gap: 8px !important; }
+  .cq-hero-frame .cq-today-fgroup { flex-wrap: wrap; }
+  .cq-hero-frame .cq-today-pills .cq-today-pill { font-size: 9.5px !important; padding: 3px 7px !important; }
+  .cq-hero-frame .cq-today-row { grid-template-columns: 42px 1fr 32px !important; padding: 10px !important; gap: 8px !important; }
+  .cq-hero-frame .cq-today-viz { width: 42px !important; height: 56px !important; }
+  .cq-hero-frame .cq-today-viz .cq-today-thumb { width: 42px !important; height: 56px !important; }
+  .cq-hero-frame .cq-today-body b { font-size: 12px !important; -webkit-line-clamp: 2 !important; }
+  .cq-hero-frame .cq-today-cta .btn { padding: 5px 8px !important; font-size: 10.5px !important; }
+  .cq-hero-frame-ready { padding: 6px 10px !important; gap: 8px !important; }
+  .cq-hero-frame-ready .cq-hero-ready-ring { width: 30px !important; height: 30px !important; }
+  .cq-hero-frame-ready .cq-hero-ready-body .val { font-size: 11.5px !important; }
+  .cq-hero-frame-ready .cq-hero-ready-body .kicker { font-size: 8px !important; }
+  .cq-hero-aibrief { padding: 4px 9px !important; font-size: 9.5px !important; }
+  .cq-hero-aibrief svg { width: 10px !important; height: 10px !important; }
+
+  /* Marquee — same but tighter */
+  .cq-marquee { padding: 20px 0 !important; }
+  .cq-marquee-lab { font-size: 9.5px !important; letter-spacing: 0.16em !important; padding: 0 20px; }
+  .cq-marquee-item { font-size: 16px !important; }
+
+  /* Foreplay creative library grid — 2 up on mobile so cards stay square */
+  .cq-foreplay { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+  .cq-fp-mock .cq-mock-copy { font-size: 13px !important; }
+  .cq-fp-mock .cq-mock-brand { font-size: 8px !important; padding: 3px 6px !important; }
+  .cq-fp-mock .cq-mock-badge { font-size: 8px !important; padding: 3px 6px !important; }
+  .cq-fp-mock .cq-fp-meta b { font-size: 11px !important; }
+  .cq-fp-mock .cq-fp-meta-row { font-size: 9.5px !important; }
+
+  /* Section paddings tighter */
+  .sp-section { padding: 44px 0 !important; }
+  .sp-section .wrap { padding: 0 20px !important; }
+  .section-title { font-size: clamp(26px, 7vw, 36px) !important; }
+
+  /* Lag chart — hide the wide SVG, scale it */
+  .cq-lag-chart { padding: 16px !important; }
+  .cq-lag-svg { height: 200px !important; }
+  .cq-lag-head { flex-direction: column; align-items: flex-start !important; gap: 10px !important; }
+  .cq-lag-legend { flex-wrap: wrap; }
+  .cq-lag-meta { flex-direction: column; align-items: flex-start !important; gap: 6px !important; }
+
+  /* Readiness section — stack score + parts */
+  .cq-readiness-hero-v2 { grid-template-columns: 1fr !important; padding: 24px 20px !important; gap: 24px !important; text-align: center; }
+  .cq-readiness-hero-v2 .cq-ring-big { justify-self: center !important; width: 200px !important; height: 200px !important; }
+  .cq-readiness-hero-v2 .cq-readiness-bands { justify-content: center; }
+  .cq-readiness-strip { grid-template-columns: 1fr !important; }
+  .cq-readiness-strip .cq-partv2 { min-height: auto !important; }
+  .cq-partv2 { padding: 18px !important; }
+
+  /* 9-signal hub — narrower aspect ratio, hide some satellite tiles */
+  .cq-signals-hub { aspect-ratio: 3 / 4 !important; max-width: 380px !important; }
+  .cq-hub-orb { width: 88px !important; height: 88px !important; }
+  .cq-hub-face.back .num { font-size: 30px !important; }
+  .cq-hub-face.front .mark { width: 24px !important; height: 24px !important; }
+  .cq-hub-sat { min-width: 66px !important; padding: 5px 7px !important; gap: 3px !important; }
+  .cq-hub-sat .ico { width: 22px !important; height: 22px !important; }
+  .cq-hub-sat .ico svg { width: 12px !important; height: 12px !important; }
+  .cq-hub-sat b { font-size: 8px !important; letter-spacing: -0.005em !important; }
+
+  /* Ad detail dash-body */
+  .cq-dash-body { padding: 0 !important; }
+  .cq-detail-head { grid-template-columns: 44px 1fr !important; padding: 14px 16px !important; }
+  .cq-detail-status { grid-column: 1 / -1 !important; align-items: flex-start !important; }
+  .cq-detail-title b { font-size: 14px !important; }
+  .cq-detail-crumbs span { grid-template-columns: 70px 1fr !important; font-size: 11px !important; }
+  .cq-breakdown { padding: 16px !important; }
+  .cq-breakdown-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  .cq-grain { padding: 10px !important; }
+  .cq-grain b { font-size: 15px !important; }
+  .cq-grain em { font-size: 9.5px !important; }
+  .cq-tagstrip { padding: 0 16px 16px !important; gap: 6px !important; }
+  .cq-tag { font-size: 10.5px !important; padding: 3px 8px 3px 6px !important; }
+
+  /* Gap map — stack controls + shrink cells */
+  .cq-gap { grid-template-columns: 1fr !important; gap: 14px !important; }
+  .cq-gap-controls { flex-direction: row !important; flex-wrap: wrap; gap: 12px !important; }
+  .cq-gap-map { grid-template-columns: 80px repeat(4, 1fr) !important; padding: 10px !important; }
+  .cq-gap-xlab, .cq-gap-ylab { font-size: 9px !important; }
+  .cq-gap-cell .ct { font-size: 10.5px !important; }
+  .cq-gap-cell em { font-size: 8.5px !important; }
+
+  /* AI brief fuse — stack */
+  .cq-brief-fuse { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .cq-brief-orb-wrap::before, .cq-brief-orb-wrap::after { display: none !important; }
+  .cq-brief-out-fields { grid-template-columns: 1fr !important; }
+
+  /* Platform coverage — single column stack */
+  .cq-platforms { grid-template-columns: 1fr !important; }
+  .cq-pf { padding: 20px 20px 18px !important; }
+  .cq-pf-name { font-size: 17px !important; }
+  .cq-pf-list li { font-size: 12px !important; padding: 6px 10px 6px 26px !important; }
+
+  /* Close section */
+  .sp-cta-inline { flex-direction: column !important; text-align: center; gap: 18px !important; }
+  .sp-quote p { font-size: 15px !important; }
+  .sp-nav-next { flex-direction: column; gap: 8px !important; }
+}

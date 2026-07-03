@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PilotCTA from "@/components/PilotCTA";
+import ReadinessRing from "@/components/ReadinessRing";
 
 export const metadata: Metadata = {
   title: "Creative IQ — Closed-loop creative decision OS | MemoLogs",
@@ -12,249 +13,170 @@ export const metadata: Metadata = {
 
 export default function CreativeIQPage() {
   return (
-    <>
-      {/* ═══════════════════ HERO — MotionApp gradient + big product frame ═══════════════════ */}
-      <section className="subpage-hero cq-hero-v2" aria-labelledby="cq-h1">
-        <div className="wrap">
-          <div className="sp-breadcrumb"><Link href="/">Platform</Link> <span>›</span> Creative IQ</div>
+    <div className="cq-iq-page">
+      {/* ═══════════════════ HERO — 1a "Bone & Ink" cream, color-block creative ═══════════════════ */}
+      <section className="cq-hero-1a" aria-labelledby="cq-h1" style={{ background: "#F5F4EF", color: "#16181C" }}>
+        <div style={{ maxWidth: 1440, margin: "0 auto", padding: "72px 56px 96px" }}>
+          <div style={{ fontSize: 13, color: "#8A8D93", marginBottom: 28 }}>
+            <Link href="/" style={{ color: "#0B7B5A", fontWeight: 500 }}>Platform</Link> › Creative IQ
+          </div>
 
-          <div className="cq-hero-layout">
-            <div className="cq-hero-lead">
-              <span className="cq-hero-eyebrow cq-reveal"><span className="dot"></span>Creative decision OS · Meta first</span>
-
-              <h1 id="cq-h1" className="cq-hero-h1 cq-reveal d1">
-                Every creative decision, <span className="accent">closed-loop</span>.
+          <div className="cq-hero-1a-grid" style={{ display: "grid", gridTemplateColumns: "1fr 620px", gap: 64, alignItems: "center" }}>
+            <div>
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "1px solid #E0DDD2", background: "#FFFFFF", borderRadius: 999, padding: "7px 14px", fontSize: 12.5, fontWeight: 600, color: "#43464C" }}>
+                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#0B7B5A" }}></span>Creative decision OS
+              </span>
+              <h1 id="cq-h1" style={{ margin: "22px 0 0", fontSize: 60, lineHeight: 1.04, fontWeight: 650, letterSpacing: "-0.035em" }}>
+                Every creative decision, <span style={{ color: "#0B7B5A" }}>closed-loop</span>.
               </h1>
-
-              <p className="cq-hero-sub cq-reveal d2">
-                We don&apos;t generate ads. We close the loop on creative decisions. <b>Creative IQ</b> reads a 9-signal Andromeda fatigue model on every live ad, maps the audience × angle × format gaps you never enter, and composes production-ready briefs from every signal at once — with day-precise runways and every outcome measured.
+              <p style={{ margin: "22px 0 0", fontSize: 18, lineHeight: 1.6, color: "#5F6368", maxWidth: 540 }}>
+                We don&apos;t generate ads. We close the loop on the ones you&apos;re already running — spotting fatigue before your CPA does, surfacing the audience gaps you never enter, and turning every signal into your next brief.
               </p>
 
-              <div className="cq-hero-pillars cq-reveal d3">
-                <article className="cq-pillar">
-                  <span className="cq-pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12l4-4 4 4M17 12l4 4-4 4"/><path d="M12 2v20"/></svg></span>
-                  <b>Detect fatigue</b>
-                  <em>9-signal Andromeda · day-precise runway</em>
-                </article>
-                <article className="cq-pillar">
-                  <span className="cq-pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7" strokeDasharray="2 2"/></svg></span>
-                  <b>Find gaps</b>
-                  <em>Audience × angle × format map</em>
-                </article>
-                <article className="cq-pillar">
-                  <span className="cq-pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.8 4.4L18 9l-4.2 1.6L12 15l-1.8-4.4L6 9l4.2-1.6z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z" opacity="0.5"/></svg></span>
-                  <b>Compose briefs</b>
-                  <em>AI-fused · production-ready · Scale plan</em>
-                </article>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 30 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <span style={{ display: "inline-flex", width: 34, height: 34, borderRadius: 10, background: "#FFFFFF", border: "1px solid #E5E2D8", alignItems: "center", justifyContent: "center", color: "#0B7B5A" }}>
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l2.5 2"></path></svg>
+                  </span>
+                  <span style={{ fontSize: 15 }}><b style={{ fontWeight: 600 }}>Detect fatigue</b><span style={{ color: "#8A8D93" }}> — 9-signal model, day-precise runway</span></span>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <span style={{ display: "inline-flex", width: 34, height: 34, borderRadius: 10, background: "#FFFFFF", border: "1px solid #E5E2D8", alignItems: "center", justifyContent: "center", color: "#0B7B5A" }}>
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1" strokeDasharray="2 2"></rect></svg>
+                  </span>
+                  <span style={{ fontSize: 15 }}><b style={{ fontWeight: 600 }}>Find gaps</b><span style={{ color: "#8A8D93" }}> — audience × angle × format map</span></span>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <span style={{ display: "inline-flex", width: 34, height: 34, borderRadius: 10, background: "#FFFFFF", border: "1px solid #E5E2D8", alignItems: "center", justifyContent: "center", color: "#0B7B5A" }}>
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"><path d="M12 4l1.8 4.4L18 10l-4.2 1.6L12 16l-1.8-4.4L6 10l4.2-1.6z"></path></svg>
+                  </span>
+                  <span style={{ fontSize: 15 }}><b style={{ fontWeight: 600 }}>Compose briefs</b><span style={{ color: "#8A8D93" }}> — AI-fused, production-ready</span></span>
+                </div>
               </div>
 
-              <div className="cta-row iq-cta-row cq-reveal d4">
-                <a href="https://app.memologs.com/" className="btn btn-primary btn-lg">Try Creative IQ →</a>
-                <a href="#readiness" className="btn btn-ghost btn-lg">See the Readiness Score</a>
+              <div style={{ display: "flex", gap: 14, marginTop: 36 }}>
+                <a href="https://app.memologs.com/" style={{ display: "inline-flex", alignItems: "center", background: "#16181C", color: "#FFFFFF", borderRadius: 999, padding: "15px 30px", fontSize: 16, fontWeight: 600, textDecoration: "none" }}>Try Creative IQ →</a>
+                <a href="#readiness" style={{ display: "inline-flex", alignItems: "center", background: "#FFFFFF", border: "1px solid #DCD9CE", color: "#16181C", borderRadius: 999, padding: "15px 30px", fontSize: 16, fontWeight: 600, textDecoration: "none" }}>See the Readiness Score</a>
               </div>
             </div>
 
-            {/* Product frame — bigger, with mock-ad content inside each row */}
-            <aside className="cq-hero-viz" aria-label="Creative IQ — Today decision queue">
-              <div className="cq-hero-frame cq-hero-frame-lg">
-                <div className="cq-hero-frame-chrome">
-                  <div className="dots"><span></span><span></span><span></span></div>
-                  <span className="tab">Creative IQ · Today</span>
+            {/* Product frame */}
+            <aside style={{ background: "#FFFFFF", border: "1px solid #E5E2D8", borderRadius: 22, boxShadow: "0 24px 60px -28px rgba(22,24,28,0.18)", overflow: "hidden" }} aria-label="Creative IQ — Today decision queue">
+              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "13px 18px", borderBottom: "1px solid #EFEDE5" }}>
+                <span style={{ display: "flex", gap: 6 }}><span style={{ width: 9, height: 9, borderRadius: "50%", background: "#E4E1D7" }}></span><span style={{ width: 9, height: 9, borderRadius: "50%", background: "#E4E1D7" }}></span><span style={{ width: 9, height: 9, borderRadius: "50%", background: "#E4E1D7" }}></span></span>
+                <span style={{ fontSize: 12.5, fontWeight: 600, color: "#8A8D93" }}>Creative IQ · Today</span>
+              </div>
+              <div style={{ padding: 18 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 16, background: "#F8F7F3", border: "1px solid #EFEDE5", borderRadius: 14, padding: "14px 16px" }}>
+                  <span style={{ position: "relative", width: 56, height: 56, flex: "none" }}>
+                    <svg viewBox="0 0 100 100" width="56" height="56"><circle cx="50" cy="50" r="42" fill="none" stroke="#E9E7DE" strokeWidth="10"></circle><circle cx="50" cy="50" r="42" fill="none" stroke="#0B7B5A" strokeWidth="10" strokeDasharray="264" strokeDashoffset="100" strokeLinecap="round" transform="rotate(-90 50 50)"></circle></svg>
+                    <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, fontWeight: 700 }}>62</span>
+                  </span>
+                  <span style={{ flex: 1 }}>
+                    <span style={{ display: "block", fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#8A8D93" }}>Andromeda Readiness</span>
+                    <span style={{ display: "block", fontSize: 15, fontWeight: 650, marginTop: 2 }}>Watch · Aura Skin</span>
+                    <span style={{ display: "block", fontSize: 12, color: "#8A8D93", marginTop: 1 }}>3 backed · 5 candidates · 14d window</span>
+                  </span>
+                  <span style={{ display: "flex", gap: 4, alignItems: "flex-end" }}>
+                    <span style={{ width: 6, height: 16, borderRadius: 3, background: "#D9A441" }}></span>
+                    <span style={{ width: 6, height: 14, borderRadius: 3, background: "#D9A441" }}></span>
+                    <span style={{ width: 6, height: 20, borderRadius: 3, background: "#0B7B5A" }}></span>
+                    <span style={{ width: 6, height: 10, borderRadius: 3, background: "#C4472E" }}></span>
+                    <span style={{ width: 6, height: 18, borderRadius: 3, background: "#0B7B5A" }}></span>
+                  </span>
                 </div>
-                <div className="cq-hero-frame-body">
-                  {/* Readiness banner — north-star metric in the chrome */}
-                  <div className="cq-hero-frame-ready" aria-label="Andromeda Readiness Score">
-                    <div className="cq-hero-ready-ring" aria-hidden="true">
-                      <svg viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="10"/>
-                        <circle cx="50" cy="50" r="42" fill="none" stroke="#00FFC2" strokeWidth="10" strokeDasharray="264" strokeDashoffset="100" strokeLinecap="round" transform="rotate(-90 50 50)"/>
-                      </svg>
-                      <span className="val">62</span>
-                    </div>
-                    <div className="cq-hero-ready-body">
-                      <span className="kicker">Andromeda Readiness</span>
-                      <span className="val">Watch · Aura Skin</span>
-                      <em>3 backed · 5 candidates · 14d window</em>
-                    </div>
-                    <div className="cq-hero-ready-parts" title="5 components: Diversity · Fatigue · Format · Refresh · Signal">
-                      <span className="mid"></span>
-                      <span className="mid"></span>
-                      <span className="ok"></span>
-                      <span className="bad"></span>
-                      <span className="ok"></span>
-                    </div>
+
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 14 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <span style={{ fontSize: 11.5, fontWeight: 600, color: "#8A8D93" }}>WHEN</span>
+                    <span style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "#16181C", color: "#fff", borderRadius: 999, padding: "6px 12px", fontSize: 12, fontWeight: 600 }}><span style={{ width: 6, height: 6, borderRadius: "50%", background: "#3ECF9A" }}></span>Now · 2</span>
+                    <span style={{ display: "inline-flex", background: "#F1EFE8", color: "#5F6368", borderRadius: 999, padding: "6px 12px", fontSize: 12, fontWeight: 600 }}>Today · 3</span>
+                    <span style={{ display: "inline-flex", background: "#F1EFE8", color: "#5F6368", borderRadius: 999, padding: "6px 12px", fontSize: 12, fontWeight: 600 }}>1–3d · 5</span>
                   </div>
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 6, border: "1px solid #0B7B5A", color: "#0B7B5A", borderRadius: 999, padding: "6px 14px", fontSize: 12.5, fontWeight: 650 }}>✦ AI Brief</span>
+                </div>
 
-                  {/* Compact filter bar with AI Brief CTA on the right */}
-                  <div className="cq-today-filters" style={{ margin: 0 }}>
-                    <div className="cq-today-fgroup">
-                      <span className="cq-today-flab">When</span>
-                      <div className="cq-today-pills">
-                        <span className="cq-today-pill on b-now"><span className="dot"></span>Now <em>2</em></span>
-                        <span className="cq-today-pill b-today">Today <em>3</em></span>
-                        <span className="cq-today-pill b-1_3d">1–3d <em>5</em></span>
-                      </div>
-                    </div>
-                    <button type="button" className="cq-hero-aibrief" aria-label="Generate AI top brief">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 3l1.8 4.4L18 9l-4.2 1.6L12 15l-1.8-4.4L6 9l4.2-1.6z"/>
-                        <path d="M18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9z" opacity="0.7"/>
-                      </svg>
-                      AI Brief
-                    </button>
+                <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 14 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 14, border: "1px solid #EFEDE5", borderRadius: 14, padding: "12px 14px" }}>
+                    <span style={{ width: 52, height: 66, borderRadius: 10, background: "#E8734A", flex: "none", display: "flex", alignItems: "flex-end", padding: 6, boxSizing: "border-box" }}><span style={{ color: "#fff", fontSize: 8.5, fontWeight: 700, lineHeight: 1.2 }}>Quiet skin<br />Winter serum</span></span>
+                    <span style={{ flex: 1 }}><span style={{ display: "inline-flex", background: "#FBEAE4", color: "#C4472E", borderRadius: 6, padding: "2px 8px", fontSize: 10.5, fontWeight: 700, letterSpacing: "0.04em" }}>APPLY</span><span style={{ display: "block", fontSize: 14, fontWeight: 650, marginTop: 4 }}>Aura Skin — Winter Serum</span><span style={{ display: "block", fontSize: 12, color: "#8A8D93", marginTop: 2 }}>hook · question &nbsp;·&nbsp; age 21d &nbsp;·&nbsp; <b style={{ color: "#C4472E", fontWeight: 650 }}>fatigued</b></span></span>
+                    <span style={{ position: "relative", width: 46, height: 46, flex: "none" }}><svg viewBox="0 0 100 100" width="46" height="46"><circle cx="50" cy="50" r="42" fill="none" stroke="#EFEDE5" strokeWidth="12"></circle><circle cx="50" cy="50" r="42" fill="none" stroke="#C4472E" strokeWidth="12" strokeDasharray="264" strokeDashoffset="58" strokeLinecap="round" transform="rotate(-90 50 50)"></circle></svg><span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700, color: "#C4472E" }}>78</span></span>
+                    <span style={{ display: "inline-flex", width: 34, height: 34, borderRadius: 999, background: "#16181C", color: "#fff", alignItems: "center", justifyContent: "center", fontSize: 11 }}>▐▐</span>
                   </div>
-
-                  <div className="cq-today-rows" style={{ marginTop: 8 }}>
-                    {/* AURA SKIN — fatigued */}
-                    <article className="cq-today-row r-apply">
-                      <div className="cq-today-viz">
-                        <div className="cq-today-thumb cq-mock b-aura">
-                          <span className="cq-mock-brandmark">Aura</span>
-                          <span className="cq-mock-copy">Quiet skin<em>Winter serum</em></span>
-                          <span className="cq-thumb-score bad">24</span>
-                        </div>
-                      </div>
-                      <div className="cq-today-body">
-                        <span className="cq-today-type t-apply">Apply</span>
-                        <b>Aura Skin — Winter Serum</b>
-                        <div className="cq-hero-tags">
-                          <span className="cq-hero-tag t-hook"><span className="dot"></span>hook · question</span>
-                          <span className="cq-hero-tag t-age"><span className="dot"></span>age 21d</span>
-                        </div>
-                        <span className="cq-today-runway is-fatigued">⏱ FATIGUED</span>
-                      </div>
-                      <div className="cq-hero-mini-ring" title="Fatigue score 78 · Critical">
-                        <svg viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="12"/>
-                          <circle cx="50" cy="50" r="42" fill="none" stroke="#FF6B5B" strokeWidth="12" strokeDasharray="264" strokeDashoffset="58" strokeLinecap="round" transform="rotate(-90 50 50)"/>
-                        </svg>
-                        <span className="val" style={{ color: '#FF8A7E' }}>78</span>
-                        <span className="lab">Fatigue</span>
-                      </div>
-                      <div className="cq-today-cta">
-                        <button className="btn btn-primary btn-sm" aria-label="Pause ad">▐▐</button>
-                      </div>
-                    </article>
-
-                    {/* PULSE — test candidate */}
-                    <article className="cq-today-row r-test">
-                      <div className="cq-today-viz">
-                        <div className="cq-today-thumb cq-mock b-pulse">
-                          <span className="cq-mock-brandmark">Pulse</span>
-                          <span className="cq-mock-copy">Hydrate different<em>Free sample</em></span>
-                          <span className="cq-thumb-score lav">+12</span>
-                        </div>
-                      </div>
-                      <div className="cq-today-body">
-                        <span className="cq-today-type t-test">Test</span>
-                        <b>Pulse — Question hook × LAL 1%</b>
-                        <div className="cq-hero-tags">
-                          <span className="cq-hero-tag t-hook"><span className="dot"></span>hook · question</span>
-                          <span className="cq-hero-tag t-audience"><span className="dot"></span>LAL 1%</span>
-                        </div>
-                        <span className="cq-today-runway">⏱ 3d optimal</span>
-                      </div>
-                      <div className="cq-hero-mini-ring" title="Forecast lift +12% · CI 8–17%">
-                        <svg viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="12"/>
-                          <circle cx="50" cy="50" r="42" fill="none" stroke="#B8A6FF" strokeWidth="12" strokeDasharray="264" strokeDashoffset="105" strokeLinecap="round" transform="rotate(-90 50 50)"/>
-                        </svg>
-                        <span className="val" style={{ color: '#C8B8FF' }}>62</span>
-                        <span className="lab">Fit</span>
-                      </div>
-                      <div className="cq-today-cta">
-                        <button className="btn btn-primary btn-sm" aria-label="Start test">⚛</button>
-                      </div>
-                    </article>
-
-                    {/* MERIDIAN — brief candidate */}
-                    <article className="cq-today-row r-brief">
-                      <div className="cq-today-viz">
-                        <div className="cq-today-thumb cq-mock b-meridian">
-                          <span className="cq-mock-brandmark">Meridian</span>
-                          <span className="cq-mock-copy">Everyday carry<em>Monogram</em></span>
-                          <span className="cq-thumb-score mid">+18</span>
-                        </div>
-                      </div>
-                      <div className="cq-today-body">
-                        <span className="cq-today-type t-brief">Brief</span>
-                        <b>Meridian — Fill Question gap</b>
-                        <div className="cq-hero-tags">
-                          <span className="cq-hero-tag t-format"><span className="dot"></span>UGC vertical</span>
-                          <span className="cq-hero-tag t-lift"><span className="dot"></span>+18% lift</span>
-                        </div>
-                        <span className="cq-today-runway">⏱ AI-drafted</span>
-                      </div>
-                      <div className="cq-hero-mini-ring" title="Gap opportunity score 76 · High">
-                        <svg viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="12"/>
-                          <circle cx="50" cy="50" r="42" fill="none" stroke="#FFB347" strokeWidth="12" strokeDasharray="264" strokeDashoffset="63" strokeLinecap="round" transform="rotate(-90 50 50)"/>
-                        </svg>
-                        <span className="val" style={{ color: '#FFB347' }}>76</span>
-                        <span className="lab">Gap</span>
-                      </div>
-                      <div className="cq-today-cta">
-                        <button className="btn btn-primary btn-sm" aria-label="Generate brief">✦</button>
-                      </div>
-                    </article>
+                  <div style={{ display: "flex", alignItems: "center", gap: 14, border: "1px solid #EFEDE5", borderRadius: 14, padding: "12px 14px" }}>
+                    <span style={{ width: 52, height: 66, borderRadius: 10, background: "#F5B82E", flex: "none", display: "flex", alignItems: "flex-end", padding: 6, boxSizing: "border-box" }}><span style={{ color: "#16181C", fontSize: 8.5, fontWeight: 700, lineHeight: 1.2 }}>Hydrate<br />different</span></span>
+                    <span style={{ flex: 1 }}><span style={{ display: "inline-flex", background: "#E9EEF6", color: "#4A6FA5", borderRadius: 6, padding: "2px 8px", fontSize: 10.5, fontWeight: 700, letterSpacing: "0.04em" }}>TEST</span><span style={{ display: "block", fontSize: 14, fontWeight: 650, marginTop: 4 }}>Pulse — Question hook × LAL 1%</span><span style={{ display: "block", fontSize: 12, color: "#8A8D93", marginTop: 2 }}>hook · question &nbsp;·&nbsp; LAL 1% &nbsp;·&nbsp; 3d optimal</span></span>
+                    <span style={{ position: "relative", width: 46, height: 46, flex: "none" }}><svg viewBox="0 0 100 100" width="46" height="46"><circle cx="50" cy="50" r="42" fill="none" stroke="#EFEDE5" strokeWidth="12"></circle><circle cx="50" cy="50" r="42" fill="none" stroke="#4A6FA5" strokeWidth="12" strokeDasharray="264" strokeDashoffset="105" strokeLinecap="round" transform="rotate(-90 50 50)"></circle></svg><span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700, color: "#4A6FA5" }}>62</span></span>
+                    <span style={{ display: "inline-flex", width: 34, height: 34, borderRadius: 999, background: "#FFFFFF", border: "1px solid #DCD9CE", alignItems: "center", justifyContent: "center", fontSize: 13 }}>⚗</span>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 14, border: "1px solid #EFEDE5", borderRadius: 14, padding: "12px 14px" }}>
+                    <span style={{ width: 52, height: 66, borderRadius: 10, background: "#E98BB4", flex: "none", display: "flex", alignItems: "flex-end", padding: 6, boxSizing: "border-box" }}><span style={{ color: "#fff", fontSize: 8.5, fontWeight: 700, lineHeight: 1.2 }}>Everyday<br />carry</span></span>
+                    <span style={{ flex: 1 }}><span style={{ display: "inline-flex", background: "#F7EEDD", color: "#A87A1F", borderRadius: 6, padding: "2px 8px", fontSize: 10.5, fontWeight: 700, letterSpacing: "0.04em" }}>BRIEF</span><span style={{ display: "block", fontSize: 14, fontWeight: 650, marginTop: 4 }}>Meridian — Fill Question gap</span><span style={{ display: "block", fontSize: 12, color: "#8A8D93", marginTop: 2 }}>UGC vertical &nbsp;·&nbsp; +18% lift &nbsp;·&nbsp; AI-drafted</span></span>
+                    <span style={{ position: "relative", width: 46, height: 46, flex: "none" }}><svg viewBox="0 0 100 100" width="46" height="46"><circle cx="50" cy="50" r="42" fill="none" stroke="#EFEDE5" strokeWidth="12"></circle><circle cx="50" cy="50" r="42" fill="none" stroke="#D9A441" strokeWidth="12" strokeDasharray="264" strokeDashoffset="63" strokeLinecap="round" transform="rotate(-90 50 50)"></circle></svg><span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700, color: "#A87A1F" }}>76</span></span>
+                    <span style={{ display: "inline-flex", width: 34, height: 34, borderRadius: 999, background: "#FFFFFF", border: "1px solid #DCD9CE", alignItems: "center", justifyContent: "center", fontSize: 13 }}>✦</span>
                   </div>
                 </div>
               </div>
             </aside>
           </div>
 
-          {/* Full-width stats band — animated icons + gradient numbers */}
-          <div className="cq-hero-statband cq-reveal d4" aria-label="Creative IQ stats">
-            <div className="cq-stat-tile">
-              <span className="cq-stat-ico" aria-hidden="true">
+          {/* Stat band */}
+          <div className="cq-hero-1a-stats" style={{ marginTop: 56 }}>
+            <div className="cq-1a-stat">
+              <span className="cq-1a-ico" aria-hidden="true">
                 <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
-                  {/* 9 signals — 9 tick lines around a ring */}
-                  <circle className="anim-ring" cx="16" cy="16" r="10" strokeOpacity="0.35"/>
+                  <circle className="anim-ring" cx="16" cy="16" r="10" strokeOpacity="0.35" />
                   <g strokeWidth="2">
-                    <line x1="16" y1="3" x2="16" y2="6"/>
-                    <line x1="24" y1="6" x2="22" y2="8"/>
-                    <line x1="28" y1="13" x2="25" y2="14"/>
-                    <line x1="28" y1="19" x2="25" y2="18"/>
-                    <line x1="24" y1="26" x2="22" y2="24"/>
-                    <line x1="16" y1="29" x2="16" y2="26"/>
-                    <line x1="8"  y1="26" x2="10" y2="24"/>
-                    <line x1="4"  y1="19" x2="7"  y2="18"/>
-                    <line x1="4"  y1="13" x2="7"  y2="14"/>
+                    <line x1="16" y1="3" x2="16" y2="6" />
+                    <line x1="24" y1="6" x2="22" y2="8" />
+                    <line x1="28" y1="13" x2="25" y2="14" />
+                    <line x1="28" y1="19" x2="25" y2="18" />
+                    <line x1="24" y1="26" x2="22" y2="24" />
+                    <line x1="16" y1="29" x2="16" y2="26" />
+                    <line x1="8" y1="26" x2="10" y2="24" />
+                    <line x1="4" y1="19" x2="7" y2="18" />
+                    <line x1="4" y1="13" x2="7" y2="14" />
                   </g>
-                  <circle cx="16" cy="16" r="3" fill="currentColor" stroke="none"/>
+                  <circle cx="16" cy="16" r="3" fill="currentColor" stroke="none" />
                 </svg>
               </span>
-              <div className="cq-stat-body"><b>9</b><em>Signal fatigue model</em></div>
+              <div>
+                <div style={{ fontSize: 40, fontWeight: 650, letterSpacing: "-0.03em", lineHeight: 1 }}>9</div>
+                <div style={{ fontSize: 14, color: "#8A8D93", marginTop: 6 }}>Signal fatigue model</div>
+              </div>
             </div>
-            <div className="cq-stat-tile">
-              <span className="cq-stat-ico" aria-hidden="true">
+            <div className="cq-1a-stat">
+              <span className="cq-1a-ico" aria-hidden="true">
                 <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                  {/* Clock face — communicates "time" not "confidence interval" */}
-                  <circle cx="16" cy="17" r="9"/>
-                  <path d="M16 12v5l3.5 2.5"/>
-                  {/* Warning ping above the clock — the "early warning" */}
+                  <circle cx="16" cy="17" r="9" />
+                  <path d="M16 12v5l3.5 2.5" />
                   <g className="anim-count">
-                    <circle cx="16" cy="5" r="1.8" fill="currentColor" stroke="none"/>
-                    <circle cx="16" cy="5" r="3.6" strokeOpacity="0.35"/>
+                    <circle cx="16" cy="5" r="1.8" fill="currentColor" stroke="none" />
+                    <circle cx="16" cy="5" r="3.6" strokeOpacity="0.35" />
                   </g>
                 </svg>
               </span>
-              <div className="cq-stat-body"><b>~14d</b><em>Early warning on fatigue</em></div>
+              <div>
+                <div style={{ fontSize: 40, fontWeight: 650, letterSpacing: "-0.03em", lineHeight: 1 }}>~14d</div>
+                <div style={{ fontSize: 14, color: "#8A8D93", marginTop: 6 }}>Early warning on fatigue</div>
+              </div>
             </div>
-            <div className="cq-stat-tile">
-              <span className="cq-stat-ico" aria-hidden="true">
+            <div className="cq-1a-stat">
+              <span className="cq-1a-ico" aria-hidden="true">
                 <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                  {/* Bars + checkmark — decisions joined to outcomes */}
                   <g strokeWidth="2.4">
-                    <line className="anim-bar" x1="8"  y1="22" x2="8"  y2="14" style={{ animationDelay: '0s' }}/>
-                    <line className="anim-bar" x1="14" y1="22" x2="14" y2="10" style={{ animationDelay: '0.3s' }}/>
-                    <line className="anim-bar" x1="20" y1="22" x2="20" y2="16" style={{ animationDelay: '0.6s' }}/>
+                    <line className="anim-bar" x1="8" y1="22" x2="8" y2="14" style={{ animationDelay: "0s" }} />
+                    <line className="anim-bar" x1="14" y1="22" x2="14" y2="10" style={{ animationDelay: "0.3s" }} />
+                    <line className="anim-bar" x1="20" y1="22" x2="20" y2="16" style={{ animationDelay: "0.6s" }} />
                   </g>
-                  <path d="M24 12l3 3 5-6" strokeWidth="2" transform="translate(-4 3)"/>
-                  <line x1="4" y1="24" x2="28" y2="24" strokeOpacity="0.35"/>
+                  <path d="M24 12l3 3 5-6" strokeWidth="2" transform="translate(-4 3)" />
+                  <line x1="4" y1="24" x2="28" y2="24" strokeOpacity="0.35" />
                 </svg>
               </span>
-              <div className="cq-stat-body"><b>100%</b><em>Decisions joined to outcomes</em></div>
+              <div>
+                <div style={{ fontSize: 40, fontWeight: 650, letterSpacing: "-0.03em", lineHeight: 1 }}>100%</div>
+                <div style={{ fontSize: 14, color: "#8A8D93", marginTop: 6 }}>Decisions joined to outcomes</div>
+              </div>
             </div>
           </div>
         </div>
@@ -284,238 +206,113 @@ export default function CreativeIQPage() {
         </div>
       </section>
 
-      {/* ═══════════════════ FOREPLAY-STYLE CREATIVE LIBRARY GRID ═══════════════════ */}
-      <section className="sp-section alt">
-        <div className="wrap">
-          <div className="section-head split">
-            <h2 className="section-title">Every creative <em>scored</em> at the grain.</h2>
-            <p className="section-sub">Not a swipe file. Not an inspiration library. Creative IQ knows which of your ads is fatigued, why, and what to swap in — because every live creative is grain-scored on hook, tone, angle, audience, format, and length. Colour-coded because ambiguity kills speed.</p>
+      {/* ═══════════════════ LAG CHART — 1a light + Apple vibrancy/blur ═══════════════════ */}
+      <section className="cq-lag-1a" style={{ background: "#FFFFFF", color: "#16181C" }}>
+        <div style={{ maxWidth: 1440, margin: "0 auto", padding: "96px 56px" }}>
+          <div className="cq-lib-1a-head" style={{ display: "flex", justifyContent: "space-between", gap: 48, alignItems: "flex-end", marginBottom: 44 }}>
+            <h2 style={{ margin: 0, fontSize: 42, lineHeight: 1.1, fontWeight: 650, letterSpacing: "-0.03em", whiteSpace: "nowrap" }}>CPA is a <span style={{ color: "#0B7B5A" }}>lagging</span> indicator.<br />Fatigue isn&apos;t.</h2>
+            <p style={{ margin: 0, fontSize: 16.5, lineHeight: 1.6, color: "#5F6368", maxWidth: 560 }}>By the time your CPA chart spikes, the audience has already moved on. The leading signals were there all along — CTR drifted, frequency climbed, sentiment cooled. Creative IQ reads them in real time so you act before the bill lands.</p>
           </div>
 
-          <div className="cq-foreplay">
-            {/* AURA SKIN — fatigued */}
-            <article className="cq-fp-card cq-mock cq-fp-mock b-aura">
-              <span className="cq-mock-brand aura"><span className="brandmark"></span>Aura Skin</span>
-              <span className="cq-mock-badge hot">−25%</span>
-              <div className="cq-mock-bg">
-                <svg viewBox="0 0 40 60" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.5">
-                  <path d="M15 4h10v7h-10z"/>
-                  <path d="M14 11h12l-2 8h-8z" fill="rgba(255,255,255,0.20)"/>
-                  <rect x="12" y="19" width="16" height="34" rx="3" fill="rgba(255,255,255,0.14)"/>
-                  <line x1="15" y1="32" x2="25" y2="32"/>
-                  <line x1="15" y1="38" x2="25" y2="38" strokeOpacity="0.6"/>
-                </svg>
-              </div>
-              <div className="cq-fp-heat"></div>
-              <div className="cq-fp-play">▶</div>
-              <span className="cq-mock-copy" style={{ bottom: 74, left: 12, right: 12, fontSize: 20, lineHeight: 1.05 }}>Winter serum, quiet skin.<em>Save 25% today</em></span>
-              <div className="cq-fp-meta">
-                <b>Winter Sale — UGC Vertical A</b>
-                <div className="cq-fp-meta-row">
-                  <span className="score bad">CTR −38%</span>
-                  <span>freq 11.2×</span>
+          <div className="cq-lag-1a-card">
+            <span className="cq-lag-1a-blob a" aria-hidden="true"></span>
+            <span className="cq-lag-1a-blob b" aria-hidden="true"></span>
+            <span className="cq-lag-1a-blob c" aria-hidden="true"></span>
+
+            <div className="cq-lag-1a-inner">
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20, flexWrap: "wrap", gap: 12 }}>
+                <div style={{ display: "flex", gap: 24, fontSize: 13, color: "rgba(255,255,255,0.75)", flexWrap: "wrap" }}>
+                  <span style={{ display: "flex", alignItems: "center", gap: 8 }}><span style={{ width: 18, height: 3, borderRadius: 2, background: "#00FFC2" }}></span>Andromeda Readiness (leading)</span>
+                  <span style={{ display: "flex", alignItems: "center", gap: 8 }}><span style={{ width: 18, height: 3, borderRadius: 2, background: "#FF6B5B" }}></span>CPA (lagging)</span>
+                  <span style={{ display: "flex", alignItems: "center", gap: 8 }}><span style={{ width: 14, height: 14, borderRadius: 4, background: "rgba(255,179,71,0.14)", border: "1px dashed #D9A441" }}></span>Detection gap — day-precise runway</span>
                 </div>
+                <span style={{ fontSize: 12, fontWeight: 600, color: "#9AA3B4", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 999, padding: "6px 12px", background: "rgba(255,255,255,0.06)" }}>Real pilot · SKU-447 · Meta</span>
               </div>
-            </article>
 
-            {/* PULSE — testing new */}
-            <article className="cq-fp-card cq-mock cq-fp-mock b-pulse">
-              <span className="cq-mock-brand pulse"><span className="brandmark"></span>Pulse</span>
-              <span className="cq-mock-badge new">Test</span>
-              <div className="cq-mock-bg">
-                <svg viewBox="0 0 40 60" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.5">
-                  <rect x="13" y="6" width="14" height="46" rx="5" fill="rgba(255,255,255,0.12)"/>
-                  <path d="M13 28q7 -7 14 0 t-14 0" stroke="rgba(255,255,255,0.95)" strokeWidth="1.4" fill="none"/>
-                  <path d="M13 36q7 -7 14 0 t-14 0" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2" fill="none"/>
-                  <line x1="16" y1="44" x2="24" y2="44"/>
-                </svg>
-              </div>
-              <div className="cq-fp-play">▶</div>
-              <span className="cq-mock-copy" style={{ bottom: 74, left: 12, right: 12, fontSize: 20, lineHeight: 1.05 }}>What if hydration hit different?<em>Try Pulse · free sample</em></span>
-              <div className="cq-fp-meta">
-                <b>Question hook · Lookalike 1%</b>
-                <div className="cq-fp-meta-row">
-                  <span className="score mid">+12% forecast</span>
-                  <span>gap cell</span>
+              <svg viewBox="0 0 900 260" className="cq-lag-1a-svg" preserveAspectRatio="none" aria-hidden="true" style={{ width: "100%", height: "auto", display: "block" }}>
+                <defs>
+                  <linearGradient id="cqHealthL" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stopColor="#00FFC2" stopOpacity="0.42" />
+                    <stop offset="55%" stopColor="#00FFC2" stopOpacity="0.16" />
+                    <stop offset="100%" stopColor="#00FFC2" stopOpacity="0.02" />
+                  </linearGradient>
+                  <linearGradient id="cqCpaL" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stopColor="#FF6B5B" stopOpacity="0.38" />
+                    <stop offset="55%" stopColor="#FF6B5B" stopOpacity="0.14" />
+                    <stop offset="100%" stopColor="#FF6B5B" stopOpacity="0.02" />
+                  </linearGradient>
+                  <filter id="cqGlow" x="-20%" y="-40%" width="140%" height="180%">
+                    <feGaussianBlur stdDeviation="5" />
+                  </filter>
+                  {/* Frosted-vibrancy blur for the area fills under the curves */}
+                  <filter id="cqFrost" x="-10%" y="-30%" width="120%" height="160%">
+                    <feGaussianBlur stdDeviation="9" />
+                  </filter>
+                </defs>
+
+                <g stroke="rgba(255,255,255,0.07)" strokeWidth="1">
+                  <line x1="50" x2="880" y1="40" y2="40" /><line x1="50" x2="880" y1="100" y2="100" />
+                  <line x1="50" x2="880" y1="160" y2="160" /><line x1="50" x2="880" y1="210" y2="210" />
+                </g>
+                <g fill="#A9ACB0" fontFamily="-apple-system, sans-serif" fontSize="11">
+                  <text x="12" y="44">100</text><text x="18" y="104">70</text>
+                  <text x="18" y="164">40</text><text x="18" y="214">10</text>
+                </g>
+
+                <rect x="320" y="20" width="240" height="200" fill="rgba(217,164,65,0.08)" stroke="#D9A441" strokeDasharray="4 4" strokeWidth="1" />
+                <text x="330" y="36" fill="#FFB347" fontFamily="-apple-system, sans-serif" fontSize="11" fontWeight="600">RUNWAY · ~5d · CI 4–6d</text>
+
+                {/* Gradient area fills (kept from original) */}
+                <path d="M50 55 L120 60 L190 72 L260 92 L320 112 L400 138 L480 162 L560 178 L620 190 L700 198 L770 202 L830 204 L880 205 L880 220 L50 220 Z" fill="url(#cqHealthL)" filter="url(#cqFrost)" />
+                <path d="M50 190 L120 188 L190 186 L260 184 L320 180 L400 174 L480 162 L560 138 L620 108 L700 80 L770 62 L830 52 L880 48 L880 220 L50 220 Z" fill="url(#cqCpaL)" filter="url(#cqFrost)" />
+
+                {/* Soft blurred glow under each curve — Apple-like vibrancy */}
+                <path d="M50 55 L120 60 L190 72 L260 92 L320 112 L400 138 L480 162 L560 178 L620 190 L700 198 L770 202 L830 204 L880 205" stroke="#00FFC2" strokeOpacity="0.45" strokeWidth="7" fill="none" strokeLinecap="round" filter="url(#cqGlow)" />
+                <path d="M50 190 L120 188 L190 186 L260 184 L320 180 L400 174 L480 162 L560 138 L620 108 L700 80 L770 62 L830 52 L880 48" stroke="#FF6B5B" strokeOpacity="0.40" strokeWidth="7" fill="none" strokeLinecap="round" filter="url(#cqGlow)" />
+
+                {/* Sharp curves */}
+                <path d="M50 55 L120 60 L190 72 L260 92 L320 112 L400 138 L480 162 L560 178 L620 190 L700 198 L770 202 L830 204 L880 205" stroke="#00FFC2" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M50 190 L120 188 L190 186 L260 184 L320 180 L400 174 L480 162 L560 138 L620 108 L700 80 L770 62 L830 52 L880 48" stroke="#FF6B5B" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+
+                <circle cx="320" cy="112" r="5" fill="#00FFC2" />
+                <circle cx="320" cy="112" r="10" fill="none" stroke="#00FFC2" strokeOpacity="0.35" strokeWidth="1.5" />
+                <text x="195" y="96" fill="#00FFC2" fontFamily="-apple-system, sans-serif" fontSize="11" fontWeight="600">Readiness dip</text>
+                <circle cx="560" cy="138" r="5" fill="#FF6B5B" />
+                <circle cx="560" cy="138" r="10" fill="none" stroke="#FF6B5B" strokeOpacity="0.35" strokeWidth="1.5" />
+                <text x="584" y="130" fill="#FF6B5B" fontFamily="-apple-system, sans-serif" fontSize="11" fontWeight="600">CPA spike (too late)</text>
+
+                <g fill="#A9ACB0" fontFamily="-apple-system, sans-serif" fontSize="11">
+                  <text x="50" y="250">Day 0</text><text x="200" y="250">Day 7</text>
+                  <text x="320" y="250" fill="#00FFC2">Day 14</text><text x="480" y="250">Day 21</text>
+                  <text x="560" y="250" fill="#FF6B5B">Day 28</text><text x="700" y="250">Day 35</text>
+                  <text x="850" y="250" textAnchor="end">Day 42</text>
+                </g>
+              </svg>
+
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 32, marginTop: 20, paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.08)", flexWrap: "wrap" }}>
+                <div style={{ display: "flex", gap: 28, fontSize: 13, color: "#8A8D93", flexWrap: "wrap" }}>
+                  <span><b style={{ color: "#EDEFF3", fontWeight: 600 }}>Day-precise</b> runway with CI</span>
+                  <span><b style={{ color: "#EDEFF3", fontWeight: 600 }}>Terminal state</b> past fatigue point</span>
+                  <span><b style={{ color: "#EDEFF3", fontWeight: 600 }}>Value Ledger</b> vs. counterfactual</span>
                 </div>
+                <p style={{ margin: 0, fontSize: 13, color: "#5F6368", maxWidth: 420 }}><b style={{ fontWeight: 600, color: "#EDEFF3" }}>Takeaway:</b> the green curve names the dying grain — the red curve tells the same story in dollars, two weeks late.</p>
               </div>
-            </article>
-
-            {/* MERIDIAN — brief draft */}
-            <article className="cq-fp-card cq-mock cq-fp-mock b-meridian">
-              <span className="cq-mock-brand meridian"><span className="brandmark"></span>Meridian</span>
-              <span className="cq-mock-badge sale">Draft</span>
-              <div className="cq-mock-bg">
-                <svg viewBox="0 0 40 60" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.5">
-                  <path d="M8 22h24v22H8z" fill="rgba(255,255,255,0.14)"/>
-                  <path d="M13 22V18q0-4 7-4t7 4v4"/>
-                  <line x1="15" y1="30" x2="25" y2="30" strokeOpacity="0.65"/>
-                  <circle cx="20" cy="35" r="1.4" fill="currentColor"/>
-                </svg>
-              </div>
-              <div className="cq-fp-play">✦</div>
-              <span className="cq-mock-copy" style={{ bottom: 74, left: 12, right: 12, fontSize: 20, lineHeight: 1.05 }}>Everyday carry, made to last.<em>Free monogram · this week</em></span>
-              <div className="cq-fp-meta">
-                <b>Demo × High-AOV repeat</b>
-                <div className="cq-fp-meta-row">
-                  <span className="score mid">+15% forecast</span>
-                  <span>AI-drafted</span>
-                </div>
-              </div>
-            </article>
-
-            {/* LUMEN — ready / testimonial winner */}
-            <article className="cq-fp-card cq-mock cq-fp-mock b-lumen">
-              <span className="cq-mock-brand lumen"><span className="brandmark"></span>Lumen</span>
-              <span className="cq-mock-badge new">Winner</span>
-              <div className="cq-mock-bg">
-                <svg viewBox="0 0 40 60" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.5">
-                  <circle cx="20" cy="22" r="7" fill="rgba(255,255,255,0.16)"/>
-                  <path d="M10 46q10 -10 20 0" fill="rgba(255,255,255,0.10)"/>
-                  <path d="M9 50h22"/>
-                  <path d="M13 32l2 3" strokeOpacity="0.6"/>
-                  <path d="M27 32l-2 3" strokeOpacity="0.6"/>
-                </svg>
-              </div>
-              <div className="cq-fp-play">▶</div>
-              <span className="cq-mock-copy" style={{ bottom: 74, left: 12, right: 12, fontSize: 20, lineHeight: 1.05 }}>&ldquo;My sleep just… fixed itself.&rdquo;<em>Real customer · Priya, 34</em></span>
-              <div className="cq-fp-meta">
-                <b>Testimonial — 15s vertical</b>
-                <div className="cq-fp-meta-row">
-                  <span className="score ok">ROAS 3.4×</span>
-                  <span>6d live</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════ LAG CHART ═══════════════════ */}
-      <section className="sp-section cq-lag-section">
-        <div className="wrap">
-          <div className="section-head split">
-            <h2 className="section-title">CPA is a <em>lagging</em> indicator.<br />Fatigue isn&apos;t.</h2>
-            <p className="section-sub">By the time your CPA chart spikes, the audience has already moved on from the creative. The leading signals were there all along — CTR drifted, frequency climbed, sentiment cooled. Creative IQ reads them in real time so you act before the bill lands.</p>
-          </div>
-
-          <div className="cq-lag-chart">
-            <header className="cq-lag-head">
-              <div className="cq-lag-legend">
-                <span className="cq-lag-legend-item"><span className="cq-lag-line teal"></span>Andromeda Readiness (leading)</span>
-                <span className="cq-lag-legend-item"><span className="cq-lag-line coral"></span>CPA (lagging)</span>
-                <span className="cq-lag-legend-item"><span className="cq-lag-zone"></span>Detection gap — day-precise runway</span>
-              </div>
-              <span className="cq-lag-badge">Real pilot · SKU-447 · Meta</span>
-            </header>
-            <svg viewBox="0 0 900 260" className="cq-lag-svg" preserveAspectRatio="none" aria-hidden="true">
-              <defs>
-                <linearGradient id="cqHealth" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stopColor="#00FFC2" stopOpacity="0.32" />
-                  <stop offset="100%" stopColor="#00FFC2" stopOpacity="0.02" />
-                </linearGradient>
-                <linearGradient id="cqCpa" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0%" stopColor="#FF6B5B" stopOpacity="0.28" />
-                  <stop offset="100%" stopColor="#FF6B5B" stopOpacity="0.02" />
-                </linearGradient>
-              </defs>
-              <g stroke="rgba(255,255,255,0.05)" strokeWidth="1">
-                <line x1="50" x2="880" y1="40" y2="40" /><line x1="50" x2="880" y1="100" y2="100" />
-                <line x1="50" x2="880" y1="160" y2="160" /><line x1="50" x2="880" y1="210" y2="210" />
-              </g>
-              <g fill="#5A6377" fontFamily="JetBrains Mono, monospace" fontSize="10">
-                <text x="10" y="44">100</text><text x="10" y="104">70</text>
-                <text x="10" y="164">40</text><text x="10" y="214">10</text>
-              </g>
-              <rect x="320" y="20" width="240" height="200" fill="rgba(255,179,71,0.05)" stroke="rgba(255,179,71,0.3)" strokeDasharray="4 4" strokeWidth="1" />
-              <text x="330" y="36" fill="#FFB347" fontFamily="JetBrains Mono, monospace" fontSize="10" fontWeight="700">RUNWAY · ~5d · CI 4–6d</text>
-              <path d="M50 55 L120 60 L190 72 L260 92 L320 112 L400 138 L480 162 L560 178 L620 190 L700 198 L770 202 L830 204 L880 205" stroke="#00FFC2" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M50 55 L120 60 L190 72 L260 92 L320 112 L400 138 L480 162 L560 178 L620 190 L700 198 L770 202 L830 204 L880 205 L880 220 L50 220 Z" fill="url(#cqHealth)" />
-              <path d="M50 190 L120 188 L190 186 L260 184 L320 180 L400 174 L480 162 L560 138 L620 108 L700 80 L770 62 L830 52 L880 48" stroke="#FF6B5B" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M50 190 L120 188 L190 186 L260 184 L320 180 L400 174 L480 162 L560 138 L620 108 L700 80 L770 62 L830 52 L880 48 L880 220 L50 220 Z" fill="url(#cqCpa)" />
-              <circle cx="320" cy="112" r="5" fill="#00FFC2" />
-              <circle cx="320" cy="112" r="10" fill="none" stroke="#00FFC2" strokeOpacity="0.4" strokeWidth="1.5" />
-              <text x="180" y="94" fill="#00FFC2" fontFamily="JetBrains Mono, monospace" fontSize="10" fontWeight="700">⚠ Readiness dip</text>
-              <circle cx="560" cy="138" r="5" fill="#FF6B5B" />
-              <circle cx="560" cy="138" r="10" fill="none" stroke="#FF6B5B" strokeOpacity="0.4" strokeWidth="1.5" />
-              <text x="584" y="130" fill="#FF6B5B" fontFamily="JetBrains Mono, monospace" fontSize="10" fontWeight="700">CPA spike (too late)</text>
-              <g fill="#5A6377" fontFamily="JetBrains Mono, monospace" fontSize="10">
-                <text x="50" y="250">Day 0</text><text x="200" y="250">Day 7</text>
-                <text x="320" y="250" fill="#00FFC2">Day 14</text><text x="480" y="250">Day 21</text>
-                <text x="560" y="250" fill="#FF6B5B">Day 28</text><text x="700" y="250">Day 35</text>
-                <text x="872" y="250" textAnchor="end">Day 42</text>
-              </g>
-            </svg>
-            <footer className="cq-lag-foot">
-              <div className="cq-lag-meta">
-                <span><b>Day-precise</b> runway with confidence interval</span>
-                <span><b>Terminal state</b> when past predicted fatigue point</span>
-                <span><b>Value Ledger</b> measures observed vs. counterfactual</span>
-              </div>
-              <p className="cq-lag-takeaway"><b>Takeaway:</b> the teal Readiness curve names the specific dying grain — the red CPA curve tells you the same story in dollars, two weeks late.</p>
-            </footer>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════ ANDROMEDA READINESS SCORE ═══════════════════ */}
-      <section className="sp-section alt cq-readiness-section" id="readiness">
+      <section className="sp-section alt cq-readiness-section" id="readiness" style={{ background: "#F5F4EF" }}>
         <div className="wrap">
           <div className="section-head split">
-            <h2 className="section-title">One score for whether your creative is <em>ready to run</em>.</h2>
-            <p className="section-sub">The Andromeda Readiness Score fuses five components — diversity of your live library, fatigue of running ads, format coverage, refresh rhythm, and signal strength — into a single 0–100 number your team can steer by.</p>
+            <h2 className="section-title">AI reads every signal. You read <em>one number</em>.</h2>
+            <p className="section-sub">Nine fatigue signals, five weighted components, thousands of ad-level data points — the Andromeda engine crunches all of it every night and hands back a single 0–100.</p>
           </div>
 
-          {/* Hero: big animated score ring + context */}
+          {/* Hero: animated score ring + context */}
           <div className="cq-readiness-hero-v2">
-            <div className="cq-ring-big" aria-label="Andromeda Readiness Score: 62 out of 100">
-              <svg viewBox="0 0 200 200">
-                {/* Outer dashed tick marks — rotating slowly */}
-                <g className="ring-ticks">
-                  {Array.from({ length: 60 }, (_, i) => {
-                    const angle = (i * 360) / 60;
-                    const outer = 96;
-                    const inner = i % 5 === 0 ? 86 : 90;
-                    const rad = (angle - 90) * (Math.PI / 180);
-                    return (
-                      <line
-                        key={i}
-                        x1={100 + outer * Math.cos(rad)}
-                        y1={100 + outer * Math.sin(rad)}
-                        x2={100 + inner * Math.cos(rad)}
-                        y2={100 + inner * Math.sin(rad)}
-                        stroke={i % 5 === 0 ? '#00FFC2' : 'rgba(255,255,255,0.14)'}
-                        strokeWidth={i % 5 === 0 ? 1.6 : 1}
-                        strokeLinecap="round"
-                      />
-                    );
-                  })}
-                </g>
-                {/* Track ring */}
-                <circle cx="100" cy="100" r="76" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="14" />
-                {/* Pulse ring — soft glow */}
-                <circle className="ring-pulse" cx="100" cy="100" r="76" fill="none" stroke="rgba(0,255,194,0.25)" strokeWidth="24" />
-                {/* Progress fill — animated draw */}
-                <circle
-                  className="ring-fill"
-                  cx="100" cy="100" r="76"
-                  fill="none"
-                  stroke="url(#cqReadinessGrad)"
-                  strokeWidth="14"
-                  strokeLinecap="round"
-                  transform="rotate(-90 100 100)"
-                />
-                <defs>
-                  <linearGradient id="cqReadinessGrad" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0%" stopColor="#00FFC2" />
-                    <stop offset="50%" stopColor="#5EF0D8" />
-                    <stop offset="100%" stopColor="#00D4A3" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div className="core-num">62</div>
-              <div className="core-lab">Ready · watch</div>
-            </div>
+            <ReadinessRing />
 
             <div className="cq-readiness-lede">
               <span className="cq-readiness-eyebrow">Andromeda Readiness Score</span>
@@ -638,8 +435,114 @@ export default function CreativeIQPage() {
         </div>
       </section>
 
+      {/* ═══════════════════ CREATIVE LIBRARY — 1a light cards + real lifestyle photos ═══════════════════ */}
+      <section className="cq-lib-1a" style={{ background: "#FFFFFF", color: "#16181C" }}>
+        <div style={{ maxWidth: 1440, margin: "0 auto", padding: "96px 56px" }}>
+          <div className="cq-lib-1a-head" style={{ display: "flex", justifyContent: "space-between", gap: 48, alignItems: "flex-end", marginBottom: 44 }}>
+            <h2 style={{ margin: 0, fontSize: 42, lineHeight: 1.1, fontWeight: 650, letterSpacing: "-0.03em", maxWidth: 480 }}>Every creative <span style={{ color: "#0B7B5A" }}>scored</span> at the grain.</h2>
+            <p style={{ margin: 0, fontSize: 16.5, lineHeight: 1.6, color: "#5F6368", maxWidth: 620 }}>Not a swipe file. Not an inspiration library. Creative IQ knows which of your ads is fatigued, why, and what to swap in — because every live creative is grain-scored on hook, tone, angle, audience, format, and length.</p>
+          </div>
+
+          <div className="cq-foreplay">
+            {/* AURA SKIN — fatigued */}
+            <article className="cq-fp-card cq-mock cq-fp-mock b-aura">
+              <span className="cq-mock-brand aura"><span className="brandmark"></span>Aura Skin</span>
+              <span className="cq-mock-badge hot">−25%</span>
+              <div className="cq-mock-bg">
+                <svg viewBox="0 0 40 60" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.5">
+                  <path d="M15 4h10v7h-10z"/>
+                  <path d="M14 11h12l-2 8h-8z" fill="rgba(255,255,255,0.20)"/>
+                  <rect x="12" y="19" width="16" height="34" rx="3" fill="rgba(255,255,255,0.14)"/>
+                  <line x1="15" y1="32" x2="25" y2="32"/>
+                  <line x1="15" y1="38" x2="25" y2="38" strokeOpacity="0.6"/>
+                </svg>
+              </div>
+              <div className="cq-fp-heat"></div>
+              <div className="cq-fp-play">▶</div>
+              <span className="cq-mock-copy" style={{ bottom: 74, left: 12, right: 12, fontSize: 20, lineHeight: 1.05 }}>Winter serum, quiet skin.<em>Save 25% today</em></span>
+              <div className="cq-fp-meta">
+                <b>Winter Sale — UGC Vertical A</b>
+                <div className="cq-fp-meta-row">
+                  <span className="score bad">CTR −38%</span>
+                  <span>freq 11.2×</span>
+                </div>
+              </div>
+            </article>
+
+            {/* PULSE — testing new */}
+            <article className="cq-fp-card cq-mock cq-fp-mock b-pulse">
+              <span className="cq-mock-brand pulse"><span className="brandmark"></span>Pulse</span>
+              <span className="cq-mock-badge new">Test</span>
+              <div className="cq-mock-bg">
+                <svg viewBox="0 0 40 60" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.5">
+                  <rect x="13" y="6" width="14" height="46" rx="5" fill="rgba(255,255,255,0.12)"/>
+                  <path d="M13 28q7 -7 14 0 t-14 0" stroke="rgba(255,255,255,0.95)" strokeWidth="1.4" fill="none"/>
+                  <path d="M13 36q7 -7 14 0 t-14 0" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2" fill="none"/>
+                  <line x1="16" y1="44" x2="24" y2="44"/>
+                </svg>
+              </div>
+              <div className="cq-fp-play">▶</div>
+              <span className="cq-mock-copy" style={{ bottom: 74, left: 12, right: 12, fontSize: 20, lineHeight: 1.05 }}>What if hydration hit different?<em>Try Pulse · free sample</em></span>
+              <div className="cq-fp-meta">
+                <b>Question hook · Lookalike 1%</b>
+                <div className="cq-fp-meta-row">
+                  <span className="score mid">+12% forecast</span>
+                  <span>gap cell</span>
+                </div>
+              </div>
+            </article>
+
+            {/* MERIDIAN — brief draft */}
+            <article className="cq-fp-card cq-mock cq-fp-mock b-meridian">
+              <span className="cq-mock-brand meridian"><span className="brandmark"></span>Meridian</span>
+              <span className="cq-mock-badge sale">Draft</span>
+              <div className="cq-mock-bg">
+                <svg viewBox="0 0 40 60" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.5">
+                  <path d="M8 22h24v22H8z" fill="rgba(255,255,255,0.14)"/>
+                  <path d="M13 22V18q0-4 7-4t7 4v4"/>
+                  <line x1="15" y1="30" x2="25" y2="30" strokeOpacity="0.65"/>
+                  <circle cx="20" cy="35" r="1.4" fill="currentColor"/>
+                </svg>
+              </div>
+              <div className="cq-fp-play">✦</div>
+              <span className="cq-mock-copy" style={{ bottom: 74, left: 12, right: 12, fontSize: 20, lineHeight: 1.05 }}>Everyday carry, made to last.<em>Free monogram · this week</em></span>
+              <div className="cq-fp-meta">
+                <b>Demo × High-AOV repeat</b>
+                <div className="cq-fp-meta-row">
+                  <span className="score mid">+15% forecast</span>
+                  <span>AI-drafted</span>
+                </div>
+              </div>
+            </article>
+
+            {/* LUMEN — ready / testimonial winner */}
+            <article className="cq-fp-card cq-mock cq-fp-mock b-lumen">
+              <span className="cq-mock-brand lumen"><span className="brandmark"></span>Lumen</span>
+              <span className="cq-mock-badge new">Winner</span>
+              <div className="cq-mock-bg">
+                <svg viewBox="0 0 40 60" fill="none" stroke="rgba(255,255,255,0.85)" strokeWidth="1.5">
+                  <circle cx="20" cy="22" r="7" fill="rgba(255,255,255,0.16)"/>
+                  <path d="M10 46q10 -10 20 0" fill="rgba(255,255,255,0.10)"/>
+                  <path d="M9 50h22"/>
+                  <path d="M13 32l2 3" strokeOpacity="0.6"/>
+                  <path d="M27 32l-2 3" strokeOpacity="0.6"/>
+                </svg>
+              </div>
+              <div className="cq-fp-play">▶</div>
+              <span className="cq-mock-copy" style={{ bottom: 74, left: 12, right: 12, fontSize: 20, lineHeight: 1.05 }}>&ldquo;My sleep just… fixed itself.&rdquo;<em>Real customer · Priya, 34</em></span>
+              <div className="cq-fp-meta">
+                <b>Testimonial — 15s vertical</b>
+                <div className="cq-fp-meta-row">
+                  <span className="score ok">ROAS 3.4×</span>
+                  <span>6d live</span>
+                </div>
+              </div>
+            </article>
+          </div>        </div>
+      </section>
+
       {/* ═══════════════════ 9 SIGNALS — ANIMATED HUB ═══════════════════ */}
-      <section className="sp-section cq-signals-section" id="signals">
+      <section className="sp-section cq-signals-section" id="signals" style={{ background: "#F5F4EF" }}>
         <div className="wrap">
           <div className="section-head split">
             <h2 className="section-title">Nine signals feed the fatigue score.<br />Zero guessing.</h2>
@@ -735,15 +638,10 @@ export default function CreativeIQPage() {
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">{sig.icon}</svg>
                         </span>
                         <b>{sig.name}</b>
-                        <em>{sig.weight}</em>
                       </div>
                     );
                   })}
                 </div>
-
-                <p className="cq-hub-caption">
-                  Each signal is weighted against your own historical cohorts, then rolled up into a per-ad fatigue score and day-precise runway. When the point estimate collapses to zero, the pill turns red and simply reads <b>Fatigued</b> — no meaningless <em>~0d</em> countdowns.
-                </p>
               </>
             );
           })()}
@@ -751,11 +649,11 @@ export default function CreativeIQPage() {
       </section>
 
       {/* ═══════════════════ AD DETAIL — CREATIVE BREAKDOWN ═══════════════════ */}
-      <section className="sp-section alt cq-dash-section" id="ad-detail">
+      <section className="sp-section alt cq-dash-section" id="ad-detail" style={{ background: "#FFFFFF" }}>
         <div className="wrap">
-          <div className="section-head split">
-            <h2 className="section-title">Open an ad.<br />See it broken down.</h2>
-            <p className="section-sub">Creative IQ doesn&apos;t stop at &ldquo;this ad is tired.&rdquo; Every ad has a detail page with a six-icon Creative Breakdown — quality, brand, coverage, readiness, fatigue, confidence — plus colour-coded tags for every dimension we&apos;ve classified (hook, tone, format, audience, angle) and campaign › adset breadcrumbs.</p>
+          <div className="cq-lib-1a-head" style={{ display: "flex", justifyContent: "space-between", gap: 48, alignItems: "flex-end", marginBottom: 44 }}>
+            <h2 className="section-title" style={{ margin: 0, maxWidth: 440 }}>Open an ad.<br />See it broken down.</h2>
+            <p className="section-sub" style={{ margin: 0, maxWidth: 560, fontSize: "16.5px", lineHeight: 1.6 }}>Creative IQ doesn&apos;t stop at &ldquo;this ad is tired.&rdquo; Every ad has a detail page with a six-icon Creative Breakdown — quality, brand, coverage, readiness, fatigue, confidence — plus colour-coded tags for every dimension we&apos;ve classified (hook, tone, format, audience, angle) and campaign › adset breadcrumbs.</p>
           </div>
 
           <div className="cq-dash">
@@ -835,11 +733,11 @@ export default function CreativeIQPage() {
       </section>
 
       {/* ═══════════════════ DIVERSITY GAP MAP ═══════════════════ */}
-      <section className="sp-section cq-gap-section" id="gap-map">
+      <section className="sp-section cq-gap-section" id="gap-map" style={{ background: "#F5F4EF" }}>
         <div className="wrap">
           <div className="section-head split">
-            <h2 className="section-title">Find the cells you never enter.<br />Fill them before your winners fatigue.</h2>
-            <p className="section-sub">The Diversity Gap Map pivots your live library across two axes you pick — audience × angle, format × hook, tone × cohort — and colours every cell by observed spend and performance vs. your account mean. Empty cells are gaps: territory your creative never enters.</p>
+            <h2 className="section-title">See what you&apos;re <em>missing</em>.</h2>
+            <p className="section-sub">We map every audience, angle, and format your ads never touch — and rank each gap by the upside you&apos;re leaving on the table. When a winner starts to tire, you already know where to run next.</p>
           </div>
 
           <div className="cq-gap">
@@ -912,29 +810,24 @@ export default function CreativeIQPage() {
               </article>
             </aside>
           </div>
-
-          <p className="cq-gap-caption">Cross-account brands see one aggregated map plus a per-account overlay — so multi-brand agencies find the gap once and roll it out where the underlying audiences overlap.</p>
         </div>
       </section>
 
       {/* ═══════════════════ AI TOP BRIEF ═══════════════════ */}
-      <section className="sp-section alt cq-brief-section" id="ai-brief">
+      <section className="sp-section alt cq-brief-section" id="ai-brief" style={{ background: "#FFFFFF" }}>
         <div className="wrap">
-          <div className="section-head split">
-            <div>
-              <span className="iq-chip iq-chip-accent" style={{ marginBottom: 12, display: 'inline-block' }}>✦ Scale plan · AI-fused</span>
-              <h2 className="section-title" style={{ marginTop: 12 }}>One brief.<br />Every signal we have.</h2>
-            </div>
-            <p className="section-sub">Creative teams don&apos;t need another blank page. The AI Top Brief generator fuses every signal already on your account into one production-ready brief — the highest-impact gap × your winning grain, cross-referenced with real-world search-trend velocity, cultural moments in flight, and competitor creative directions live in the wild.</p>
+          <div className="cq-lib-1a-head" style={{ display: "flex", justifyContent: "space-between", gap: 48, alignItems: "flex-end", marginBottom: 44 }}>
+            <h2 className="section-title" style={{ margin: 0, maxWidth: 440 }}>One brief.<br />Every signal we have.</h2>
+            <p className="section-sub" style={{ margin: 0, maxWidth: 680, fontSize: "16.5px", lineHeight: 1.6 }}>The AI Top Brief generator fuses every signal already on your account into one production-ready brief — the highest-impact gap × your winning grain, cross-referenced with real-world search-trend velocity, cultural moments in flight, and competitor creative directions live in the wild.</p>
           </div>
 
           <div className="cq-brief-fuse">
             <div className="cq-brief-ings">
-              <article className="cq-brief-ing t-diversity"><span className="cq-brief-ing-kicker">Diversity gap</span><b>Question × LAL 1%</b><em>+12% ROAS · 0% saturated</em></article>
-              <article className="cq-brief-ing t-winners"><span className="cq-brief-ing-kicker">Your winners</span><b>UGC vertical · 15s · warm</b><em>Grain-extracted from top 10</em></article>
-              <article className="cq-brief-ing t-audience"><span className="cq-brief-ing-kicker">Audience fit</span><b>Lookalike 1% · idx 1.9×</b><em>Headroom +38%</em></article>
-              <article className="cq-brief-ing t-realworld"><span className="cq-brief-ing-kicker">Real-world</span><b>&ldquo;retinol serum&rdquo; +124%</b><em>Coachella &apos;26 · Glossier UGC</em></article>
-              <article className="cq-brief-ing t-fatigue"><span className="cq-brief-ing-kicker">Fatigue signal</span><b>3 ads · runway ≤ 7d</b><em>9-signal Andromeda</em></article>
+              <article className="cq-brief-ing t-diversity"><span className="cq-brief-ing-main"><span className="cq-brief-ing-kicker">Diversity gap</span><b>Question × LAL 1%</b></span><em>+12% ROAS · 0% saturated</em></article>
+              <article className="cq-brief-ing t-winners"><span className="cq-brief-ing-main"><span className="cq-brief-ing-kicker">Your winners</span><b>UGC vertical · 15s · warm</b></span><em>Grain-extracted from top 10</em></article>
+              <article className="cq-brief-ing t-audience"><span className="cq-brief-ing-main"><span className="cq-brief-ing-kicker">Audience fit</span><b>Lookalike 1% · idx 1.9×</b></span><em>Headroom +38%</em></article>
+              <article className="cq-brief-ing t-realworld"><span className="cq-brief-ing-main"><span className="cq-brief-ing-kicker">Real-world</span><b>&ldquo;retinol serum&rdquo; +124%</b></span><em>Coachella &apos;26 · Glossier UGC</em></article>
+              <article className="cq-brief-ing t-fatigue"><span className="cq-brief-ing-main"><span className="cq-brief-ing-kicker">Fatigue signal</span><b>3 ads · runway ≤ 7d</b></span><em>9-signal Andromeda</em></article>
             </div>
 
             <div className="cq-brief-orb-wrap">
@@ -948,7 +841,7 @@ export default function CreativeIQPage() {
             </div>
 
             <div className="cq-brief-out">
-              <header className="cq-brief-out-head"><span>Production brief</span><em>Draft · 6 sec</em></header>
+              <header className="cq-brief-out-head"><span>✦ Production brief</span><em>Draft · 6 sec</em></header>
               <div className="cq-brief-out-fields">
                 <div><em>Angle</em><b>Problem → Solve</b></div>
                 <div><em>Hook</em><b>Question · &ldquo;What if…&rdquo;</b></div>
@@ -957,104 +850,85 @@ export default function CreativeIQPage() {
                 <div><em>KPI</em><b>ROAS ≥ 3.5×</b></div>
                 <div><em>Refs</em><b>3 winners auto-attached</b></div>
               </div>
-              <footer className="cq-brief-out-foot"><button className="btn btn-primary btn-sm">Open in Brief Studio →</button></footer>
+              <footer className="cq-brief-out-foot"><a href="https://app.memologs.com/" className="cq-brief-studio-btn">Open in Brief Studio →</a></footer>
             </div>
           </div>
 
-          <p className="cq-brief-caption">Locked to the <b>Scale</b> plan. Non-Scale accounts see the CTA and can open the animated walkthrough — showing exactly which signals the AI ingests — before deciding to upgrade.</p>
         </div>
       </section>
 
       {/* ═══════════════════ PLATFORM COVERAGE ═══════════════════ */}
-      <section className="sp-section cq-platforms-section" id="platforms">
+      <section className="sp-section cq-platforms-section" id="platforms" style={{ background: "#F5F4EF" }}>
         <div className="wrap">
-          <div className="section-head split">
-            <h2 className="section-title">Where Creative IQ <em>works</em> today.</h2>
-            <p className="section-sub">Run Meta ads? You&apos;re ready on day one. TikTok and YouTube are on the way — join the waitlist and we&apos;ll onboard you the moment those platforms are live.</p>
+          <div className="cq-lib-1a-head" style={{ display: "flex", justifyContent: "space-between", gap: 48, alignItems: "flex-end", marginBottom: 44 }}>
+            <h2 className="section-title" style={{ margin: 0, maxWidth: 480 }}>Where Creative IQ <em>works</em> today.</h2>
+            <p className="section-sub" style={{ margin: 0, maxWidth: 560, fontSize: "16.5px", lineHeight: 1.6 }}>Run Meta ads? You&apos;re ready on day one. TikTok and YouTube are on the way — join the waitlist and we&apos;ll onboard you the moment those platforms are live.</p>
           </div>
 
           <div className="cq-platforms">
             {/* META — live */}
             <article className="cq-pf cq-pf-live">
-              <header className="cq-pf-head">
-                <span className="cq-pf-ico cq-pf-ico-meta" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8v-6.93H7.9V12h2.1V9.8c0-2.08 1.24-3.23 3.13-3.23.91 0 1.85.16 1.85.16v2.03h-1.04c-1.03 0-1.35.64-1.35 1.29V12h2.3l-.37 2.87h-1.93v6.94C18.56 20.87 22 16.84 22 12z"/>
-                  </svg>
-                </span>
-                <span className="cq-pf-name">Meta</span>
+              <div className="cq-pf-top">
+                <b className="cq-pf-name">Meta</b>
                 <span className="cq-pf-badge live"><span className="dot"></span>Live</span>
-              </header>
+              </div>
               <ul className="cq-pf-list">
-                <li>Per-ad fatigue scoring &amp; day-precise runway</li>
-                <li>Diversity Gap Map — find the cells you never enter</li>
-                <li>Decision queue — Apply, Test, Brief, Watch</li>
-                <li>AI Top Brief generator (Scale plan)</li>
-                <li>Outcomes measured against a counterfactual</li>
+                <li><span className="mk">✓</span>Per-ad fatigue scoring &amp; day-precise runway</li>
+                <li><span className="mk">✓</span>Diversity Gap Map — the cells you never enter</li>
+                <li><span className="mk">✓</span>Decision queue — Apply, Test, Brief, Watch</li>
+                <li><span className="mk">✓</span>AI Top Brief generator (Scale plan)</li>
+                <li><span className="mk">✓</span>Outcomes measured against a counterfactual</li>
               </ul>
-              <footer className="cq-pf-foot">
-                <a href="https://app.memologs.com/" className="btn btn-primary btn-sm">Try Creative IQ →</a>
-                <span className="cq-pf-note">Refreshes nightly from your Meta ad account</span>
-              </footer>
+              <div className="cq-pf-foot">
+                <a href="https://app.memologs.com/" className="cq-pf-btn primary">Try Creative IQ →</a>
+                <span className="cq-pf-note">Refreshes nightly</span>
+              </div>
             </article>
 
             {/* TIKTOK — coming soon */}
             <article className="cq-pf cq-pf-roadmap">
-              <header className="cq-pf-head">
-                <span className="cq-pf-ico cq-pf-ico-tiktok" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M16 3h-3.2v13.6c0 1.6-1.3 2.9-2.9 2.9s-2.9-1.3-2.9-2.9 1.3-2.9 2.9-2.9c.3 0 .6.05.9.14V10.6a6.2 6.2 0 00-.9-.06c-3.4 0-6.1 2.75-6.1 6.15S6.5 22.85 9.9 22.85 16 20.1 16 16.7V9.6c1.25.9 2.8 1.45 4.4 1.45V7.85c-2.4 0-4.4-2-4.4-4.4V3z"/>
-                  </svg>
-                </span>
-                <span className="cq-pf-name">TikTok</span>
+              <div className="cq-pf-top">
+                <b className="cq-pf-name">TikTok</b>
                 <span className="cq-pf-badge soon">Coming soon</span>
-              </header>
+              </div>
               <ul className="cq-pf-list">
-                <li>Same 9-signal fatigue engine, TikTok-tuned</li>
-                <li>Gap map across audience, angle, and format</li>
-                <li>Decision queue &amp; brief workflow</li>
-                <li>Portfolio view alongside your Meta account</li>
+                <li><span className="mk mk-soon">—</span>Same 9-signal fatigue engine, TikTok-tuned</li>
+                <li><span className="mk mk-soon">—</span>Gap map across audience, angle, and format</li>
+                <li><span className="mk mk-soon">—</span>Decision queue &amp; brief workflow</li>
+                <li><span className="mk mk-soon">—</span>Portfolio view alongside your Meta account</li>
               </ul>
-              <footer className="cq-pf-foot">
+              <div className="cq-pf-foot">
                 <PilotCTA
-                  className="btn btn-ghost btn-sm"
+                  className="cq-pf-btn ghost"
                   modalTitle="Join the TikTok waitlist"
                   modalSubtitle="Tell us about your TikTok ad account. We'll email as soon as Creative IQ is live on TikTok — and onboard you first."
                 >
                   Join the waitlist →
                 </PilotCTA>
-                <span className="cq-pf-note">We&apos;ll email as soon as it&apos;s ready</span>
-              </footer>
+              </div>
             </article>
 
             {/* YOUTUBE — coming soon */}
             <article className="cq-pf cq-pf-roadmap">
-              <header className="cq-pf-head">
-                <span className="cq-pf-ico cq-pf-ico-youtube" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M23 6.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C16.5 2.5 12 2.5 12 2.5s-4.5 0-7.8.4c-.5.1-1.4.1-2.3 1C1.2 4.6 1 6.2 1 6.2s-.2 1.9-.2 3.7v1.7c0 1.9.2 3.7.2 3.7s.2 1.6.9 2.3c.9.9 2.1.9 2.6 1 1.9.2 8 .3 8 .3s4.5 0 7.8-.4c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.7v-1.7c0-1.9-.2-3.7-.2-3.7z"/>
-                    <path d="M9.5 14.5V7.5l6.5 3.5z" fill="#0A0F1D"/>
-                  </svg>
-                </span>
-                <span className="cq-pf-name">YouTube</span>
+              <div className="cq-pf-top">
+                <b className="cq-pf-name">YouTube</b>
                 <span className="cq-pf-badge soon">Coming soon</span>
-              </header>
+              </div>
               <ul className="cq-pf-list">
-                <li>Watch-through decay &amp; skip-rate saturation</li>
-                <li>Shorts &amp; in-stream format coverage</li>
-                <li>Decision queue with the same commit flow</li>
-                <li>Portfolio view across every platform you run</li>
+                <li><span className="mk mk-soon">—</span>Watch-through decay &amp; skip-rate saturation</li>
+                <li><span className="mk mk-soon">—</span>Shorts &amp; in-stream format coverage</li>
+                <li><span className="mk mk-soon">—</span>Decision queue with the same commit flow</li>
+                <li><span className="mk mk-soon">—</span>Portfolio view across every platform you run</li>
               </ul>
-              <footer className="cq-pf-foot">
+              <div className="cq-pf-foot">
                 <PilotCTA
-                  className="btn btn-ghost btn-sm"
+                  className="cq-pf-btn ghost"
                   modalTitle="Join the YouTube waitlist"
                   modalSubtitle="Tell us about your YouTube ad account. We'll email as soon as Creative IQ is live on YouTube — and onboard you first."
                 >
                   Join the waitlist →
                 </PilotCTA>
-                <span className="cq-pf-note">We&apos;ll email as soon as it&apos;s ready</span>
-              </footer>
+              </div>
             </article>
           </div>
 
@@ -1063,7 +937,7 @@ export default function CreativeIQPage() {
       </section>
 
       {/* ═══════════════════ QUOTE + CTA ═══════════════════ */}
-      <section className="sp-section cq-close-section">
+      <section className="sp-section cq-close-section" style={{ background: "#FFFFFF" }}>
         <div className="wrap">
           <blockquote className="sp-quote">
             <p>&ldquo;We used to have a creative dashboard. Creative IQ gave us a decision queue. The team opens Today, commits three or four things, and goes back to making ads — instead of sifting through fatigue charts.&rdquo;</p>
@@ -1084,6 +958,6 @@ export default function CreativeIQPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

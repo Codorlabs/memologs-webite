@@ -54,13 +54,14 @@ export default function Footer() {
             <div className="foot-col-title">Resources</div>
             <a href="/#calculator">Inflation calculator</a>
             <PilotCTA className="foot-link-btn">Book a pilot</PilotCTA>
-            <a href="mailto:hello@memologs.ai">hello@memologs.ai</a>
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms and Conditions</Link>
+            <a href="mailto:hello@memologs.com">hello@memologs.com</a>
           </div>
         </div>
         <div className="foot-rule"></div>
         <div className="foot-meta">
-          <span>© 2026 MemoLogs, Inc.</span>
-          <span>SOC 2 compliant · GDPR-ready · Flat-fee pricing</span>
+          <span>© 2026 MEMO AI, Inc.</span>
         </div>
       </div>
     </footer>

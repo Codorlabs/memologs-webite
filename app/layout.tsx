@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "MemoLogs is an AI marketing intelligence platform that proves causal impact, detects creative fatigue, finds high-LTV audiences, and remembers every decision. Average 37% lower CPI, 80% faster execution, 45% lower agency cost across $300M+ managed spend.",
   keywords:
     "AI marketing platform, causal measurement, incrementality testing, marketing mix modeling alternative, creative fatigue detection, audience intelligence, marketing attribution, GeoTwin, CausalCore, DiffLens, tri-model consensus, media optimization, MemoLogs",
-  authors: [{ name: "MemoLogs, Inc." }],
+  authors: [{ name: "MEMO AI, Inc." }],
   robots: "index, follow, max-image-preview:large, max-snippet:-1",
   alternates: { canonical: "https://memologs.ai/" },
   openGraph: {

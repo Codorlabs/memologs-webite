@@ -4,7 +4,6 @@ import InflationCalculator from "@/components/InflationCalculator";
 import ContactForm from "@/components/ContactForm";
 import PilotCTA from "@/components/PilotCTA";
 import HomeTimelineScroll from "@/components/HomeTimelineScroll";
-import StatsBand from "@/components/StatsBand";
 import Link from "next/link";
 
 export default function Home() {
@@ -36,14 +35,15 @@ export default function Home() {
         <div className="wrap">
           <div className="hero-grid">
             <div className="hero-lead">
+              <span className="hp-kicker" style={{ display: "inline-block", fontSize: 11.5, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#00FFC2", marginBottom: 18 }}>Defining a new category</span>
               <h1 className="display hero-display" id="hero-h1">
-                AI Marketing<br />Intelligence Platform
+                The Marketing<br />Decision Platform.
               </h1>
               <p className="hero-tagline">
-                MemoLogs <em>thinks.</em> Your stack <em>measures.</em>
+                The only one with <em>a memory.</em>
               </p>
               <p className="lede">
-                Causal measurement, creative AI, and audience AI — held together by a memory that learns from every campaign you&apos;ll ever run. The only platform that <em>measures causality, fixes creative, targets buyers,</em> and remembers <em>why</em> it all worked.
+                Causal measurement, creative AI, audience activation, an experiment-anchored budget planner, and a decision memory — all on one signal graph, all grounded in causal proof. We don&apos;t just store your data; we store the <em>decisions behind it.</em>
               </p>
               <div className="cta-row">
                 <PilotCTA className="btn btn-primary btn-lg">Start a 90-day pilot</PilotCTA>
@@ -59,7 +59,7 @@ export default function Home() {
               <div className="hero-micro hero-micro-meta">
                 <span>Flat fee — never % of spend</span>
                 <span className="sep">·</span>
-                <span>Results in week 5, not week 12</span>
+                <span>Causal proof by week 5</span>
                 <span className="sep">·</span>
                 <span>Sits alongside your stack</span>
               </div>
@@ -69,14 +69,13 @@ export default function Home() {
         </div>
       </section>
 
-      <StatsBand />
-
       {/* ═══════════ DIAGNOSTIC / PROBLEM ═══════════ */}
       <section className="diag">
         <div className="wrap">
           <div className="section-head">
-            <h2 className="section-title">Built to measure the <em>causality</em>.<br />Not the clicks.</h2>
-            <p className="section-sub">Here&apos;s what&apos;s actually going wrong under the hood of most modern marketing stacks — and what it quietly costs you every month you leave it alone.</p>
+            <span className="hp-kicker" style={{ display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#00FFC2", marginBottom: 14 }}>The problem</span>
+            <h2 className="section-title">Your stack measures.<br />It doesn&apos;t <em>decide.</em></h2>
+            <p className="section-sub">Marketing teams have more data than ever — and less memory of what to do with it. Four expensive things go wrong under the hood, and the same lessons get re-learned every quarter at full cost.</p>
           </div>
 
           <div className="diag-grid">
@@ -103,7 +102,7 @@ export default function Home() {
               </header>
               <div className="dc-body">
                 <h3>Your creative is dying in silence.</h3>
-                <p>By the time CPA spikes, you&apos;ve already overspent up to 60%. The symptom arrives weeks after the death.</p>
+                <p>By the time CPA spikes, you&apos;ve already overspent 20–40%. The symptom arrives weeks after the death.</p>
               </div>
               <div className="dc-exhibit dc-fatigue">
                 <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
@@ -183,6 +182,7 @@ export default function Home() {
         <div className="wrap">
           <div className="mb-head">
             <h2 className="mb-title">One root cause.</h2>
+            <p className="section-sub" style={{ margin: "12px auto 0", maxWidth: 560 }}>Every symptom traces back to the same gap — your tools <em>measure</em>, but nothing <em>decides</em>, and nothing remembers what happened last time.</p>
           </div>
 
           <div className="orbit-stage" role="img" aria-label="Eight marketing-stack symptoms orbiting one root cause">
@@ -300,8 +300,9 @@ export default function Home() {
       <section id="platform" className="pillars">
         <div className="wrap">
           <div className="section-head">
-            <h2 className="section-title">One platform.<br />Five AI products.</h2>
-            <p className="section-sub">Every IQ product shares one data layer, one signal graph, and one memory. That&apos;s why MemoLogs produces answers MMM, attribution platforms, and consulting stacks simply can&apos;t.</p>
+            <span className="hp-kicker" style={{ display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#00FFC2", marginBottom: 14 }}>The platform</span>
+            <h2 className="section-title">Five IQ products.<br />One signal graph. <em>One memory.</em></h2>
+            <p className="section-sub">Each product is a serious system on its own. The signal graph and Memory IQ underneath make them compound — every decision your team makes feeds the next one.</p>
           </div>
           <PillarTabs />
         </div>
@@ -311,6 +312,7 @@ export default function Home() {
       <section id="calculator" className="calc">
         <div className="wrap">
           <div className="section-head">
+            <span className="hp-kicker" style={{ display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#00FFC2", marginBottom: 14 }}>See it on your numbers</span>
             <h2 className="section-title">What is <em>your</em> attribution inflation factor?</h2>
             <p className="section-sub">Enter your monthly media spend and what your platforms are reporting. We&apos;ll show you what that number likely looks like once you strip out the fluff — and how much is quietly draining every month.</p>
           </div>
@@ -322,8 +324,9 @@ export default function Home() {
       <section className="results">
         <div className="wrap">
           <div className="section-head">
-            <h2 className="section-title">Inside real customer pilots.</h2>
-            <p className="section-sub">Every study below was measured with the same GeoTwin™ methodology we&apos;d run on your account. No case-study theater — just the before, the test, and the after.</p>
+            <span className="hp-kicker" style={{ display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#00FFC2", marginBottom: 14 }}>Proof</span>
+            <h2 className="section-title">Measured causally.<br />Not platform-reported.</h2>
+            <p className="section-sub">Three anonymized engagements — the before, the test, and the after. Where a causal read applies, the numbers are what the incrementality models saw, not what the platform claimed.</p>
           </div>
 
           <div className="cases">
@@ -369,8 +372,9 @@ export default function Home() {
       <section className="landscape">
         <div className="wrap">
           <div className="section-head">
-            <h2 className="section-title">Where other tools stop. Where MemoLogs starts.</h2>
-            <p className="section-sub">Each category a CMO shops solves one slice — measurement, or planning, or reporting. Here&apos;s what each does well, where it stops, and what only a connected causal system does.</p>
+            <span className="hp-kicker" style={{ display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#00FFC2", marginBottom: 14 }}>The category</span>
+            <h2 className="section-title">Not attribution. Not MMM.<br />Not a dashboard.</h2>
+            <p className="section-sub">Each category a CMO shops solves one slice — measurement, or planning, or reporting. Here&apos;s what each does well, where it stops, and what only a connected <em>decision platform</em> does.</p>
           </div>
 
           <div className="ctbl-shell">
@@ -525,6 +529,7 @@ export default function Home() {
       <section className="implement">
         <div className="wrap">
           <div className="section-head">
+            <span className="hp-kicker" style={{ display: "inline-block", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#00FFC2", marginBottom: 14 }}>The rollout</span>
             <h2 className="section-title">Value before your next board meeting.</h2>
             <p className="section-sub">No rip-and-replace. MemoLogs sits alongside your existing stack via API. Here&apos;s what the rollout looks like, week by week.</p>
           </div>
@@ -580,7 +585,7 @@ export default function Home() {
           <div className="cc-grid">
             <div className="cc-left">
               <h2 className="display">
-                Ready to know what<br />
+                Want to know what<br />
                 <em>actually works?</em>
               </h2>
               <p className="lede">Book a 30-minute pilot-scoping call. We&apos;ll audit your attribution, size the likely inflation on your account, and tell you whether a MemoLogs pilot makes sense — before you commit a dollar.</p>

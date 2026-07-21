@@ -80,6 +80,7 @@ export default function PillarTabs() {
                 <li><b>Design before you spend.</b> ML picks optimal test &amp; control markets. Statistical power guaranteed before dollar one.</li>
                 <li><b>GeoTwin™ synthetic markets.</b> A weighted blend of control cities that mirrors your test market in real time — then we watch the gap.</li>
                 <li><b>CausalCore™ validation.</b> Counterfactual model runs in parallel on non-campaign windows. If phantom lift appears there, we catch it.</li>
+                <li><b>Plan the next dollar.</b> Every trusted verdict feeds the <b>Budget Planner</b> — a causal MMM calibrated by your live geo-tests that allocates spend cross-channel, forecasts the lift, and only recommends when it&apos;s trustworthy.</li>
               </ul>
             </div>
             <button

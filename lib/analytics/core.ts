@@ -4,12 +4,15 @@ import { metaAdapter } from './adapters/meta';
 import { ga4Adapter } from './adapters/ga4';
 import { googleAdsAdapter } from './adapters/google-ads';
 import { tiktokAdapter } from './adapters/tiktok';
+import { zarazAdapter } from './adapters/zaraz';
 import { analyticsConfig } from './config';
 import { getCountry, getExternalId, getStoredUser, normalizeUser, storeUser, uuid } from './identity';
 import { getConsent, setConsent, whenConsented } from './consent';
 
-// Register platforms here. Disabled ones are skipped automatically.
-const ADAPTERS: Adapter[] = [metaAdapter, ga4Adapter, googleAdsAdapter, tiktokAdapter];
+// Register platforms here. Disabled ones are skipped automatically. The Zaraz
+// sink fires one server-side event per track() that Cloudflare fans out to every
+// enabled Zaraz tool (Meta CAPI, GA4, TikTok, Google Ads).
+const ADAPTERS: Adapter[] = [metaAdapter, ga4Adapter, googleAdsAdapter, tiktokAdapter, zarazAdapter];
 
 class Analytics {
   private loaded = false;

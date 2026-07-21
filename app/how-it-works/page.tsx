@@ -20,14 +20,14 @@ export default function HowItWorksPage() {
           <div className="hw-hero-grid">
             <div className="hw-hero-lead">
               <span className="iq-chip iq-chip-accent">90-day pilot playbook</span>
-              <h1 id="hw-h1">First value in <em>week one.</em><br />Proof in <em>week five.</em></h1>
+              <h1 id="hw-h1">Connected in <em>a week.</em> Proven in <em>five.</em><br />Compounding by <em>twelve.</em></h1>
               <p className="lede">
-                MemoLogs is API-first. No rip-and-replace. No 90-day onboarding. No consulting retainer bolted on. Four chapters, eleven milestones — here&apos;s exactly what ships, when, and what it looks like when it lands.
+                MemoLogs plugs into the stack you already run — no rip-and-replace, no engineering sprint, no consulting retainer. Here&apos;s exactly what comes online across your first 90 days: dashboards in week one, a causal proof of what&apos;s really working by week five, and a system that compounds what it learns by week twelve.
               </p>
               <div className="iq-feature-chips">
-                <span className="iq-fchip"><span className="iq-fchip-dot"></span>API integrations in 2–3 days</span>
-                <span className="iq-fchip"><span className="iq-fchip-dot"></span>First dashboards by day 7</span>
-                <span className="iq-fchip"><span className="iq-fchip-dot"></span>Tri-model causal verdict by week 5</span>
+                <span className="iq-fchip"><span className="iq-fchip-dot"></span>Dashboards by day 7</span>
+                <span className="iq-fchip"><span className="iq-fchip-dot"></span>Causal proof by week 5</span>
+                <span className="iq-fchip"><span className="iq-fchip-dot"></span>Compounding by week 12</span>
               </div>
               <div className="cta-row iq-cta-row">
                 <PilotCTA className="btn btn-primary btn-lg">Start a 90-day pilot →</PilotCTA>
@@ -160,7 +160,7 @@ export default function HowItWorksPage() {
               <header className="hw-chapter-head">
                 <span className="hw-chapter-idx">Chapter 01</span>
                 <h2 className="hw-chapter-title">Connect.</h2>
-                <p className="hw-chapter-sub">Wire MemoLogs into your stack. Read-only API access to the platforms you already run. Your data never leaves your workspace in a form we&apos;d re-sell.</p>
+                <p className="hw-chapter-sub">Wire MemoLogs into your stack. Read-only API access to the platforms you already run. Your raw data is never re-sold, and never pooled with other customers&apos;.</p>
                 <span className="hw-chapter-range">Days 1 – 7</span>
               </header>
 
@@ -185,7 +185,7 @@ export default function HowItWorksPage() {
                 <div className="hw-ms-node"><span>D3</span></div>
                 <div className="hw-ms-card">
                   <header><span className="hw-ms-when">Days 2–3</span><h3>Data connections live</h3></header>
-                  <p>Meta, Google, TikTok, GA4, Shopify, BigQuery, Snowflake — all pre-built. You grant read-only OAuth or paste a service-account token. We handle wiring and schema validation in the war room.</p>
+                  <p>Meta, Google, TikTok, GA4, Shopify, and BigQuery — all pre-built. You grant read-only OAuth or paste a service-account token. We handle wiring and schema validation in the war room.</p>
                   <div className="hw-preview hw-pv-plat">
                     <span className="hw-pv-plat-chip">Meta</span>
                     <span className="hw-pv-plat-chip">Google</span>
@@ -193,7 +193,6 @@ export default function HowItWorksPage() {
                     <span className="hw-pv-plat-chip">GA4</span>
                     <span className="hw-pv-plat-chip">Shopify</span>
                     <span className="hw-pv-plat-chip">BigQuery</span>
-                    <span className="hw-pv-plat-chip">Snowflake</span>
                   </div>
                 </div>
               </article>
@@ -245,7 +244,7 @@ export default function HowItWorksPage() {
                 <div className="hw-ms-node"><span>W2</span></div>
                 <div className="hw-ms-card">
                   <header><span className="hw-ms-when">Week 2</span><h3>First creative refresh queue</h3></header>
-                  <p>Creative IQ crosses your first asset below health score 40. Three variants are drafted from your existing library, ranked by predicted CPA lift. Your team picks one. First A/B goes live.</p>
+                  <p>Creative IQ crosses your first asset below health score 60. Three variants are drafted from your existing library, ranked by predicted CPA lift. Your team picks one. First A/B goes live.</p>
                   <div className="hw-preview hw-pv-queue">
                     <div className="hw-pv-var hw-pv-var-1"><span>V1</span><em>+18% pred.</em></div>
                     <div className="hw-pv-var"><span>V2</span><em>+11% pred.</em></div>
@@ -287,8 +286,8 @@ export default function HowItWorksPage() {
               <article className="hw-ms hw-ms-right is-visible" data-day="Week 4" data-progress="33">
                 <div className="hw-ms-node"><span>W4</span></div>
                 <div className="hw-ms-card">
-                  <header><span className="hw-ms-when">Week 4</span><h3>GeoTwin™ study launches</h3></header>
-                  <p>ML selects test + control markets from 58K pair permutations. Pre-fit L2 error below 0.012. The synthetic twin is validated. Your campaign goes live in the 4 treatment DMAs.</p>
+                  <header><span className="hw-ms-when">Week 4</span><h3>Incrementality study launches</h3></header>
+                  <p>MemoLogs picks the best-matched test and control markets from tens of thousands of combinations, then confirms the match holds before a dollar is spent. Your campaign goes live in the 4 treatment markets.</p>
                   <div className="hw-preview hw-pv-geo">
                     <svg viewBox="0 0 280 140" aria-hidden="true">
                       <defs>
@@ -320,10 +319,10 @@ export default function HowItWorksPage() {
                 <div className="hw-ms-node hw-ms-node-milestone"><span>W5</span></div>
                 <div className="hw-ms-card hw-ms-card-milestone">
                   <header><span className="hw-ms-when">Week 5 · key milestone</span><h3>First consensus verdict delivered</h3></header>
-                  <p>GeoTwin™ (SCM), CausalCore™ (BSTS), and DiffLens™ (DiD) run in parallel. Direction agrees 3/3. Two of three reach p&lt;0.05. Your Attribution Inflation Factor per channel lands — with a dollar-impact reallocation plan.</p>
+                  <p>Three independent causal models — GeoTwin™, CausalCore™, and DiffLens™ — run in parallel and agree on the direction of the lift. You get one reconciled verdict, your per-channel Attribution Inflation Factor (how much each platform over-claims), and a dollar-impact reallocation plan.</p>
                   <div className="hw-preview hw-pv-verdict">
                     <div className="hw-pv-verdict-head">
-                      <span className="hw-pv-verdict-tag">Consensus Verdict</span>
+                      <span className="hw-pv-verdict-tag">Consensus Verdict · Illustrative</span>
                       <span className="hw-pv-verdict-conf">High confidence</span>
                     </div>
                     <div className="hw-pv-verdict-big"><b>+7.0%</b><span>consensus lift</span></div>
@@ -363,7 +362,7 @@ export default function HowItWorksPage() {
                       <span className="hw-pv-bar-delta">Hold</span>
                     </div>
                     <div className="hw-pv-bar-row">
-                      <span className="hw-pv-bar-lab">CTV</span>
+                      <span className="hw-pv-bar-lab">TikTok</span>
                       <div className="hw-pv-bar"><div className="before" style={{ width: '40%' }}></div><div className="after" style={{ width: '76%' }}></div></div>
                       <span className="hw-pv-bar-delta good">+90%</span>
                     </div>
@@ -493,7 +492,7 @@ export default function HowItWorksPage() {
             </details>
             <details className="hw-faq-item">
               <summary><span className="hw-faq-q">What data do you need from us?</span><span className="hw-faq-caret" aria-hidden="true">+</span></summary>
-              <p>Read-only API access to your ad platforms (Meta, Google, TikTok), analytics (GA4), and commerce/CRM (Shopify, BigQuery, Snowflake). Roughly 6 total hours of integration effort on your side — all OAuth flows or pasted service-account tokens.</p>
+              <p>Read-only API access to your ad platforms (Meta, Google, TikTok), analytics (GA4), and commerce/CRM (Shopify, BigQuery). Roughly 6 total hours of integration effort on your side — all OAuth flows or pasted service-account tokens.</p>
             </details>
             <details className="hw-faq-item">
               <summary><span className="hw-faq-q">Do you share or re-sell our data?</span><span className="hw-faq-caret" aria-hidden="true">+</span></summary>
@@ -505,7 +504,7 @@ export default function HowItWorksPage() {
             </details>
             <details className="hw-faq-item">
               <summary><span className="hw-faq-q">Who on our side runs this?</span><span className="hw-faq-caret" aria-hidden="true">+</span></summary>
-              <p>Two people on your side: typically a performance / analytics lead and a data or engineering lead. MemoLogs provides a dedicated account pod (solutions architect + analyst + success manager) for the duration of the pilot.</p>
+              <p>Usually one person on your side — a growth or performance lead. If you&apos;re connecting a data warehouse, a data lead helps for the few hours of setup. MemoLogs provides a dedicated account pod (solutions architect + analyst + success manager) for the whole pilot.</p>
             </details>
             <details className="hw-faq-item">
               <summary><span className="hw-faq-q">How does the tri-model consensus actually work?</span><span className="hw-faq-caret" aria-hidden="true">+</span></summary>

@@ -1,7 +1,7 @@
 import type { Adapter } from './base';
 import type { EventData, NormalizedEvent, UserData } from '../types';
 import { analyticsConfig } from '../config';
-import { getExternalId, getFbp, getFbc } from '../identity';
+import { getExternalId } from '../identity';
 
 // Standard events fire via `track`; anything else falls back to `trackCustom`.
 const STANDARD_EVENTS = new Set([
@@ -82,25 +82,13 @@ export const metaAdapter: Adapter = {
     const isStandard = STANDARD_EVENTS.has(event.name);
     const custom = metaCustom(event.data);
 
-    // 1) Browser Pixel — carries eventID for deduplication.
+    // Browser Pixel only — carries eventID for deduplication. The server-side
+    // Conversions API half is fired once by the Zaraz sink adapter (which fans
+    // the same event_name + event_id out to Meta CAPI and every other Zaraz
+    // tool), so Meta receives both and deduplicates them into one event.
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq(isStandard ? 'track' : 'trackCustom', event.name, custom, {
         eventID: event.eventId,
-      });
-    }
-
-    // 2) Conversions API via Zaraz — fired server-side from the Cloudflare edge,
-    // which also injects client IP + user-agent. Same event_name + event_id as
-    // the Pixel above => Meta deduplicates them into one event.
-    if (typeof window !== 'undefined' && window.zaraz?.track) {
-      window.zaraz.track(event.name, {
-        event_id: event.eventId,
-        event_source_url: event.eventSourceUrl,
-        action_source: 'website',
-        ...metaUser(event.user),
-        fbp: getFbp(),
-        fbc: getFbc(),
-        ...custom,
       });
     }
   },

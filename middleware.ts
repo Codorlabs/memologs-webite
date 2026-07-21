@@ -21,6 +21,11 @@ export function middleware(request: NextRequest) {
     sameSite: 'lax' as const,
     // Secure cookies are dropped over http://localhost in dev.
     secure: process.env.NODE_ENV === 'production',
+    // Scope to the apex so app.memologs.com sees the same identifiers and can
+    // stitch its server-side signup conversion back to this visit. Localhost has
+    // no subdomains, so only set a domain in prod. Matches Zaraz's own managed
+    // cookies (cfz_*), which are already Domain=memologs.com.
+    ...(process.env.NODE_ENV === 'production' ? { domain: '.memologs.com' } : {}),
     // Not httpOnly: the browser Pixel and our analytics client must read these.
   };
 

@@ -8,6 +8,26 @@ import StatsBand from "@/components/StatsBand";
 import Link from "next/link";
 
 export default function Home() {
+  const CMP = [
+    { g: "The truth layer" },
+    { cap: "Causal measurement", sub: "Is the “what worked” causal, or self-reported?", a: "Self-attributed — structurally inflated", adim: true, b: "Real, but a periodic point-in-time read", c: "Bespoke, manual, slow to run", m: "Always-on tri-model consensus (GeoTwin · CausalCore · DiffLens) + trust state" },
+    { cap: "Attribution inflation, exposed", sub: "How much each platform over-claims", a: "It is the inflation", adim: true, b: "Partial — “incrementality factors”", c: "Not measured", cdim: true, m: "Per-channel AIF — claimed vs. measured lift, auto-populated" },
+    { cap: "Cross-metric halo", sub: "Effect on branded search, organic, and more", a: "Rarely", adim: true, b: "Rare", bdim: true, c: "Rarely", cdim: true, m: "Measures a channel’s downstream lift on other metrics" },
+    { g: "Planning the next dollar" },
+    { cap: "Media-mix model", sub: "The engine behind the plan", a: "Some — correlational", b: "Core — fit on historical correlation", c: "Periodic planning models", m: "Experiment-anchored — your live geo-tests are its backbone" },
+    { cap: "Cross-channel allocation + forecast", sub: "Split the next budget, project the lift", a: "Some", b: "Yes — allocated off the model", c: "Manual, in a deck", m: "Allocates from measured curves + forecasts the reallocation" },
+    { cap: "Reliability gate on the plan", sub: "Does it refuse when it can’t be trusted?", a: "Not offered", adim: true, b: "Rare", bdim: true, c: "Not offered", cdim: true, m: "Trust state on every plan — shows measured history when it can’t defend one" },
+    { g: "Acting on it" },
+    { cap: "Creative intelligence", sub: "Fatigue, refresh, asset-level health", a: "Basic tagging", b: "Not offered", bdim: true, c: "Not offered", cdim: true, m: "9-signal fatigue scoring + refresh recommendations" },
+    { cap: "Audience activation", sub: "From measurement to live segments", a: "Lookalikes only", b: "Limited / partner-led", c: "Not offered", cdim: true, m: "4 causal-LTV agents, per-platform sync — no identity graph" },
+    { g: "Compounding what you learn" },
+    { cap: "Decision memory", sub: "Do learnings survive the readout?", a: "A dashboard, not a memory", adim: true, b: "A readout, then gone", bdim: true, c: "Leaves with the deck", cdim: true, m: "Memory IQ — warns before you repeat a trusted failure" },
+    { cap: "SKU & sales-channel truth", sub: "“What did Meta drive on Amazon?”", a: "Channel-blind", adim: true, b: "Channel-blind", bdim: true, c: "Not modeled", cdim: true, m: "SKU price index + marketing→sales-channel*" },
+    { g: "How you work with it" },
+    { cap: "Grounded AI Co-Pilot", sub: "Answers you can trust and cite", a: "AI dashboards", b: "Some AI narration", c: "Not offered", cdim: true, m: "Source-cited answers — declines when the data can’t support them" },
+    { cap: "Time to first causal verdict", plain: true, a: "Real-time (but inflated)", b: "6–12 weeks", c: "30+ days", m: "Under 5 weeks" },
+    { cap: "Pricing model", plain: true, a: "% of ad spend", b: "Seats + custom", c: "Retainer", m: "Flat fee — never a % of spend" },
+  ];
   return (
     <>
       <HomeTimelineScroll />
@@ -350,89 +370,153 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <h2 className="section-title">Where other tools stop. Where MemoLogs starts.</h2>
-            <p className="section-sub">Every category a CMO shops when they realize their attribution stack is lying. Here&apos;s what each one gives you — and what it quietly leaves on the table.</p>
+            <p className="section-sub">Each category a CMO shops solves one slice — measurement, or planning, or reporting. Here&apos;s what each does well, where it stops, and what only a connected causal system does.</p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(238px, 1fr))", gap: 18, marginTop: 8 }}>
-            {[
-              {
-                cat: "Attribution & analytics platforms",
-                buy: "Shopped when “attribution is broken.”",
-                gives: ["Every channel’s numbers in one real-time dashboard", "MTA, pixels, and first-party tracking"],
-                leaves: ["It’s still platform self-attribution — the same inflated signal, now aggregated", "No causal truth, and no memory of what actually worked"],
-              },
-              {
-                cat: "Incrementality & experiment tools",
-                buy: "Shopped when “we need a real lift number.”",
-                gives: ["Clean holdouts and geo-tests", "A trustworthy read on a single test"],
-                leaves: ["The test is a one-time readout", "Nothing turns it into next quarter’s plan, or feeds creative, audience, and memory"],
-              },
-              {
-                cat: "Media-mix models & planning",
-                buy: "Shopped when “we need to plan the budget.”",
-                gives: ["Forecasting and cross-channel allocation", "A board-level view of where spend goes"],
-                leaves: ["Fit on historical correlation and calibrated by occasional tests — so it can confidently mislead", "No trust state that refuses a plan it can’t defend; disconnected from the rest of the stack"],
-              },
-              {
-                cat: "Consultants & agencies",
-                buy: "Shopped when “we need senior brains on it.”",
-                gives: ["A bespoke study and a strategy deck", "Experienced human judgment"],
-                leaves: ["Slow and point-in-time — 30+ days per study, not always-on", "The learning walks out the door with the deck"],
-              },
-            ].map((c) => (
-              <div key={c.cat} style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: "22px 22px 24px" }}>
-                <h3 style={{ fontSize: 16, fontWeight: 600, color: "#FBFBFD", margin: "0 0 4px", letterSpacing: "-0.01em" }}>{c.cat}</h3>
-                <p style={{ fontSize: 12.5, color: "rgba(255,255,255,0.42)", margin: "0 0 18px" }}>{c.buy}</p>
-                <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: 9 }}>What you get</div>
-                <ul style={{ listStyle: "none", padding: 0, margin: "0 0 18px" }}>
-                  {c.gives.map((g, i) => (
-                    <li key={i} style={{ display: "flex", gap: 8, fontSize: 13.5, lineHeight: 1.5, color: "rgba(255,255,255,0.74)", marginBottom: 7 }}>
-                      <span aria-hidden="true" style={{ color: "#00FFC2", flexShrink: 0, marginTop: 1 }}>✓</span><span>{g}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#FFB347", marginBottom: 9 }}>What it leaves on the table</div>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {c.leaves.map((l, i) => (
-                    <li key={i} style={{ display: "flex", gap: 8, fontSize: 13.5, lineHeight: 1.5, color: "rgba(255,255,255,0.74)", marginBottom: 7 }}>
-                      <span aria-hidden="true" style={{ color: "#FFB347", flexShrink: 0, marginTop: 1 }}>—</span><span>{l}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <div className="ctbl-shell">
+            <style>{`
+              .ctbl-shell{margin-top:20px}
+              .cmp-ic{width:16px;height:16px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:800;flex:0 0 16px;line-height:1}
+              .cmp-ic.full{background:#00FFC2;color:#052018}
+              .cmp-ic.part{background:conic-gradient(#FFB347 0 50%,transparent 50%);border:1px solid rgba(255,179,71,0.6)}
+              .cmp-ic.none{border:1px solid rgba(255,255,255,0.22)}
 
-          <div style={{ marginTop: 18, background: "linear-gradient(180deg, rgba(0,255,194,0.09), rgba(0,255,194,0.02))", border: "1px solid rgba(0,255,194,0.32)", borderRadius: 18, padding: "30px 30px 30px" }}>
-            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#00FFC2", marginBottom: 10 }}>Where MemoLogs starts</div>
-            <p style={{ fontSize: 18, lineHeight: 1.5, color: "#FBFBFD", margin: "0 0 24px", maxWidth: 780, letterSpacing: "-0.01em" }}>Every category above answers one question and stops. MemoLogs is the layer underneath — one causal system where measurement, creative, audience, memory, and the budget plan compound.</p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(258px, 1fr))", gap: 20 }}>
-              {[
-                { h: "Causal truth, not platform credit", b: "Three independent causal models — GeoTwin, CausalCore, and DiffLens — reconciled into a trust state on every verdict, plus a per-channel Attribution Inflation Factor that shows exactly how much each platform over-claims versus the measured truth." },
-                { h: "A plan gated to what it can defend", b: "An experiment-anchored causal MMM — your live geo-tests are its backbone, not a periodic calibration — allocates the next dollar across channels and forecasts the lift. Every plan carries a trust state, so it surfaces a recommendation only when it’s trustworthy, and shows your measured history when it isn’t." },
-                { h: "Down to the SKU and the sales channel", b: "It controls for a SKU-level, mix-adjusted price index (not blended AOV) and promo — and answers “what did Meta drive on Amazon?” for the sales channels you connect." },
-                { h: "It compounds", b: "Every decision and its measured outcome is remembered, so Memory IQ can warn you before you repeat a trusted failure — and a grounded Co-Pilot answers all of it with the source records attached." },
-              ].map((f) => (
-                <div key={f.h}>
-                  <div style={{ display: "flex", gap: 9, alignItems: "flex-start", marginBottom: 6 }}>
-                    <span aria-hidden="true" style={{ color: "#00FFC2", fontWeight: 700, flexShrink: 0 }}>→</span>
-                    <h4 style={{ fontSize: 15, fontWeight: 600, color: "#FBFBFD", margin: 0 }}>{f.h}</h4>
+              .ctbl-wrap{display:none;border:1px solid rgba(255,255,255,0.09);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0))}
+              .ctbl{width:100%;border-collapse:separate;border-spacing:0;font-size:13px;table-layout:fixed}
+              .ctbl th,.ctbl td{padding:14px 16px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+              .ctbl thead th{position:sticky;top:64px;z-index:20;background:#0c1322;vertical-align:bottom;border-bottom:1px solid rgba(255,255,255,0.14)}
+              .ctbl thead .h-name{display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.85);line-height:1.25}
+              .ctbl thead .h-arch{display:block;margin-top:5px;font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,0.36)}
+              .ctbl thead th.ct-cap{border-top-left-radius:16px}
+              .ctbl thead th.ct-cap .h-name{color:rgba(255,255,255,0.42);font-weight:700;font-size:10px;letter-spacing:.09em;text-transform:uppercase}
+              .ctbl td.ct-cap{border-right:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.05)}
+              .ctbl td.ct-cap b{display:block;color:#FBFBFD;font-weight:600;font-size:13px;line-height:1.3}
+              .ctbl td.ct-cap span{display:block;margin-top:3px;font-size:10.5px;color:rgba(255,255,255,0.44);line-height:1.35}
+              .ctbl td.ct-comp{color:rgba(255,255,255,0.64);line-height:1.45;border-bottom:1px solid rgba(255,255,255,0.05)}
+              .ctbl td.ct-comp.dim{color:rgba(255,255,255,0.32)}
+              .ctbl td .cell{display:flex;gap:9px;align-items:flex-start}
+              .ctbl td .cell .cmp-ic{margin-top:1px}
+              .ctbl .ct-memo{background:rgba(0,255,194,0.07);border-left:1px solid rgba(0,255,194,0.28);border-right:1px solid rgba(0,255,194,0.28)}
+              .ctbl thead th.ct-memo{background:linear-gradient(180deg,#00FFC2,#04e0ac);border-top-left-radius:13px;border-top-right-radius:16px;border-bottom:none}
+              .ctbl thead th.ct-memo .h-name{color:#052018;font-weight:800;font-size:13.5px}
+              .ctbl thead th.ct-memo .h-arch{color:rgba(5,32,24,0.65)}
+              .ctbl td.ct-memo{color:#EAFFF9;font-weight:500;line-height:1.45;border-bottom:1px solid rgba(0,255,194,0.14)}
+              .ctbl td.ct-memo b.m-plain{font-weight:700;color:#fff}
+              .ctbl tbody tr:last-child td.ct-memo{border-bottom-right-radius:16px}
+              .ctbl tbody tr:last-child td.ct-cap{border-bottom-left-radius:16px}
+              .ctbl tr.ct-group td{background:rgba(255,255,255,0.025);padding:12px 16px 9px;border-bottom:1px solid rgba(255,255,255,0.06)}
+              .ctbl tr.ct-group td.ct-memo{background:rgba(0,255,194,0.1)}
+              .ctbl tr.ct-group .gk{display:inline-flex;align-items:center;gap:9px;font-size:10px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,0.62)}
+              .ctbl tr.ct-group .gk:before{content:"";width:15px;height:2px;border-radius:2px;background:#00FFC2}
+              .ctbl tbody tr.ct-row:hover td{background:rgba(255,255,255,0.04)}
+              .ctbl tbody tr.ct-row:hover td.ct-memo{background:rgba(0,255,194,0.12)}
+
+              .cmp-cards{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+              .cmp-div{margin:16px 2px 2px;font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:rgba(0,255,194,0.74);display:flex;align-items:center;gap:9px}
+              .cmp-div:before{content:"";width:15px;height:2px;border-radius:2px;background:#00FFC2}
+              .cmp-div:first-child{margin-top:0}
+              .cmp-card{border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:15px 16px;background:rgba(255,255,255,0.02)}
+              .cmp-cap b{display:block;color:#FBFBFD;font-weight:700;font-size:14.5px;line-height:1.3}
+              .cmp-cap span{display:block;margin-top:3px;font-size:12px;color:rgba(255,255,255,0.48);line-height:1.4}
+              .cmp-memo{display:flex;gap:11px;align-items:flex-start;margin:13px 0 12px;padding:12px 13px;border-radius:11px;background:rgba(0,255,194,0.08);border:1px solid rgba(0,255,194,0.22)}
+              .cmp-memo .cmp-ic{margin-top:1px}
+              .cmp-memo b{display:block;font-size:9.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#00FFC2;margin-bottom:4px}
+              .cmp-memo p{margin:0;font-size:13.5px;line-height:1.5;color:#EAFFF9}
+              .cmp-others{display:flex;flex-wrap:wrap;gap:9px 18px}
+              .cmp-others>span{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.6)}
+              .cmp-others.plain{flex-direction:column;gap:7px}
+              .cmp-others.plain>span{color:rgba(255,255,255,0.72)}
+              .cmp-others.plain em{font-style:normal;color:rgba(255,255,255,0.4);min-width:94px;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em}
+
+              .ctbl-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:16px 4px 0;font-size:11.5px;color:rgba(255,255,255,0.52)}
+              .ctbl-legend span{display:inline-flex;align-items:center;gap:8px}
+              .ctbl-foot{margin:9px 4px 0;font-size:11px;color:rgba(255,255,255,0.38);line-height:1.5}
+              @media(min-width:900px){.ctbl-wrap{display:block}.cmp-cards{display:none}}
+            `}</style>
+
+            <div className="ctbl-wrap">
+              <table className="ctbl">
+                <colgroup><col style={{ width: "234px" }} /><col /><col /><col /><col /></colgroup>
+                <thead>
+                  <tr>
+                    <th className="ct-cap" scope="col"><span className="h-name">Capability</span></th>
+                    <th scope="col"><span className="h-name">Attribution &amp; analytics</span><span className="h-arch">The dashboards</span></th>
+                    <th scope="col"><span className="h-name">Incrementality &amp; MMM</span><span className="h-arch">The measurers</span></th>
+                    <th scope="col"><span className="h-name">Consultants &amp; agencies</span><span className="h-arch">The studies</span></th>
+                    <th className="ct-memo" scope="col"><span className="h-name">★ MemoLogs</span><span className="h-arch">The system</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {CMP.map((r) =>
+                    r.g ? (
+                      <tr className="ct-group" key={"g-" + r.g}>
+                        <td className="ct-cap"><span className="gk">{r.g}</span></td>
+                        <td colSpan={3}></td>
+                        <td className="ct-memo"></td>
+                      </tr>
+                    ) : (
+                      <tr className="ct-row" key={"r-" + r.cap}>
+                        <td className="ct-cap"><b>{r.cap}</b>{r.sub ? <span>{r.sub}</span> : null}</td>
+                        {[["a", r.adim], ["b", r.bdim], ["c", r.cdim]].map(([k, dim]) => (
+                          <td className={"ct-comp" + (dim ? " dim" : "")} key={k}>
+                            {r.plain ? r[k] : (
+                              <span className="cell"><span className={"cmp-ic " + (dim ? "none" : "part")}></span><span>{r[k]}</span></span>
+                            )}
+                          </td>
+                        ))}
+                        <td className="ct-memo">
+                          {r.plain ? <b className="m-plain">{r.m}</b> : (
+                            <span className="cell"><span className="cmp-ic full">✓</span><span>{r.m}</span></span>
+                          )}
+                        </td>
+                      </tr>
+                    )
+                  )}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="cmp-cards">
+              {CMP.map((r) =>
+                r.g ? (
+                  <div className="cmp-div" key={"cg-" + r.g}><span>{r.g}</span></div>
+                ) : (
+                  <div className="cmp-card" key={"cc-" + r.cap}>
+                    <div className="cmp-cap"><b>{r.cap}</b>{r.sub ? <span>{r.sub}</span> : null}</div>
+                    <div className="cmp-memo">
+                      <span className="cmp-ic full">✓</span>
+                      <div><b>MemoLogs</b><p>{r.m}</p></div>
+                    </div>
+                    {r.plain ? (
+                      <div className="cmp-others plain">
+                        <span><em>Dashboards</em>{r.a}</span>
+                        <span><em>Measurers</em>{r.b}</span>
+                        <span><em>Studies</em>{r.c}</span>
+                      </div>
+                    ) : (
+                      <div className="cmp-others">
+                        <span><span className={"cmp-ic " + (r.adim ? "none" : "part")}></span>Dashboards</span>
+                        <span><span className={"cmp-ic " + (r.bdim ? "none" : "part")}></span>Measurers</span>
+                        <span><span className={"cmp-ic " + (r.cdim ? "none" : "part")}></span>Studies</span>
+                      </div>
+                    )}
                   </div>
-                  <p style={{ fontSize: 13.5, lineHeight: 1.55, color: "rgba(255,255,255,0.66)", margin: 0, paddingLeft: 18 }}>{f.b}</p>
-                </div>
-              ))}
+                )
+              )}
             </div>
-            <div style={{ marginTop: 24, paddingTop: 18, borderTop: "1px solid rgba(0,255,194,0.18)", display: "flex", flexWrap: "wrap", gap: "6px 18px", fontSize: 13, color: "rgba(255,255,255,0.72)" }}>
-              <span>Flat fee — never a % of spend</span><span aria-hidden="true" style={{ color: "rgba(0,255,194,0.5)" }}>·</span>
-              <span>First causal verdict in week 5</span><span aria-hidden="true" style={{ color: "rgba(0,255,194,0.5)" }}>·</span>
-              <span>Sits alongside your existing stack</span>
-            </div>
-          </div>
 
-          <div className="land-close" aria-label="Other tools answer one question and stop. MemoLogs closes the loop: measure causal truth, remember every decision, and plan the next dollar from it, gated so it only recommends what it can defend.">
-            <span className="land-close-line land-close-line-1">Other tools answer <em> one </em> question and stop.</span>
-            <span className="land-close-line land-close-line-2">MemoLogs closes the loop — measure causal truth, remember every decision, and plan the next dollar from it.</span>
-            <span className="land-close-line land-close-line-3">Gated, so it only ever recommends what it can defend.</span>
+            <div className="ctbl-legend">
+              <span><span className="cmp-ic full">✓</span> Built for it</span>
+              <span><span className="cmp-ic part"></span> Partial / with caveats</span>
+              <span><span className="cmp-ic none"></span> Not really</span>
+            </div>
+            <p className="ctbl-foot">* Marketing→sales-channel answers cover the sales channels you connect (your own store today; marketplaces as you add them).</p>
+
+            <div className="land-close" aria-label="Every category to the left solves one slice. MemoLogs is the one system where measurement, planning, activation, and memory connect, so the next decision is always smarter than the last.">
+              <span className="land-close-line land-close-line-1">Every category to the left solves <em> one </em> slice.</span>
+              <span className="land-close-line land-close-line-2">MemoLogs is the one system where measurement, planning, activation, and memory connect —</span>
+              <span className="land-close-line land-close-line-3">so the next decision is always smarter than the last.</span>
+            </div>
           </div>
         </div>
       </section>

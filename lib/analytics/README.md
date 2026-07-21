@@ -35,11 +35,33 @@ platform's name. Any other string is sent as a custom event.
 For every `track()` call we generate **one `event_id`** and send the same
 `event_name` + `event_id` to:
 
-1. **Browser Pixel** — `fbq('track', name, data, { eventID })`
-2. **Conversions API** — `zaraz.track(name, { event_id, ... })`, which the Zaraz
-   Meta managed component sends server-side from the Cloudflare edge.
+1. **Browser Pixel** — `fbq('track', name, data, { eventID })` (the `meta` adapter)
+2. **Conversions API** — one `zaraz.track(name, { event_id, ... })` from the
+   `zaraz` sink adapter, which the Cloudflare edge fans out to every enabled
+   Zaraz tool (Meta CAPI, GA4, TikTok, Google Ads) via dashboard triggers.
 
 Meta sees both, matches on `event_name` + `event_id`, and counts them once.
+
+## Server-side fan-out (the `zaraz` sink)
+
+`adapters/zaraz.ts` fires **one** server-side event per `track()` carrying a
+superset of properties (Meta shorthand `em/fn/ln/…` **and** plain
+`email/first_name/…`). Add a tool + a per-event trigger in the Zaraz dashboard
+for each platform you want server-side; map its fields in the action. Dedup
+notes: Meta and TikTok dedup on `event_id` (shared automatically); **GA4 should
+be client *or* server, not both** — disable the browser `ga4` adapter if you let
+Zaraz own GA4 server-side.
+
+## app.memologs.com signup (Django, server-to-server)
+
+The real registration completes in the Django app, not here. Zaraz's browser
+injection is disabled on `app.memologs.com` (Cloudflare Configuration Rule) so no
+marketing pixels load there; instead Django POSTs a `CompleteRegistration` to the
+[Zaraz HTTP Events API](https://developers.cloudflare.com/zaraz/http-events-api/)
+on the apex (`ZARAZ_EVENTS_API_URL`). It reads the same apex-scoped `_fbp`/`_fbc`/
+`ml_external_id` cookies this site sets, so the app conversion stitches back to
+the ad click. Keep the waitlist (`Lead`) and the app signup
+(`CompleteRegistration`) as distinct events so they don't conflate.
 
 ## Event Match Quality (EMQ)
 

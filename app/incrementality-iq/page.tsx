@@ -438,6 +438,31 @@ export default function IncrementalityIQPage() {
         </div>
       </section>
 
+      <section className="sp-section">
+        <div className="wrap">
+          <div className="section-head">
+            <h2 className="section-title">From the verdict to the <em>next dollar</em>.</h2>
+            <p className="section-sub">Measurement isn&apos;t the end of the workflow. Every trusted lift result anchors the <b>Budget Planner</b> — a causal media-mix model whose backbone is your own live geo-experiments, not a periodic calibration — so you can plan next quarter from what you measured, not what a model inferred from history.</p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(238px, 1fr))", gap: 18 }}>
+            {[
+              { h: "Allocate cross-channel", b: "Split the next budget to maximize measured incremental outcome — bounded to the spend range your experiments actually validated, never extrapolated." },
+              { h: "Forecast the reallocation", b: "See the projected lift of moving spend from current to recommended, with credible intervals — not a single point guess." },
+              { h: "Gated to what it can defend", b: "Every plan carries a trust state. When the model isn’t trustworthy, the planner shows your measured test history instead of a confident number." },
+            ].map((f) => (
+              <div key={f.h} style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: "20px 20px 22px" }}>
+                <div style={{ display: "flex", gap: 9, alignItems: "flex-start", marginBottom: 7 }}>
+                  <span aria-hidden="true" style={{ color: "#00FFC2", fontWeight: 700, flexShrink: 0 }}>→</span>
+                  <h3 style={{ fontSize: 15, fontWeight: 600, color: "#FBFBFD", margin: 0 }}>{f.h}</h3>
+                </div>
+                <p style={{ fontSize: 13.5, lineHeight: 1.55, color: "rgba(255,255,255,0.66)", margin: 0, paddingLeft: 18 }}>{f.b}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontSize: 12.5, color: "rgba(255,255,255,0.42)", margin: "16px 0 0" }}>Ask it in the Co-Pilot, or open the Budget Planner — every recommendation carries its trust state.</p>
+        </div>
+      </section>
+
 {/*       
       <section className="sp-section">
         <div className="wrap">

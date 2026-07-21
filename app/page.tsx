@@ -66,13 +66,13 @@ export default function Home() {
                 <span className="dc-tag">Measurement</span>
               </header>
               <div className="dc-body">
-                <h3>Platforms over-count conversions <em>3–10×</em>.</h3>
+                <h3>Platforms over-count conversions <em>3×</em>.</h3>
                 <p>Every budget call you make downstream is off by a multiple. You&apos;re not optimizing — you&apos;re calibrating on fiction.</p>
               </div>
               <div className="dc-exhibit dc-inflation">
                 <div className="dc-inf-row"><span className="dc-inf-lab">Platform says</span><div className="dc-inf-bar"><div className="dc-inf-fill ghost" style={{width:"100%"}}></div></div><span className="dc-inf-val">12,500</span></div>
                 <div className="dc-inf-row"><span className="dc-inf-lab">Actually caused</span><div className="dc-inf-bar"><div className="dc-inf-fill real" style={{width:"33%"}}></div></div><span className="dc-inf-val">4,200</span></div>
-                <div className="dc-inf-delta"><span className="dc-inf-delta-tag">Inflation factor</span><span className="dc-inf-delta-val">3.0×</span></div>
+                <div className="dc-inf-delta"><span className="dc-inf-delta-tag">Inflation factor · illustrative</span><span className="dc-inf-delta-val">3.0×</span></div>
               </div>
             </article>
 
@@ -83,7 +83,7 @@ export default function Home() {
               </header>
               <div className="dc-body">
                 <h3>Your creative is dying in silence.</h3>
-                <p>By the time CPA spikes, you&apos;ve already overspent 20–40%. The symptom arrives weeks after the death.</p>
+                <p>By the time CPA spikes, you&apos;ve already overspent up to 60%. The symptom arrives weeks after the death.</p>
               </div>
               <div className="dc-exhibit dc-fatigue">
                 <svg viewBox="0 0 240 90" preserveAspectRatio="none" aria-hidden="true">
@@ -260,7 +260,7 @@ export default function Home() {
                 <text x="630" y="314" textAnchor="middle">Last-touch bias</text>
                 <text x="400" y="356" textAnchor="middle">Memory walks with the VP</text>
                 <text x="170" y="314" textAnchor="middle">Audiences fragmenting</text>
-                <text x="66"  y="195" textAnchor="end">Attribution 3–10× inflated</text>
+                <text x="66"  y="195" textAnchor="end">Attribution 3× inflated</text>
                 <text x="170" y="90"  textAnchor="middle">iOS / cookie signal loss</text>
               </g>
             </svg>
@@ -325,7 +325,7 @@ export default function Home() {
                 <span className="case-industry">Multi-brand retail</span>
                 <span className="case-action">Read study →</span>
               </div>
-              <h3>India&apos;s largest watch retailer hit 1.6× ROAS and 40% YoY revenue growth.</h3>
+              <h3>A multi-brand watch retailer hit 4.9× ROAS (1.6× lift) and 40% YoY revenue growth.</h3>
               <div className="case-stats">
                 <div><span className="case-stat-val">1.6×</span><span className="case-stat-lab">ROAS lift</span></div>
                 <div><span className="case-stat-val">+40%</span><span className="case-stat-lab">YoY revenue</span></div>
@@ -353,60 +353,86 @@ export default function Home() {
             <p className="section-sub">Every category a CMO shops when they realize their attribution stack is lying. Here&apos;s what each one gives you — and what it quietly leaves on the table.</p>
           </div>
 
-          <div className="land-table-wrap land-table-wrap-desktop">
-            <table className="land-table">
-              <thead>
-                <tr>
-                  <th className="lt-cap">Capability</th>
-                  <th>MMM tools</th>
-                  <th>Attribution platforms</th>
-                  <th>Consulting firms</th>
-                  <th className="lt-memo">MemoLogs</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td className="lt-cap" data-label="Capability">Causal measurement</td><td data-label="MMM tools">Correlational only</td><td className="x" data-label="Attribution platforms">✗</td><td data-label="Consulting firms">Manual studies</td><td className="lt-memo" data-label="MemoLogs">Tri-model: GeoTwin™ + CausalCore™ + DiffLens™</td></tr>
-                <tr><td className="lt-cap" data-label="Capability">Creative intelligence</td><td className="x" data-label="MMM tools">✗</td><td data-label="Attribution platforms">Basic tagging</td><td className="x" data-label="Consulting firms">✗</td><td className="lt-memo" data-label="MemoLogs">7-signal fatigue + AI refresh</td></tr>
-                <tr><td className="lt-cap" data-label="Capability">Audience optimization</td><td className="x" data-label="MMM tools">✗</td><td data-label="Attribution platforms">Lookalikes only</td><td className="x" data-label="Consulting firms">✗</td><td className="lt-memo" data-label="MemoLogs">6 agents + cross-platform sync</td></tr>
-                <tr><td className="lt-cap" data-label="Capability">Conversational analytics</td><td className="x" data-label="MMM tools">✗</td><td className="x" data-label="Attribution platforms">✗</td><td className="x" data-label="Consulting firms">✗</td><td className="lt-memo" data-label="MemoLogs">AI Co-Pilot</td></tr>
-                <tr><td className="lt-cap" data-label="Capability">Institutional memory</td><td className="x" data-label="MMM tools">✗</td><td className="x" data-label="Attribution platforms">✗</td><td className="x" data-label="Consulting firms">✗</td><td className="lt-memo" data-label="MemoLogs">Memory IQ</td></tr>
-                <tr><td className="lt-cap" data-label="Capability">Unified platform</td><td data-label="MMM tools">Measurement only</td><td data-label="Attribution platforms">Attribution only</td><td data-label="Consulting firms">Strategy only</td><td className="lt-memo" data-label="MemoLogs">Measure + Create + Audience + Act</td></tr>
-                <tr><td className="lt-cap" data-label="Capability">Time to first insight</td><td data-label="MMM tools">6–12 weeks</td><td data-label="Attribution platforms">Real-time (inflated)</td><td data-label="Consulting firms">30+ days</td><td className="lt-memo" data-label="MemoLogs">&lt; 5 weeks</td></tr>
-                <tr><td className="lt-cap" data-label="Capability">Typical cost</td><td data-label="MMM tools">$50–150K / qtr</td><td data-label="Attribution platforms">$1–5K / mo</td><td data-label="Consulting firms">$200K+ / qtr</td><td className="lt-memo" data-label="MemoLogs">$15–35K / mo, all-in</td></tr>
-                <tr><td className="lt-cap" data-label="Capability">Pricing model</td><td data-label="MMM tools">Seats + custom</td><td data-label="Attribution platforms">% of ad spend</td><td data-label="Consulting firms">Retainer</td><td className="lt-memo" data-label="MemoLogs">Flat fee — never % of spend</td></tr>
-              </tbody>
-            </table>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(238px, 1fr))", gap: 18, marginTop: 8 }}>
+            {[
+              {
+                cat: "Attribution & analytics platforms",
+                buy: "Shopped when “attribution is broken.”",
+                gives: ["Every channel’s numbers in one real-time dashboard", "MTA, pixels, and first-party tracking"],
+                leaves: ["It’s still platform self-attribution — the same inflated signal, now aggregated", "No causal truth, and no memory of what actually worked"],
+              },
+              {
+                cat: "Incrementality & experiment tools",
+                buy: "Shopped when “we need a real lift number.”",
+                gives: ["Clean holdouts and geo-tests", "A trustworthy read on a single test"],
+                leaves: ["The test is a one-time readout", "Nothing turns it into next quarter’s plan, or feeds creative, audience, and memory"],
+              },
+              {
+                cat: "Media-mix models & planning",
+                buy: "Shopped when “we need to plan the budget.”",
+                gives: ["Forecasting and cross-channel allocation", "A board-level view of where spend goes"],
+                leaves: ["Fit on historical correlation and calibrated by occasional tests — so it can confidently mislead", "No trust state that refuses a plan it can’t defend; disconnected from the rest of the stack"],
+              },
+              {
+                cat: "Consultants & agencies",
+                buy: "Shopped when “we need senior brains on it.”",
+                gives: ["A bespoke study and a strategy deck", "Experienced human judgment"],
+                leaves: ["Slow and point-in-time — 30+ days per study, not always-on", "The learning walks out the door with the deck"],
+              },
+            ].map((c) => (
+              <div key={c.cat} style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: "22px 22px 24px" }}>
+                <h3 style={{ fontSize: 16, fontWeight: 600, color: "#FBFBFD", margin: "0 0 4px", letterSpacing: "-0.01em" }}>{c.cat}</h3>
+                <p style={{ fontSize: 12.5, color: "rgba(255,255,255,0.42)", margin: "0 0 18px" }}>{c.buy}</p>
+                <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: 9 }}>What you get</div>
+                <ul style={{ listStyle: "none", padding: 0, margin: "0 0 18px" }}>
+                  {c.gives.map((g, i) => (
+                    <li key={i} style={{ display: "flex", gap: 8, fontSize: 13.5, lineHeight: 1.5, color: "rgba(255,255,255,0.74)", marginBottom: 7 }}>
+                      <span aria-hidden="true" style={{ color: "#00FFC2", flexShrink: 0, marginTop: 1 }}>✓</span><span>{g}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#FFB347", marginBottom: 9 }}>What it leaves on the table</div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {c.leaves.map((l, i) => (
+                    <li key={i} style={{ display: "flex", gap: 8, fontSize: 13.5, lineHeight: 1.5, color: "rgba(255,255,255,0.74)", marginBottom: 7 }}>
+                      <span aria-hidden="true" style={{ color: "#FFB347", flexShrink: 0, marginTop: 1 }}>—</span><span>{l}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
 
-          <div className="land-table-wrap land-table-wrap-mobile">
-            <table className="land-table land-table-mobile">
-              <thead>
-                <tr>
-                  <th className="lt-memo">MemoLogs</th>
-                  <th className="lt-cap">Capability</th>
-                  <th>MMM tools</th>
-                  <th>Attribution platforms</th>
-                  <th>Consulting firms</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td className="lt-memo" data-label="MemoLogs">Tri-model: GeoTwin™ + CausalCore™ + DiffLens™</td><td className="lt-cap" data-label="Capability">Causal measurement</td><td data-label="MMM tools">Correlational only</td><td className="x" data-label="Attribution platforms">✗</td><td data-label="Consulting firms">Manual studies</td></tr>
-                <tr><td className="lt-memo" data-label="MemoLogs">7-signal fatigue + AI refresh</td><td className="lt-cap" data-label="Capability">Creative intelligence</td><td className="x" data-label="MMM tools">✗</td><td data-label="Attribution platforms">Basic tagging</td><td className="x" data-label="Consulting firms">✗</td></tr>
-                <tr><td className="lt-memo" data-label="MemoLogs">6 agents + cross-platform sync</td><td className="lt-cap" data-label="Capability">Audience optimization</td><td className="x" data-label="MMM tools">✗</td><td data-label="Attribution platforms">Lookalikes only</td><td className="x" data-label="Consulting firms">✗</td></tr>
-                <tr><td className="lt-memo" data-label="MemoLogs">AI Co-Pilot</td><td className="lt-cap" data-label="Capability">Conversational analytics</td><td className="x" data-label="MMM tools">✗</td><td className="x" data-label="Attribution platforms">✗</td><td className="x" data-label="Consulting firms">✗</td></tr>
-                <tr><td className="lt-memo" data-label="MemoLogs">Memory IQ</td><td className="lt-cap" data-label="Capability">Institutional memory</td><td className="x" data-label="MMM tools">✗</td><td className="x" data-label="Attribution platforms">✗</td><td className="x" data-label="Consulting firms">✗</td></tr>
-                <tr><td className="lt-memo" data-label="MemoLogs">Measure + Create + Audience + Act</td><td className="lt-cap" data-label="Capability">Unified platform</td><td data-label="MMM tools">Measurement only</td><td data-label="Attribution platforms">Attribution only</td><td data-label="Consulting firms">Strategy only</td></tr>
-                <tr><td className="lt-memo" data-label="MemoLogs">&lt; 5 weeks</td><td className="lt-cap" data-label="Capability">Time to first insight</td><td data-label="MMM tools">6–12 weeks</td><td data-label="Attribution platforms">Real-time (inflated)</td><td data-label="Consulting firms">30+ days</td></tr>
-                <tr><td className="lt-memo" data-label="MemoLogs">$15–35K / mo, all-in</td><td className="lt-cap" data-label="Capability">Typical cost</td><td data-label="MMM tools">$50–150K / qtr</td><td data-label="Attribution platforms">$1–5K / mo</td><td data-label="Consulting firms">$200K+ / qtr</td></tr>
-                <tr><td className="lt-memo" data-label="MemoLogs">Flat fee — never % of spend</td><td className="lt-cap" data-label="Capability">Pricing model</td><td data-label="MMM tools">Seats + custom</td><td data-label="Attribution platforms">% of ad spend</td><td data-label="Consulting firms">Retainer</td></tr>
-              </tbody>
-            </table>
+          <div style={{ marginTop: 18, background: "linear-gradient(180deg, rgba(0,255,194,0.09), rgba(0,255,194,0.02))", border: "1px solid rgba(0,255,194,0.32)", borderRadius: 18, padding: "30px 30px 30px" }}>
+            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#00FFC2", marginBottom: 10 }}>Where MemoLogs starts</div>
+            <p style={{ fontSize: 18, lineHeight: 1.5, color: "#FBFBFD", margin: "0 0 24px", maxWidth: 780, letterSpacing: "-0.01em" }}>Every category above answers one question and stops. MemoLogs is the layer underneath — one causal system where measurement, creative, audience, memory, and the budget plan compound.</p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(258px, 1fr))", gap: 20 }}>
+              {[
+                { h: "Causal truth, not platform credit", b: "Three independent causal models — GeoTwin, CausalCore, and DiffLens — reconciled into a trust state on every verdict, plus a per-channel Attribution Inflation Factor that shows exactly how much each platform over-claims versus the measured truth." },
+                { h: "A plan gated to what it can defend", b: "An experiment-anchored causal MMM — your live geo-tests are its backbone, not a periodic calibration — allocates the next dollar across channels and forecasts the lift. Every plan carries a trust state, so it surfaces a recommendation only when it’s trustworthy, and shows your measured history when it isn’t." },
+                { h: "Down to the SKU and the sales channel", b: "It controls for a SKU-level, mix-adjusted price index (not blended AOV) and promo — and answers “what did Meta drive on Amazon?” for the sales channels you connect." },
+                { h: "It compounds", b: "Every decision and its measured outcome is remembered, so Memory IQ can warn you before you repeat a trusted failure — and a grounded Co-Pilot answers all of it with the source records attached." },
+              ].map((f) => (
+                <div key={f.h}>
+                  <div style={{ display: "flex", gap: 9, alignItems: "flex-start", marginBottom: 6 }}>
+                    <span aria-hidden="true" style={{ color: "#00FFC2", fontWeight: 700, flexShrink: 0 }}>→</span>
+                    <h4 style={{ fontSize: 15, fontWeight: 600, color: "#FBFBFD", margin: 0 }}>{f.h}</h4>
+                  </div>
+                  <p style={{ fontSize: 13.5, lineHeight: 1.55, color: "rgba(255,255,255,0.66)", margin: 0, paddingLeft: 18 }}>{f.b}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{ marginTop: 24, paddingTop: 18, borderTop: "1px solid rgba(0,255,194,0.18)", display: "flex", flexWrap: "wrap", gap: "6px 18px", fontSize: 13, color: "rgba(255,255,255,0.72)" }}>
+              <span>Flat fee — never a % of spend</span><span aria-hidden="true" style={{ color: "rgba(0,255,194,0.5)" }}>·</span>
+              <span>First causal verdict in week 5</span><span aria-hidden="true" style={{ color: "rgba(0,255,194,0.5)" }}>·</span>
+              <span>Sits alongside your existing stack</span>
+            </div>
           </div>
 
-          <div className="land-close" aria-label="Other tools answer one question. MemoLogs connects causal measurement, creative intelligence, audience optimization, and decision memory in a single system because that's the only way budget decisions actually get better over time.">
-            <span className="land-close-line land-close-line-1">Other tools answer <em> one </em> question.</span>
-            <span className="land-close-line land-close-line-2">MemoLogs connects causal measurement, creative intelligence, audience optimization, and decision memory in a single system</span>
-            <span className="land-close-line land-close-line-3">because that&apos;s the only way budget decisions actually get better over time.</span>
+          <div className="land-close" aria-label="Other tools answer one question and stop. MemoLogs closes the loop: measure causal truth, remember every decision, and plan the next dollar from it, gated so it only recommends what it can defend.">
+            <span className="land-close-line land-close-line-1">Other tools answer <em> one </em> question and stop.</span>
+            <span className="land-close-line land-close-line-2">MemoLogs closes the loop — measure causal truth, remember every decision, and plan the next dollar from it.</span>
+            <span className="land-close-line land-close-line-3">Gated, so it only ever recommends what it can defend.</span>
           </div>
         </div>
       </section>

@@ -6,7 +6,7 @@ import PilotCTA from '@/components/PilotCTA';
 export default function InflationCalculator() {
   const [spend, setSpend] = useState(500000);
   const [cpa, setCpa] = useState(25);
-  const [factor, setFactor] = useState(5);
+  const [factor, setFactor] = useState(3);
 
   const ghost = spend - spend / factor;
   const wastePercent = Math.round((1 - 1 / factor) * 100);
@@ -77,7 +77,7 @@ export default function InflationCalculator() {
         </div>
 
         <div className="calc-field">
-          <span>Inflation factor <small>(typical: 3–10×)</small></span>
+          <span>Inflation factor <small>(median: 3×)</small></span>
           <div className="calc-input calc-inline">
             {[3, 5, 7, 10].map(f => (
               <button

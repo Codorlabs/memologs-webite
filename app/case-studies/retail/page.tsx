@@ -4,7 +4,7 @@ import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
   title: "Multi-brand Retail Case Study — MemoLogs",
-  description: "How India's largest watch retailer hit 1.6× ROAS and 40% YoY revenue growth.",
+  description: "How a multi-brand watch retailer hit 4.9× ROAS (a 1.6× lift) and 40% YoY revenue growth.",
 };
 
 export default function RetailCaseStudyPage() {
@@ -14,7 +14,7 @@ export default function RetailCaseStudyPage() {
         <div className="wrap">
           <div className="sp-breadcrumb"><Link href="/case-studies">Case studies</Link> <span>›</span> Multi-brand retail</div>
           <span className="cs-industry">Multi-brand retail</span>
-          <h1 style={{fontFamily:"var(--serif)",fontWeight:400,fontSize:"clamp(40px,4.6vw,64px)",lineHeight:1.03,letterSpacing:"-0.01em",margin:"24px 0 0",maxWidth:"900px"}}>India&apos;s largest watch retailer hit 1.6× ROAS and 40% YoY revenue growth across 8 brand lines.</h1>
+          <h1 style={{fontFamily:"var(--serif)",fontWeight:400,fontSize:"clamp(40px,4.6vw,64px)",lineHeight:1.03,letterSpacing:"-0.01em",margin:"24px 0 0",maxWidth:"900px"}}>A multi-brand watch retailer hit 4.9× ROAS — a 1.6× lift — and 40% YoY revenue growth across 8 brand lines.</h1>
           <div className="cs-stats">
             <div className="cs-stat"><div className="cs-stat-num">1.6×</div><div className="cs-stat-lab">ROAS lift</div></div>
             <div className="cs-stat"><div className="cs-stat-num">+40%</div><div className="cs-stat-lab">YoY revenue</div></div>
@@ -38,7 +38,7 @@ export default function RetailCaseStudyPage() {
             <div>
               <h2>What we did.</h2>
               <p>We rebuilt the account structure around SKU-level keyword grouping. Every brand got its own campaign tree, and within each, SKU families (dive watches, dress, chronograph, etc.) got their own ad groups with tailored messaging.</p>
-              <p>Audience IQ enriched the first-party purchase history across all 8 brands, then built cross-brand cross-sell segments — customers who bought a mid-tier dress watch showed strong intent signals for the premium line 9–14 months later.</p>
+              <p>Audience IQ graded the first-party purchase history across all 8 brands, then built cross-brand cross-sell segments — customers who bought a mid-tier dress watch showed strong intent signals for the premium line 9–14 months later.</p>
               <p>Creative IQ handled the ad variants at scale: 300+ ad groups would have been impossible to monitor manually. Health scoring at the asset level meant refresh budget went to the specific SKU groups where it was needed.</p>
             </div>
 

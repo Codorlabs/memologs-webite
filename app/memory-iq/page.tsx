@@ -4,7 +4,7 @@ import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
   title: "Memory IQ — Proprietary Signal Layer | MemoLogs",
-  description: "Your first-party data, enriched and remembered. Cross-campaign signal accumulation that makes every experiment smarter than the last.",
+  description: "Every strategic decision remembered alongside its measured causal outcome. Cross-campaign memory that makes every experiment smarter than the last.",
 };
 
 export default function MemoryIQPage() {
@@ -55,7 +55,7 @@ export default function MemoryIQPage() {
                     <span className="mem-card-date">Oct 2023</span>
                     <span className="mem-card-tag">Budget</span>
                   </div>
-                  <p className="mem-card-body">Scale paid social to $910K. <em className="bad">−18% branded SEM efficiency.</em></p>
+                  <p className="mem-card-body">Scale paid social to $910K. <em className="bad">+$64K wasted on retargeting overlap.</em></p>
                 </div>
                 <div className="mem-card mem-card-front">
                   <div className="mem-card-head">
@@ -63,12 +63,12 @@ export default function MemoryIQPage() {
                     <span className="mem-card-tag">Budget</span>
                     <span className="mem-card-pulse" aria-hidden="true"></span>
                   </div>
-                  <p className="mem-card-body">Scale paid social to <b>$880K</b>. <em className="bad">Repeat pattern — $64K wasted.</em></p>
+                  <p className="mem-card-body">Scale paid social to <b>$880K</b>. <em className="bad">Repeat pattern — −18% branded SEM efficiency.</em></p>
                   <div className="mem-card-warn">
                     <span className="mem-warn-ico">⚠</span>
                     <div>
                       <b>Matches 3 of 4 historical failures</b>
-                      <span>Cap at $650K · shift surplus to CTV</span>
+                      <span>Cap at $650K · shift surplus to your best live channel</span>
                     </div>
                   </div>
                 </div>
@@ -88,7 +88,7 @@ export default function MemoryIQPage() {
 
               <div className="mem-stack-foot">
                 <span className="mem-stack-foot-lab">Memory IQ connected</span>
-                <span className="mem-stack-foot-val">3 past decisions · 2 failures</span>
+                <span className="mem-stack-foot-val">3 past decisions · 2 failures · illustrative</span>
               </div>
             </aside>
           </div>
@@ -319,7 +319,7 @@ export default function MemoryIQPage() {
 
               <div className="mem-warn-reco">
                 <span className="mem-warn-reco-tag">Pattern-aware recommendation</span>
-                <p>Cap Meta + TikTok at <b>$650K/mo</b>. Shift surplus to CTV (which returned <b>2.1× incremental ROI</b> in historical Q4 windows). Re-evaluate at week 3 of the flight.</p>
+                <p>Cap Meta + TikTok at <b>$650K/mo</b>. Shift surplus to your highest-headroom live channel. Re-evaluate at week 3 of the flight.</p>
                 <div className="mem-warn-reco-actions">
                   <button className="btn btn-primary btn-sm">Apply recommendation</button>
                   <button className="btn btn-ghost btn-sm">Override with reason</button>
@@ -343,7 +343,7 @@ export default function MemoryIQPage() {
           <div className="mem-dashboard">
             <div className="mem-dash-chrome">
               <div className="mem-dash-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-              <div className="mem-dash-tab">MemoLogs · Learning review</div>
+              <div className="mem-dash-tab">MemoLogs · Learning review · Illustrative</div>
               <div className="mem-dash-user">RS</div>
             </div>
 

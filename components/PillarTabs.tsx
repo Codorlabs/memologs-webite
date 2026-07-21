@@ -94,6 +94,7 @@ export default function PillarTabs() {
           </div>
           <div className="ppanel-demo">
             <div className="demo-head">
+              <span style={{fontSize:'9.5px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',opacity:0.5}}>Illustrative</span>
               <span className="demo-chip">Live demo</span>
               <span className="demo-title">GeoTwin™ study — Q2 campaign</span>
             </div>
@@ -107,7 +108,7 @@ export default function PillarTabs() {
             <div className="ppanel-tag">02 · Creative IQ</div>
             <h3>Know when your creative dies — before the metrics do.</h3>
             <div className={`ppanel-readmore${isPanelExpanded('creative') ? ' expanded' : ''}`}>
-              <p>7-signal fatigue detection at the asset level. Meta Andromeda entity-ID clustering. AI refresh recommendations with predicted replacement performance.</p>
+              <p>9-signal fatigue detection at the asset level. Meta Andromeda entity-ID clustering. AI refresh recommendations with predicted replacement performance.</p>
               <ul className="ppanel-list">
                 <li><b>11–18 days earlier.</b> Teams using Creative IQ spot fatigue before CPA reveals it.</li>
                 <li><b>Asset-level visibility.</b> We flag the specific hook, the specific frame, the specific caption — not just &ldquo;campaign is tired.&rdquo;</li>
@@ -126,7 +127,8 @@ export default function PillarTabs() {
           </div>
           <div className="ppanel-demo">
             <div className="demo-head">
-              <span className="demo-chip">7-signal fatigue model</span>
+              <span style={{fontSize:'9.5px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',opacity:0.5}}>Illustrative</span>
+              <span className="demo-chip">9-signal fatigue model</span>
               <span className="demo-title">Ad set · SKU-447</span>
             </div>
             <div className="creative-scene" aria-label="Creative IQ — 3D fatigue scene">
@@ -161,7 +163,7 @@ export default function PillarTabs() {
                   <span className="cs-orb-lab">CTR decay</span>
                 </span>
                 <span className="cs-orb cs-orb-freq" >
-                  <span className="cs-orb-val">11.2×</span>
+                  <span className="cs-orb-val">8.4×</span>
                   <span className="cs-orb-lab">Frequency</span>
                 </span>
                 <span className="cs-orb cs-orb-cpa" >
@@ -194,10 +196,10 @@ export default function PillarTabs() {
             <div className="ppanel-tag">03 · Audience IQ</div>
             <h3>Find the customers who actually convert.</h3>
             <div className={`ppanel-readmore${isPanelExpanded('audience') ? ' expanded' : ''}`}>
-              <p>First-party data enrichment. Six AI agents working in parallel. Cross-platform audience sync in real time — no CSVs, no lag.</p>
+              <p>Four AI agents working in parallel. Causal, LTV-graded audiences synced across platforms in real time — no CSVs, no lag.</p>
               <ul className="ppanel-list">
-                <li><b>Enrichment beyond lookalike.</b> Append demographics, psychographics, and purchase-intent to your first-party data.</li>
-                <li><b>Six agents, always running.</b> Prospecting · retargeting · lookalike expansion · suppression · bid management · creative matching.</li>
+                <li><b>Causal grading, not identity stitching.</b> Buyers scored on measured LTV, recency, and propensity from your own first-party data — no cross-platform identity graph.</li>
+                <li><b>Four agents, always running.</b> Prospector · Retargeter · Suppressor · Lookalike Refresher.</li>
                 <li><b>Cross-platform sync.</b> Optimized audiences pushed to Meta, Google, TikTok instantly.</li>
               </ul>
             </div>
@@ -209,11 +211,12 @@ export default function PillarTabs() {
             >
               {isPanelExpanded('audience') ? 'Read less' : 'Read more'}
             </button><br></br>
-            <Link className="learn-more" href="/audience-iq">Meet the six agents →</Link>
+            <Link className="learn-more" href="/audience-iq">Meet the four agents →</Link>
           </div>
           <div className="ppanel-demo">
             <div className="demo-head">
-              <span className="demo-chip">6 agents · 12 live segments</span>
+              <span style={{fontSize:'9.5px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',opacity:0.5}}>Illustrative</span>
+              <span className="demo-chip">4 agents · 12 live segments</span>
               <span className="demo-title">Audience constellation</span>
             </div>
             <div className="aud-scene" aria-label="Audience IQ — 3D agent constellation">
@@ -253,45 +256,34 @@ export default function PillarTabs() {
                     </svg>
                   </div>
                   <span className="aud-hub-lab">Signal graph</span>
-                  <span className="aud-hub-sub">1.2M profiles enriched</span>
+                  <span className="aud-hub-sub">1.2M graded profiles</span>
                 </div>
                 <span className="aud-agent aa-acq" style={{"--t":"12%","--l":"20%"} as React.CSSProperties}>
                   <span className="aud-agent-dot"></span>
-                  <span className="aud-agent-name">Acquisition</span>
+                  <span className="aud-agent-name">Prospector</span>
                   <span className="aud-agent-size">512K</span>
                 </span>
                 <span className="aud-agent aa-react" style={{"--t":"8%","--l":"70%"} as React.CSSProperties}>
                   <span className="aud-agent-dot"></span>
-                  <span className="aud-agent-name">Reactivation</span>
+                  <span className="aud-agent-name">Retargeter</span>
                   <span className="aud-agent-size">284K</span>
                 </span>
                 <span className="aud-agent aa-ret" style={{"--t":"38%","--l":"84%"} as React.CSSProperties}>
                   <span className="aud-agent-dot"></span>
-                  <span className="aud-agent-name">Retention</span>
+                  <span className="aud-agent-name">Lookalike Refresher</span>
                   <span className="aud-agent-size">128K</span>
-                </span>
-                <span className="aud-agent aa-ctx" style={{"--t":"72%","--l":"78%"} as React.CSSProperties}>
-                  <span className="aud-agent-dot"></span>
-                  <span className="aud-agent-name">Context</span>
-                  <span className="aud-agent-size">67K</span>
                 </span>
                 <span className="aud-agent aa-sup" style={{"--t":"80%","--l":"28%"} as React.CSSProperties}>
                   <span className="aud-agent-dot"></span>
-                  <span className="aud-agent-name">Suppression</span>
+                  <span className="aud-agent-name">Suppressor</span>
                   <span className="aud-agent-size">41K</span>
                 </span>
-                <span className="aud-agent aa-bid" style={{"--t":"42%","--l":"10%"} as React.CSSProperties}>
-                  <span className="aud-agent-dot"></span>
-                  <span className="aud-agent-name">Bid mgmt.</span>
-                  <span className="aud-agent-size">−14% CAC</span>
-                </span>
                 <div className="aud-sync">
-                  <span className="aud-sync-lab">Cross-platform sync · 3 min ago</span>
+                  <span className="aud-sync-lab">Cross-platform sync · &lt;60s ago</span>
                   <div className="aud-sync-chips">
                     <span className="aud-chip">Meta</span>
                     <span className="aud-chip">Google</span>
                     <span className="aud-chip">TikTok</span>
-                    <span className="aud-chip">DV360</span>
                   </div>
                 </div>
               </div>
@@ -324,6 +316,7 @@ export default function PillarTabs() {
           </div>
           <div className="ppanel-demo">
             <div className="demo-head">
+              <span style={{fontSize:'9.5px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',opacity:0.5}}>Illustrative</span>
               <span className="demo-chip">AI Co-Pilot</span>
               <span className="demo-title">Live chat · try a question</span>
             </div>
@@ -337,7 +330,7 @@ export default function PillarTabs() {
                     <div className="chat-answer-head">Root cause identified — 91% confidence</div>
                     <p>Tuesday&apos;s CPA spike (+38%) on Meta was driven by three compounding factors:</p>
                     <ol>
-                      <li><b>Creative fatigue</b> on ad set SKU-447 crossed the 7-signal threshold Monday night. Frequency hit 11.2.</li>
+                      <li><b>Creative fatigue</b> on ad set SKU-447 crossed the 9-signal threshold Monday night. Frequency hit 8.4.</li>
                       <li><b>Audience overlap</b> with your retargeting segment climbed to 64% — we flagged it in Memory IQ on Sunday.</li>
                       <li><b>Competitor pressure</b> from brand X doubled share-of-voice in your priority markets.</li>
                     </ol>
@@ -374,6 +367,7 @@ export default function PillarTabs() {
           </div>
           <div className="ppanel-demo">
             <div className="demo-head">
+              <span style={{fontSize:'9.5px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',opacity:0.5}}>Illustrative</span>
               <span className="demo-chip">Memory IQ</span>
               <span className="demo-title">Pattern warning · before activation</span>
             </div>

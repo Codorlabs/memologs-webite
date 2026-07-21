@@ -4,7 +4,7 @@ import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
   title: "Audience IQ — Buyer-Graded Segments | MemoLogs",
-  description: "First-party data enrichment. Six AI agents working in parallel. Cross-platform audience sync in real time. Find the customers who actually convert.",
+  description: "Four AI agents working in parallel. Causal, LTV-graded audiences activated across your paid platforms — no cross-platform identity graph. Find the customers who actually convert.",
 };
 
 export default function AudienceIQPage() {
@@ -17,24 +17,24 @@ export default function AudienceIQPage() {
             <div className="aq-hero-lead">
               <span className="iq-chip iq-chip-accent">AI Audience Targeting</span>
               <h1 id="aq-h1">Reach the people who <em>actually</em> buy.</h1>
-              <p className="lede">Platform lookalikes find profiles that look like your best customers <em>to the platform&apos;s attribution signal</em> — which is already 3× inflated. <b>Audience IQ</b> grades your first-party customers on real LTV, enriches them with outside intent signals, and ships buyer-graded segments to Meta, Google, TikTok, and DV360 in real time.</p>
+              <p className="lede">Platform lookalikes find profiles that look like your best customers <em>to the platform&apos;s attribution signal</em> — which is already 3× inflated. <b>Audience IQ</b> grades your first-party customers on causally-measured LTV and ships buyer-graded segments to Meta, Google, and TikTok in real time — activated through each platform&apos;s own hashed-match system, with no cross-platform identity graph.</p>
               <div className="iq-feature-chips">
-                <span className="iq-fchip"><span className="iq-fchip-dot"></span>Six AI agents, always running</span>
-                <span className="iq-fchip"><span className="iq-fchip-dot"></span>First-party enrichment beyond lookalike</span>
+                <span className="iq-fchip"><span className="iq-fchip-dot"></span>Four AI agents, always running</span>
+                <span className="iq-fchip"><span className="iq-fchip-dot"></span>Causal LTV grading — no identity graph</span>
                 <span className="iq-fchip"><span className="iq-fchip-dot"></span>Real-time cross-platform sync</span>
               </div>
               <div className="cta-row iq-cta-row">
                 <PilotCTA className="btn btn-primary btn-lg">Start a 90-day pilot →</PilotCTA>
-                <a href="#agents" className="btn btn-ghost btn-lg">Meet the six agents</a>
+                <a href="#agents" className="btn btn-ghost btn-lg">Meet the four agents</a>
               </div>
               <div className="iq-hero-micro">
                 <span>+30% click → acquisition</span><span className="sep">·</span>
                 <span>−14% CAC on low-LTV segments</span><span className="sep">·</span>
-                <span>4-platform sync in &lt;3 min</span>
+                <span>3-platform sync in &lt;60s p99</span>
               </div>
             </div>
 
-            <aside className="aq-hero-viz" aria-label="Audience IQ — live constellation with enriched persona cards">
+            <aside className="aq-hero-viz" aria-label="Audience IQ — live constellation with graded persona cards">
               <div className="aq-stage">
                 <div className="aq-glow"></div>
                 <svg className="aq-orbits" viewBox="0 0 480 360" aria-hidden="true">
@@ -70,7 +70,7 @@ export default function AudienceIQPage() {
                     </svg>
                   </div>
                   <span className="aq-hub-lab">Buyer graph</span>
-                  <span className="aq-hub-sub">1.2M enriched profiles</span>
+                  <span className="aq-hub-sub">1.2M graded buyer profiles</span>
                 </div>
 
                 <article className="aq-persona aq-p1">
@@ -121,13 +121,12 @@ export default function AudienceIQPage() {
                   <span className="aq-pf aq-pf-meta">Meta</span>
                   <span className="aq-pf aq-pf-google">Google</span>
                   <span className="aq-pf aq-pf-tiktok">TikTok</span>
-                  <span className="aq-pf aq-pf-dv360">DV360</span>
                 </div>
               </div>
 
               <footer className="aq-stage-foot">
                 <span className="aq-stage-foot-lab">Audience IQ · live</span>
-                <span className="aq-stage-foot-val">12 segments syncing · last push 3 min ago</span>
+                <span className="aq-stage-foot-val">12 segments syncing · last push &lt;60s ago</span>
               </footer>
             </aside>
           </div>
@@ -170,7 +169,7 @@ export default function AudienceIQPage() {
               </header>
               <ul className="aq-compare-list">
                 <li><span className="aq-dot good"></span>Seed = your top-decile LTV cohort, measured causally</li>
-                <li><span className="aq-dot good"></span>Enrichment: intent, demographics, psychographics</li>
+                <li><span className="aq-dot good"></span>Graded on causally-measured LTV, recency &amp; propensity</li>
                 <li><span className="aq-dot good"></span>Weighted by realized + projected LTV and recency</li>
                 <li><span className="aq-dot good"></span>Auto-suppression of fraud, charge-back, recent buyers</li>
                 <li><span className="aq-dot good"></span>Every signal is inspectable and overridable</li>
@@ -184,12 +183,12 @@ export default function AudienceIQPage() {
         </div>
       </section>
 
-      {/* Six AI Agents */}
+      {/* Four AI Agents */}
       <section className="sp-section alt aq-agents-section" id="agents">
         <div className="wrap">
           <div className="section-head">
-            <h2 className="section-title">Six AI agents. Always running.<br />Never asleep.</h2>
-            <p className="section-sub">Audience IQ isn&apos;t a static segment builder. It&apos;s six specialized agents working in parallel across your first-party data and enrichment layer — each owning a distinct part of the targeting problem, each shipping to the platforms via API in minutes.</p>
+            <h2 className="section-title">Four AI agents. Always running.<br />Never asleep.</h2>
+            <p className="section-sub">Audience IQ isn&apos;t a static segment builder. It&apos;s four specialized agents working in parallel over your first-party data — each owning a distinct part of the targeting problem, each shipping to the platforms via API in minutes.</p>
           </div>
 
           <div className="aq-agents">
@@ -198,12 +197,12 @@ export default function AudienceIQPage() {
                 <div className="aq-agent-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4-4" /></svg>
                 </div>
-                <div><span className="aq-agent-num">Agent 01</span><h3>Acquisition</h3></div>
+                <div><span className="aq-agent-num">Agent 01</span><h3>Prospector</h3></div>
                 <span className="aq-agent-status live">Live</span>
               </div>
-              <p className="aq-agent-desc">Continuously hunts lookalikes of your top-decile LTV buyers across enrichment signals — not just the platform&apos;s native lookalike model.</p>
+              <p className="aq-agent-desc">Discovers net-new segments by scoring prospects on propensity (BG/NBD), seeded on your causally-measured top-decile LTV buyers — not just the platform&apos;s native lookalike model.</p>
               <div className="aq-agent-stats">
-                <div><span>Segment</span><b>DTC new-customer intent</b></div>
+                <div><span>Segment</span><b>Net-new prospecting</b></div>
                 <div><span>Size</span><b>512K</b></div>
                 <div><span>Lift</span><b className="pos">+1.7×</b></div>
               </div>
@@ -214,10 +213,10 @@ export default function AudienceIQPage() {
                 <div className="aq-agent-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5" /></svg>
                 </div>
-                <div><span className="aq-agent-num">Agent 02</span><h3>Reactivation</h3></div>
+                <div><span className="aq-agent-num">Agent 02</span><h3>Retargeter</h3></div>
                 <span className="aq-agent-status live">Live</span>
               </div>
-              <p className="aq-agent-desc">Scores lapsed customers on win-back probability and routes the top decile back into active retargeting — with a cap on frequency.</p>
+              <p className="aq-agent-desc">Re-engages prior visitors and lapsed buyers using recency-weighted conversion probability, with dynamic frequency caps so you never over-serve.</p>
               <div className="aq-agent-stats">
                 <div><span>Segment</span><b>High-LTV lapsed · 90d+</b></div>
                 <div><span>Size</span><b>284K</b></div>
@@ -230,30 +229,14 @@ export default function AudienceIQPage() {
                 <div className="aq-agent-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 3v18M3 12h18M6 6l12 12M18 6L6 18" /></svg>
                 </div>
-                <div><span className="aq-agent-num">Agent 03</span><h3>Retention</h3></div>
+                <div><span className="aq-agent-num">Agent 03</span><h3>Lookalike Refresher</h3></div>
                 <span className="aq-agent-status opt">Optimizing</span>
               </div>
-              <p className="aq-agent-desc">Keeps your best customers from churning by modeling subscription fatigue, category exhaustion, and cross-sell windows.</p>
+              <p className="aq-agent-desc">Monitors seed decay and triggers re-seeding before lookalike performance drops — so expansion audiences never quietly go stale. Runs after Suppression, so excluded profiles never re-enter a seed.</p>
               <div className="aq-agent-stats">
-                <div><span>Segment</span><b>Lapsed Premium</b></div>
-                <div><span>Size</span><b>128K</b></div>
-                <div><span>Lift</span><b className="mid">+0.9×</b></div>
-              </div>
-            </article>
-
-            <article className="aq-agent aq-agent-ctx">
-              <div className="aq-agent-head">
-                <div className="aq-agent-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 4h16v16H4z" /><path d="M4 10h16M10 4v16" /></svg>
-                </div>
-                <div><span className="aq-agent-num">Agent 04</span><h3>Context</h3></div>
-                <span className="aq-agent-status scale">Scaling</span>
-              </div>
-              <p className="aq-agent-desc">Cross-sell and seasonal segments built from behavioral clusters in your own transaction history. Real cohorts, not RFM buckets.</p>
-              <div className="aq-agent-stats">
-                <div><span>Segment</span><b>Cross-sell · electronics</b></div>
-                <div><span>Size</span><b>67K</b></div>
-                <div><span>Lift</span><b className="pos">+3.4×</b></div>
+                <div><span>Segment</span><b>Lookalike seeds · 8 active</b></div>
+                <div><span>Size</span><b>—</b></div>
+                <div><span>Effect</span><b className="pos">Auto-reseed</b></div>
               </div>
             </article>
 
@@ -262,7 +245,7 @@ export default function AudienceIQPage() {
                 <div className="aq-agent-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><path d="M5 5l14 14" /></svg>
                 </div>
-                <div><span className="aq-agent-num">Agent 05</span><h3>Suppression</h3></div>
+                <div><span className="aq-agent-num">Agent 04</span><h3>Suppressor</h3></div>
                 <span className="aq-agent-status live">Live</span>
               </div>
               <p className="aq-agent-desc">Automatically excludes fraud, charge-back-prone profiles, and recent purchasers — synced to the platforms as negatives within minutes.</p>
@@ -270,22 +253,6 @@ export default function AudienceIQPage() {
                 <div><span>Segment</span><b>Supp · fraud + charge-back</b></div>
                 <div><span>Size</span><b>41K</b></div>
                 <div><span>Effect</span><b className="pos">−22% waste</b></div>
-              </div>
-            </article>
-
-            <article className="aq-agent aq-agent-bid">
-              <div className="aq-agent-head">
-                <div className="aq-agent-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 20V8M4 20h16M8 14v6M12 11v9M16 16v4M20 6v14" /></svg>
-                </div>
-                <div><span className="aq-agent-num">Agent 06</span><h3>Bid management</h3></div>
-                <span className="aq-agent-status live">Live</span>
-              </div>
-              <p className="aq-agent-desc">Caps bids on low-LTV segments in real time — not via a quarterly rule change. The model learns from every hour of auction data.</p>
-              <div className="aq-agent-stats">
-                <div><span>Segment</span><b>Bid ceiling · low-LTV</b></div>
-                <div><span>Size</span><b>—</b></div>
-                <div><span>Effect</span><b className="pos">−14% CAC</b></div>
               </div>
             </article>
           </div>
@@ -296,14 +263,14 @@ export default function AudienceIQPage() {
       <section className="sp-section aq-ltv-section">
         <div className="wrap">
           <div className="section-head">
-            <h2 className="section-title">Every customer graded.<br />Every signal enriched.</h2>
-            <p className="section-sub">Audience IQ doesn&apos;t ship segments built on vibes. It grades every customer in your file on realized LTV, projected LTV, and recency — then attaches the intent and demographic signals that make lookalike expansion actually work.</p>
+            <h2 className="section-title">Every customer graded.<br />On outcomes, not identity.</h2>
+            <p className="section-sub">Audience IQ doesn&apos;t ship segments built on vibes. It grades every customer in your file on realized LTV, projected LTV, and recency — the causal signals that make lookalike expansion actually work, with no third-party identity append.</p>
           </div>
 
           <div className="aq-ltv-dash">
             <div className="aq-dash-chrome">
               <div className="aq-dash-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-              <div className="aq-dash-tab">Audience IQ · LTV grader</div>
+              <div className="aq-dash-tab">Audience IQ · LTV grader · Illustrative</div>
               <div className="aq-dash-user">RS</div>
             </div>
 
@@ -333,22 +300,22 @@ export default function AudienceIQPage() {
               </div>
 
               <aside className="aq-enrich">
-                <h4>Enrichment layers applied</h4>
+                <h4>Signal layers applied</h4>
                 <ul>
                   <li>
                     <span className="aq-enrich-dot"></span>
-                    <div><b>Intent signals</b><span>Cart-add, category search, comparison intent — 90 days</span></div>
+                    <div><b>Behavioral intent</b><span>Cart-add, category search, comparison intent — from your own events, 90 days</span></div>
                     <em>+312 signals</em>
                   </li>
                   <li>
                     <span className="aq-enrich-dot"></span>
-                    <div><b>Demographic</b><span>Age, income, household, occupation — opted in</span></div>
-                    <em>+48 attributes</em>
+                    <div><b>Realized + projected LTV</b><span>Per-customer value from your transaction history</span></div>
+                    <em>12-mo model</em>
                   </li>
                   <li>
                     <span className="aq-enrich-dot"></span>
-                    <div><b>Psychographic</b><span>Values, lifestyle, category affinity</span></div>
-                    <em>+86 attributes</em>
+                    <div><b>Recency &amp; propensity</b><span>BG/NBD propensity with recency weighting</span></div>
+                    <em>Per-customer</em>
                   </li>
                   <li>
                     <span className="aq-enrich-dot warn"></span>
@@ -357,8 +324,8 @@ export default function AudienceIQPage() {
                   </li>
                 </ul>
                 <div className="aq-enrich-foot">
-                  <span>Enrichment partners don&apos;t re-sell your data.</span>
-                  <span className="aq-enrich-badge">SOC 2 · GDPR-ready</span>
+                  <span>Built from your first-party data — no cross-platform identity graph.</span>
+                  <span className="aq-enrich-badge">GDPR-ready</span>
                 </div>
               </aside>
             </div>
@@ -370,8 +337,8 @@ export default function AudienceIQPage() {
       <section className="sp-section alt aq-sync-section">
         <div className="wrap">
           <div className="section-head">
-            <h2 className="section-title">One source of truth.<br />Four platforms. Three minutes.</h2>
-            <p className="section-sub">Every approved segment ships to Meta, Google, TikTok, and DV360 via API in under three minutes — including suppression lists and bid caps. No CSVs. No 24-hour lag. No manual uploads.</p>
+            <h2 className="section-title">One source of truth.<br />Three platforms. Under a minute.</h2>
+            <p className="section-sub">Every approved segment ships to Meta, Google, and TikTok via API in under 60 seconds (p99) — up to 5M records per sync, including suppression lists and bid caps. No CSVs. No 24-hour lag. No manual uploads.</p>
           </div>
 
           <div className="aq-sync">
@@ -387,7 +354,7 @@ export default function AudienceIQPage() {
                 </svg>
               </div>
               <b>Audience IQ</b>
-              <span>Buyer graph · enriched</span>
+              <span>Buyer graph · graded</span>
             </div>
 
             <svg className="aq-sync-lines" viewBox="0 0 600 300" aria-hidden="true">
@@ -428,15 +395,10 @@ export default function AudienceIQPage() {
                 <span className="aq-target-meta">7 segments · 2 supp.</span>
                 <span className="aq-target-dot"></span>
               </article>
-              <article className="aq-target">
-                <span className="aq-target-name">DV360</span>
-                <span className="aq-target-meta">4 segments · 1 supp.</span>
-                <span className="aq-target-dot"></span>
-              </article>
             </div>
           </div>
 
-          <p className="aq-sync-caption">Last full sync <b>3 min ago</b>. Next in 7 min. Real-time for suppression pushes.</p>
+          <p className="aq-sync-caption">Last full sync <b>&lt;60s ago</b>. Real-time for suppression pushes.</p>
         </div>
       </section>
 
@@ -454,7 +416,7 @@ export default function AudienceIQPage() {
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2v20M2 12h20M6 6l12 12M18 6L6 18" /></svg>
               </div>
               <h3>Adapt in real time.</h3>
-              <p>Targeting evolves with new trends and audience shifts. The six agents re-rank segments hourly, not quarterly — so yesterday&apos;s best cohort doesn&apos;t become tomorrow&apos;s dead weight.</p>
+              <p>Targeting evolves with new trends and audience shifts. The four agents re-rank segments hourly, not quarterly — so yesterday&apos;s best cohort doesn&apos;t become tomorrow&apos;s dead weight.</p>
               <div className="aq-outcome-metric"><b>Hourly</b><span>segment re-ranking cadence</span></div>
             </article>
             <article className="aq-outcome aq-outcome-accent">

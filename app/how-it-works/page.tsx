@@ -38,7 +38,7 @@ export default function HowItWorksPage() {
                 <span className="sep">·</span>
                 <span>Rollback anytime in first 30 days</span>
                 <span className="sep">·</span>
-                <span>SOC 2 · GDPR-ready</span>
+                <span>GDPR-ready</span>
               </div>
             </div>
 
@@ -437,7 +437,7 @@ export default function HowItWorksPage() {
                 <span className="hw-foot-tag mid">What we touch</span>
               </header>
               <h3>A small audience-sync footprint.</h3>
-              <p>Audience IQ can push buyer-graded segments back into Meta, Google, TikTok, and DV360 via API. You approve every segment push — nothing auto-activates in pilot.</p>
+              <p>Audience IQ can push buyer-graded segments back into Meta, Google, and TikTok via API. You approve every segment push — nothing auto-activates in pilot.</p>
               <ul className="hw-foot-list">
                 <li>Segment push (opt-in, reversible)</li>
                 <li>Suppression lists (opt-in)</li>
@@ -457,13 +457,12 @@ export default function HowItWorksPage() {
               <ul className="hw-foot-list">
                 <li>No client-side pixels</li>
                 <li>No re-sold signals to third parties</li>
-                <li>No shared training models across customers</li>
+                <li>No raw customer data pooled across accounts</li>
               </ul>
             </article>
           </div>
 
           <div className="hw-foot-badges">
-            <span className="hw-foot-badge">SOC 2 Type II</span>
             <span className="hw-foot-badge">GDPR-ready</span>
             <span className="hw-foot-badge">Pilot-fee credited to contract</span>
             <span className="hw-foot-badge">30-day rollback window</span>
@@ -498,7 +497,7 @@ export default function HowItWorksPage() {
             </details>
             <details className="hw-faq-item">
               <summary><span className="hw-faq-q">Do you share or re-sell our data?</span><span className="hw-faq-caret" aria-hidden="true">+</span></summary>
-              <p>Never. Your data stays in your workspace. We don&apos;t train shared models on customer data, we don&apos;t syndicate signals, and we don&apos;t enrich our own dataset from your activity.</p>
+              <p>Never sold or syndicated. Your raw data is never pooled or used to train models that serve other customers. The only cross-customer learning is opt-in and differentially private — anonymized aggregate patterns (k ≥ 5 contributing tenants, ε = 1.0 per quarter) — and you choose contribute, benefit-only, or opt-out at onboarding.</p>
             </details>
             <details className="hw-faq-item">
               <summary><span className="hw-faq-q">What happens if we want to pause or roll back?</span><span className="hw-faq-caret" aria-hidden="true">+</span></summary>

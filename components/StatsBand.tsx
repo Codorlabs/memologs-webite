@@ -13,7 +13,7 @@ interface Stat {
 }
 
 const STATS: Stat[] = [
-  { target: 2.4, decimals: 1, suffix: '×', label: 'Attribution Inflation', desc: 'uncovered on avg' },
+  { target: 3.0, decimals: 1, suffix: '×', label: 'Attribution Inflation', desc: 'uncovered on avg' },
   { target: 60, suffix: '%', label: 'Ad Spend Saved', desc: 'on fatigued creative' },
   { target: 37, suffix: '%', label: 'CAC Reduction', desc: 'across active campaigns' },
   { target: 90, label: 'Days to Payback', desc: 'after pilot kickoff' },

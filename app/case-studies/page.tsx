@@ -40,7 +40,7 @@ export default function CaseStudiesPage() {
 
             <Link href="/case-studies/retail" className="hub-card">
               <div className="hub-card-head"><span className="cs-industry">Multi-brand retail</span><span className="hub-card-cta">→</span></div>
-              <h3>India&apos;s largest watch retailer hit 1.6× ROAS and 40% YoY revenue growth.</h3>
+              <h3>A multi-brand watch retailer hit 4.9× ROAS (1.6× lift) and 40% YoY revenue growth.</h3>
               <div className="hub-card-stats">
                 <div><span className="hub-card-stat-val">1.6×</span><span className="hub-card-stat-lab">ROAS lift</span></div>
                 <div><span className="hub-card-stat-val">+40%</span><span className="hub-card-stat-lab">YoY revenue</span></div>
@@ -70,12 +70,12 @@ export default function CaseStudiesPage() {
 
             <div className="hub-card">
               <div className="hub-card-head"><span className="cs-industry">Health &amp; PCare</span></div>
-              <h3>Subscription skincare brand hit +30% click-to-acquisition.</h3>
+              <h3>Subscription skincare brand hit +37% click-to-acquisition.</h3>
               <div className="hub-card-stats">
-                <div><span className="hub-card-stat-val">+30%</span><span className="hub-card-stat-lab">Click→acquisition</span></div>
+                <div><span className="hub-card-stat-val">+37%</span><span className="hub-card-stat-lab">Click→acquisition</span></div>
                 <div><span className="hub-card-stat-val">−18%</span><span className="hub-card-stat-lab">CAC</span></div>
               </div>
-              <p className="hub-card-quote">&ldquo;The 6 audience agents found customers our lookalikes were missing. Retention cohort quality went up, too.&rdquo;</p>
+              <p className="hub-card-quote">&ldquo;The 4 audience agents found buyers our lookalikes were missing. Retention cohort quality went up, too.&rdquo;</p>
             </div>
 
             <div className="hub-card">

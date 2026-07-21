@@ -28,10 +28,9 @@ export default function PricingPage() {
               <p className="price-desc">See the methodology on your real data before committing. Pilot fee credited 100% toward a 12-month contract.</p>
               <div className="price-num">$25K<small>total · 90 days</small></div>
               <ul className="price-list">
-                <li>Signal Recovery deployment</li>
-                <li>One geo-lift study with dual-model consensus</li>
+                <li>One geo-lift study with tri-model consensus (GeoTwin · CausalCore · DiffLens)</li>
                 <li>Creative IQ health scoring — top 30 assets</li>
-                <li>Audience IQ first-party enrichment</li>
+                <li>Audience IQ activation — Meta / Google / TikTok sync</li>
                 <li>Dedicated account team</li>
                 <li>Weekly executive readout</li>
                 <li>Final board-ready impact report</li>
@@ -49,7 +48,7 @@ export default function PricingPage() {
                 <li>All 5 IQ products, unlimited usage</li>
                 <li>Always-on geo-lift (quarterly studies)</li>
                 <li>Full creative fatigue monitoring</li>
-                <li>All 6 audience agents, cross-platform sync</li>
+                <li>All 4 audience agents, cross-platform sync</li>
                 <li>AI Co-Pilot · unlimited queries</li>
                 <li>Memory IQ · decision logging + patterns</li>
                 <li>Dedicated customer success team</li>
@@ -69,7 +68,7 @@ export default function PricingPage() {
                 <li>Cross-brand pattern learning (permissioned)</li>
                 <li>Custom data residency (US / EU / APAC)</li>
                 <li>Dedicated solutions architect</li>
-                <li>SOC 2 Type II + custom DPA</li>
+                <li>Custom DPA</li>
                 <li>Quarterly executive business review</li>
                 <li>Named phone support</li>
               </ul>
@@ -96,7 +95,7 @@ export default function PricingPage() {
             <ol>
               <li><div><b>Does the pilot fee really credit 100%?</b><p>Yes. If you sign an annual Full Platform contract within 30 days of pilot completion, your $25K pilot fee is applied dollar-for-dollar to the first two months.</p></div></li>
               <li><div><b>What counts as &ldquo;media spend&rdquo; for the Growth tier?</b><p>Nothing. Growth is flat. Our $15–35K/mo range is based on number of channels, markets, and brand lines — not your ad budget.</p></div></li>
-              <li><div><b>How fast can we start?</b><p>From signed SOW to Signal Recovery live: typically 5 business days. First geo-lift result: week 5.</p></div></li>
+              <li><div><b>How fast can we start?</b><p>From signed SOW to first dashboards live: typically 5 business days. First geo-lift result: week 5.</p></div></li>
               <li><div><b>Do we need to replace our current tools?</b><p>No. Memologs sits alongside your existing attribution, MMM, and platform dashboards via API. We add signal, we don&apos;t remove yours.</p></div></li>
               <li><div><b>Who owns the data?</b><p>You do. We never resell customer data, enrichment never flows back out, and you can export everything at contract end.</p></div></li>
             </ol>

@@ -41,7 +41,7 @@ export default function IncrementalityIQPage() {
             {/* Consensus Verdict card */}
             <aside className="iq-verdict" aria-label="Sample consensus verdict">
               <div className="iq-verdict-head">
-                <span className="iq-verdict-tag">Consensus Verdict</span>
+                <span className="iq-verdict-tag">Consensus Verdict · Illustrative</span>
                 <span className="iq-verdict-id">EXP-2026-Q4-CTV-WEST</span>
               </div>
               <div className="iq-verdict-sub">Q4 CTV Brand Campaign — West</div>

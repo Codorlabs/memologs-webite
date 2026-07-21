@@ -37,9 +37,9 @@ export default function FintechCaseStudyPage() {
             <div className="cs-tag">Approach</div>
             <div>
               <h2>What we did.</h2>
-              <p>We started with a full attribution audit on the 95% of install spend concentrated in Meta and Google. Signal Recovery was deployed in week one to rebuild server-side tracking across both platforms.</p>
-              <p>In week two, Creative IQ identified four fatiguing ad sets that accounted for 38% of spend — their 7-signal health scores had all dropped below 30. We queued refresh variants and began A/B testing immediately.</p>
-              <p>Weeks 3–5, we ran the first geo-lift study to establish true incremental CPI versus platform-reported CPI. Dual-model consensus (GeoLift + CausalImpact) returned an Attribution Inflation Factor of 2.8× on Meta and 4.1× on branded Google search.</p>
+              <p>We started with a full attribution audit on the 95% of install spend concentrated in Meta and Google.</p>
+              <p>In week two, Creative IQ identified four fatiguing ad sets that accounted for 38% of spend — their 9-signal health scores had all dropped below 30. We queued refresh variants and began A/B testing immediately.</p>
+              <p>Weeks 3–5, we ran the first geo-lift study to establish true incremental CPI versus platform-reported CPI. Tri-model consensus (GeoTwin · CausalCore · DiffLens) returned an Attribution Inflation Factor of 2.8× on Meta and 4.1× on branded Google search.</p>
               <div className="cs-pull">&ldquo;Meta claimed a $6 CPI. Geo-lift said $17. Once we stopped optimizing against the lie, everything got better.&rdquo;</div>
               <p>The reallocation plan: cap branded search at 60% of its prior budget, move the surplus into Meta prospecting creative that had tested well in the fatigue-replacement cohort, and add frequency caps at the audience level.</p>
             </div>

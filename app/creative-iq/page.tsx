@@ -150,7 +150,7 @@ export default function CreativeIQPage() {
                   <span style={{ display: "inline-flex", width: 34, height: 34, borderRadius: 10, background: "#FFFFFF", border: "1px solid #E5E2D8", alignItems: "center", justifyContent: "center", color: "#0B7B5A" }}>
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l2.5 2"></path></svg>
                   </span>
-                  <span style={{ fontSize: 15 }}><b style={{ fontWeight: 600 }}>Detect fatigue</b><span style={{ color: "#8A8D93" }}> — 9-signal model, day-precise runway</span></span>
+                  <span style={{ fontSize: 15 }}><b style={{ fontWeight: 600 }}>Detect fatigue</b><span style={{ color: "#8A8D93" }}> — 9-signal model, method-labeled runway estimate</span></span>
                 </div>
                 <div className="cq-hero-feat" style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <span style={{ display: "inline-flex", width: 34, height: 34, borderRadius: 10, background: "#FFFFFF", border: "1px solid #E5E2D8", alignItems: "center", justifyContent: "center", color: "#0B7B5A" }}>
@@ -336,9 +336,9 @@ export default function CreativeIQPage() {
                 <div style={{ display: "flex", gap: 24, fontSize: 13, color: "rgba(255,255,255,0.75)", flexWrap: "wrap" }}>
                   <span style={{ display: "flex", alignItems: "center", gap: 8 }}><span style={{ width: 18, height: 3, borderRadius: 2, background: "#00FFC2" }}></span>Andromeda Readiness (leading)</span>
                   <span style={{ display: "flex", alignItems: "center", gap: 8 }}><span style={{ width: 18, height: 3, borderRadius: 2, background: "#FF6B5B" }}></span>CPA (lagging)</span>
-                  <span className="cq-lag-legend-gap" style={{ display: "flex", alignItems: "center", gap: 8 }}><span style={{ width: 14, height: 14, borderRadius: 4, background: "rgba(255,179,71,0.14)", border: "1px dashed #D9A441" }}></span>Detection gap — day-precise runway</span>
+                  <span className="cq-lag-legend-gap" style={{ display: "flex", alignItems: "center", gap: 8 }}><span style={{ width: 14, height: 14, borderRadius: 4, background: "rgba(255,179,71,0.14)", border: "1px dashed #D9A441" }}></span>Detection gap — runway estimate</span>
                 </div>
-                <span className="cq-lag-badge" style={{ fontSize: 12, fontWeight: 600, color: "#9AA3B4", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 999, padding: "6px 12px", background: "rgba(255,255,255,0.06)" }}>Real pilot · SKU-447 · Meta</span>
+                <span className="cq-lag-badge" style={{ fontSize: 12, fontWeight: 600, color: "#9AA3B4", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 999, padding: "6px 12px", background: "rgba(255,255,255,0.06)" }}>Illustrative · SKU-447 · Meta</span>
               </div>
 
               <svg viewBox="0 0 900 260" className="cq-lag-1a-svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style={{ width: "100%", height: "auto", display: "block" }}>
@@ -372,7 +372,7 @@ export default function CreativeIQPage() {
                 </g>
 
                 <rect x="320" y="20" width="240" height="200" fill="rgba(217,164,65,0.08)" stroke="#D9A441" strokeDasharray="4 4" strokeWidth="1" />
-                <text x="330" y="36" fill="#FFB347" fontFamily="-apple-system, sans-serif" fontSize="11" fontWeight="600">RUNWAY · ~5d · CI 4–6d</text>
+                <text x="330" y="36" fill="#FFB347" fontFamily="-apple-system, sans-serif" fontSize="11" fontWeight="600">RUNWAY · ~5d · TREND est.</text>
 
                 {/* Gradient area fills (kept from original) */}
                 <path d="M50 55 L120 60 L190 72 L260 92 L320 112 L400 138 L480 162 L560 178 L620 190 L700 198 L770 202 L830 204 L880 205 L880 220 L50 220 Z" fill="url(#cqHealthL)" filter="url(#cqFrost)" />
@@ -577,7 +577,7 @@ export default function CreativeIQPage() {
                 <b>Winter Sale — UGC Vertical A</b>
                 <div className="cq-fp-meta-row">
                   <span className="score bad">CTR −38%</span>
-                  <span>freq 11.2×</span>
+                  <span>freq 8.4×</span>
                 </div>
               </div>
             </article>
@@ -659,20 +659,20 @@ export default function CreativeIQPage() {
         <div className="wrap">
           <div className="section-head split">
             <h2 className="section-title">Nine signals feed the fatigue score.<br />Zero guessing.</h2>
-            <p className="section-sub">The Andromeda fatigue engine reads nine leading signals per ad in real time — each weighted against your own historical cohorts. Watch every signal transmit into the engine, then flip to see the per-ad score and day-precise runway it produces.</p>
+            <p className="section-sub">The Andromeda fatigue engine reads nine leading signals per ad in real time — each weighted against your own historical cohorts. Watch every signal transmit into the engine, then flip to see the per-ad score and method-labeled runway estimate it produces.</p>
           </div>
 
           {(() => {
             const HUB = [
-              { key: 'ctr',    name: 'CTR / CVR trend',       weight: '18%', tone: '#00FFC2', icon: <><path d="M3 20h18M6 16l4-5 4 4 5-7"/></> },
-              { key: 'freq',   name: 'Frequency',             weight: '14%', tone: '#B8A6FF', icon: <><path d="M3 5h14l-4 4h-7l-3-3v-1zM3 12h18M3 19h14M3 5v14"/></> },
-              { key: 'eng',    name: 'Engagement decay',      weight: '12%', tone: '#FF8A7E', icon: <><path d="M4 19L10 13l4 4 6-7"/><path d="M20 10V6h-4"/></> },
-              { key: 'age',    name: 'Creative age',          weight: '11%', tone: '#FFB347', icon: <><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></> },
-              { key: 'peer',   name: 'Peer pressure',         weight: '11%', tone: '#8FCBFF', icon: <><circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/></> },
-              { key: 'sat',    name: 'Impression saturation', weight: '10%', tone: '#FF9DD3', icon: <><path d="M3 3v18h18M7 15V9M11 15V6M15 15v-4M19 15v-8"/></> },
-              { key: 'del',    name: 'Delivery decay',        weight: '10%', tone: '#8FE6BE', icon: <><path d="M4 4l16 16M4 20L20 4"/><circle cx="12" cy="12" r="9" strokeDasharray="2 2"/></> },
-              { key: 'sent',   name: 'Sentiment',             weight: '8%',  tone: '#CE9FFF', icon: <><circle cx="12" cy="12" r="9"/><path d="M8 13a4 4 0 008 0M9 9h.01M15 9h.01"/></> },
-              { key: 'refresh',name: 'Refresh rhythm',        weight: '6%',  tone: '#F0DAA8', icon: <><path d="M21 12a9 9 0 11-3-6.7M21 4v4h-4"/></> },
+              { key: 'ctr',  name: 'CTR trend',             tone: '#00FFC2', icon: <><path d="M3 20h18M6 16l4-5 4 4 5-7"/></> },
+              { key: 'freq', name: 'Frequency saturation',  tone: '#B8A6FF', icon: <><path d="M3 5h14l-4 4h-7l-3-3v-1zM3 12h18M3 19h14M3 5v14"/></> },
+              { key: 'eng',  name: 'Engagement rate',       tone: '#FF8A7E', icon: <><path d="M4 19L10 13l4 4 6-7"/><path d="M20 10V6h-4"/></> },
+              { key: 'age',  name: 'Creative age',          tone: '#FFB347', icon: <><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></> },
+              { key: 'rel',  name: 'Relative performance',  tone: '#8FCBFF', icon: <><circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/></> },
+              { key: 'sat',  name: 'Impression saturation', tone: '#FF9DD3', icon: <><path d="M3 3v18h18M7 15V9M11 15V6M15 15v-4M19 15v-8"/></> },
+              { key: 'del',  name: 'Delivery decay',        tone: '#8FE6BE', icon: <><path d="M4 4l16 16M4 20L20 4"/><circle cx="12" cy="12" r="9" strokeDasharray="2 2"/></> },
+              { key: 'sent', name: 'Sentiment decay',       tone: '#CE9FFF', icon: <><circle cx="12" cy="12" r="9"/><path d="M8 13a4 4 0 008 0M9 9h.01M15 9h.01"/></> },
+              { key: 'cvr',  name: 'CVR trend',             tone: '#F0DAA8', icon: <><path d="M21 12a9 9 0 11-3-6.7M21 4v4h-4"/></> },
             ];
             // Positions: 9 satellites evenly at 40° intervals around center.
             // SVG viewBox is 100×80 (5:4 aspect), center at (50, 40), radius 32.
@@ -729,7 +729,7 @@ export default function CreativeIQPage() {
                       <span className="kicker">Fatigue score</span>
                       <span className="num">24</span>
                       <span className="runway">Fatigues in <b>~5d</b></span>
-                      <em>CI 4–6d</em>
+                      <em>TREND estimate</em>
                     </div>
                   </div>
 
@@ -804,7 +804,7 @@ export default function CreativeIQPage() {
                       <span className="cq-sm-eng-num">24</span>
                       <div className="cq-sm-eng-meta">
                         <b>Fatigues in <span>~5d</span></b>
-                        <em>9 signals weighted · CI 4–6d</em>
+                        <em>9 signals weighted · TREND est.</em>
                       </div>
                     </div>
                   </div>
@@ -826,7 +826,7 @@ export default function CreativeIQPage() {
           <div className="cq-dash">
             <div className="aq-dash-chrome">
               <div className="aq-dash-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-              <div className="aq-dash-tab">Creative IQ · Ad detail</div>
+              <div className="aq-dash-tab">Creative IQ · Ad detail · Illustrative</div>
               <div className="aq-dash-user">RS</div>
             </div>
 
@@ -851,7 +851,7 @@ export default function CreativeIQPage() {
                 </div>
                 <div className="cq-detail-status">
                   <span className="cq-pill bad">Fatigued</span>
-                  <span className="cq-detail-runway">Runway <b>~5d</b> · CI 4–6d</span>
+                  <span className="cq-detail-runway">Runway <b>~5d</b> · TREND est.</span>
                 </div>
               </header>
 
@@ -987,7 +987,7 @@ export default function CreativeIQPage() {
         <div className="wrap">
           <div className="cq-lib-1a-head" style={{ display: "flex", justifyContent: "space-between", gap: 48, alignItems: "flex-end", marginBottom: 44 }}>
             <h2 className="section-title" style={{ margin: 0, maxWidth: 440 }}>One brief.<br />Every signal we have.</h2>
-            <p className="section-sub" style={{ margin: 0, maxWidth: 680, fontSize: "16.5px", lineHeight: 1.6 }}>The AI Top Brief generator fuses every signal already on your account into one production-ready brief — the highest-impact gap × your winning grain, cross-referenced with real-world search-trend velocity, cultural moments in flight, and competitor creative directions live in the wild.</p>
+            <p className="section-sub" style={{ margin: 0, maxWidth: 680, fontSize: "16.5px", lineHeight: 1.6 }}>The AI Top Brief generator fuses every signal already on your account into one production-ready brief — the highest-impact diversity gap × your winning creative grain, grounded in your live placement coverage and fatigue/runway signals.</p>
           </div>
 
           <div className="cq-brief-fuse">
@@ -995,7 +995,7 @@ export default function CreativeIQPage() {
               <article className="cq-brief-ing t-diversity"><span className="cq-brief-ing-main"><span className="cq-brief-ing-kicker">Diversity gap</span><b>Question × LAL 1%</b></span><em>+12% ROAS · 0% saturated</em></article>
               <article className="cq-brief-ing t-winners"><span className="cq-brief-ing-main"><span className="cq-brief-ing-kicker">Your winners</span><b>UGC vertical · 15s · warm</b></span><em>Grain-extracted from top 10</em></article>
               <article className="cq-brief-ing t-audience"><span className="cq-brief-ing-main"><span className="cq-brief-ing-kicker">Audience fit</span><b>Lookalike 1% · idx 1.9×</b></span><em>Headroom +38%</em></article>
-              <article className="cq-brief-ing t-realworld"><span className="cq-brief-ing-main"><span className="cq-brief-ing-kicker">Real-world</span><b>&ldquo;retinol serum&rdquo; +124%</b></span><em>Coachella &apos;26 · Glossier UGC</em></article>
+              <article className="cq-brief-ing t-realworld"><span className="cq-brief-ing-main"><span className="cq-brief-ing-kicker">Placement gap</span><b>Reels · 18% of spend</b></span><em>No 9:16-native variant</em></article>
               <article className="cq-brief-ing t-fatigue"><span className="cq-brief-ing-main"><span className="cq-brief-ing-kicker">Fatigue signal</span><b>3 ads · runway ≤ 7d</b></span><em>9-signal Andromeda</em></article>
             </div>
 
@@ -1045,7 +1045,7 @@ export default function CreativeIQPage() {
                 <span className="cq-pf-badge live"><span className="dot"></span>Live</span>
               </div>
               <ul className="cq-pf-list">
-                <li><span className="mk">✓</span>Per-ad fatigue scoring &amp; day-precise runway</li>
+                <li><span className="mk">✓</span>Per-ad fatigue scoring &amp; method-labeled runway estimate</li>
                 <li><span className="mk">✓</span>Diversity Gap Map — the cells you never enter</li>
                 <li><span className="mk">✓</span>Decision queue — Apply, Test, Brief, Watch</li>
                 <li><span className="mk">✓</span>AI Top Brief generator (Scale plan)</li>
@@ -1110,7 +1110,7 @@ export default function CreativeIQPage() {
             </article>
           </div>
 
-          <p className="cq-pf-caption">Every score you see is backed by real platform data. If a signal can&apos;t be measured, we don&apos;t show a number — we tell you.</p>
+          <p className="cq-pf-caption">In the product, every score is backed by real platform data. If a signal can&apos;t be measured, we don&apos;t show a number — we tell you. (Screens shown here are illustrative.)</p>
         </div>
       </section>
 

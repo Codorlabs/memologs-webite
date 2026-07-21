@@ -35,7 +35,7 @@ export default function CopilotPage() {
               </div>
 
               <div className="iq-hero-micro">
-                <span>Answers in 0.4s</span>
+                <span>Answers in ~0.4s (&lt;4s p95)</span>
                 <span className="sep">·</span>
                 <span>Slack &amp; email proactive alerts</span>
                 <span className="sep">·</span>
@@ -47,7 +47,7 @@ export default function CopilotPage() {
               <div className="cp-chat-frame">
                 <div className="cp-chat-chrome">
                   <div className="cp-chat-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                  <span className="cp-chat-tab">MemoLogs · Co-Pilot</span>
+                  <span className="cp-chat-tab">MemoLogs · Co-Pilot · Illustrative</span>
                   <span className="cp-chat-status"><span className="cp-chat-dot"></span>Live</span>
                 </div>
 
@@ -79,7 +79,7 @@ export default function CopilotPage() {
                       </div>
 
                       <ul className="cp-msg-points">
-                        <li><b>Creative fatigue (46%)</b> on ad set SKU-447 crossed the 7-signal threshold Mon night. Frequency 11.2×.</li>
+                        <li><b>Creative fatigue (46%)</b> on ad set SKU-447 crossed the 9-signal threshold Mon night. Frequency 8.4×.</li>
                         <li><b>Audience overlap (32%)</b> with retargeting climbed to 64%. Memory IQ flagged it Sunday.</li>
                         <li><b>Competitor SOV (22%)</b> doubled in priority markets — Brand X re-launched.</li>
                       </ul>
@@ -202,7 +202,7 @@ export default function CopilotPage() {
             <article className="cp-show">
               <header className="cp-show-head">
                 <span className="cp-show-num">01</span>
-                <span className="cp-show-tag">Cross-channel · 4 sources</span>
+                <span className="cp-show-tag">Cross-channel · 4 sources · Illustrative</span>
               </header>
               <div className="cp-msg cp-msg-user cp-show-user">
                 <div className="cp-msg-bubble">Which channel is most inflated right now?</div>
@@ -255,7 +255,7 @@ export default function CopilotPage() {
             <article className="cp-show">
               <header className="cp-show-head">
                 <span className="cp-show-num">02</span>
-                <span className="cp-show-tag">Forecast · with caveats</span>
+                <span className="cp-show-tag">Forecast · with caveats · Illustrative</span>
               </header>
               <div className="cp-msg cp-msg-user cp-show-user">
                 <div className="cp-msg-bubble">Forecast October spend at our current ROAS target.</div>
@@ -318,7 +318,7 @@ export default function CopilotPage() {
             <article className="cp-show">
               <header className="cp-show-head">
                 <span className="cp-show-num">03</span>
-                <span className="cp-show-tag">Decision support · pre-staged</span>
+                <span className="cp-show-tag">Decision support · pre-staged · Illustrative</span>
               </header>
               <div className="cp-msg cp-msg-user cp-show-user">
                 <div className="cp-msg-bubble">Where should I move $50K to lift incremental revenue this week?</div>
@@ -329,7 +329,7 @@ export default function CopilotPage() {
                     <span className="cp-msg-conf">High confidence · 84%</span>
                     <span className="cp-msg-time">0.5s</span>
                   </header>
-                  <p className="cp-msg-summary">Pull <b>$50K from Branded SEM</b>. Move <b>$32K to CTV</b>, <b>$18K to YouTube Shorts</b>. Predicted incremental revenue lift: <b>+$118K</b>.</p>
+                  <p className="cp-msg-summary">Pull <b>$50K from Branded SEM</b>. Move <b>$32K to CTV</b>, <b>$18K to YouTube Shorts</b>. Predicted incremental revenue lift: <b>+$111K</b>.</p>
                   <div className="cp-viz cp-viz-table">
                     <div className="cp-table">
                       <div className="cp-table-row cp-table-head">
@@ -354,10 +354,10 @@ export default function CopilotPage() {
                         <span className="cp-impact good">1.9×</span>
                       </div>
                       <div className="cp-table-row cp-table-total">
-                        <span className="cp-table-amt good">+$118K</span>
+                        <span className="cp-table-amt good">+$111K</span>
                         <span className="cp-from">net incremental revenue</span>
                         <span className="cp-table-pred">7-day window</span>
-                        <span className="cp-impact good">2.36× avg</span>
+                        <span className="cp-impact good">2.22× avg</span>
                       </div>
                     </div>
                   </div>
@@ -429,11 +429,11 @@ export default function CopilotPage() {
                 </g>
               </svg>
               <span className="cp-graph-src cp-graph-s1"><b>Causal lift</b><em>GeoTwin · CausalCore · DiffLens</em></span>
-              <span className="cp-graph-src cp-graph-s2"><b>Creative health</b><em>7-signal fatigue model</em></span>
-              <span className="cp-graph-src cp-graph-s3"><b>Audience graph</b><em>1.2M enriched profiles</em></span>
+              <span className="cp-graph-src cp-graph-s2"><b>Creative health</b><em>9-signal fatigue model</em></span>
+              <span className="cp-graph-src cp-graph-s3"><b>Audience graph</b><em>1.2M graded profiles</em></span>
               <span className="cp-graph-src cp-graph-s4"><b>Decision memory</b><em>Pattern history</em></span>
               <span className="cp-graph-src cp-graph-s5"><b>Platform metrics</b><em>Meta · Google · TikTok</em></span>
-              <span className="cp-graph-brain-lab">Co-Pilot reasoning core</span>
+              <span className="cp-graph-brain-lab">Co-Pilot reasoning core · Causal Reasoning Translator — our own fine-tuned model (not GPT, not Claude)</span>
             </div>
           </div>
         </div>
@@ -451,14 +451,14 @@ export default function CopilotPage() {
             <div className="cp-slack-chrome">
               <span className="cp-slack-hash">#</span>
               <span className="cp-slack-channel">growth-alerts</span>
-              <span className="cp-slack-meta">7 alerts today</span>
+              <span className="cp-slack-meta">7 alerts today · Illustrative</span>
             </div>
             <div className="cp-slack-stream">
               <div className="cp-slack-msg cp-slack-bad">
                 <div className="cp-slack-avatar">🤖</div>
                 <div className="cp-slack-body">
                   <div className="cp-slack-line"><b>MemoLogs Co-Pilot</b><em>09:14 AM</em><span className="cp-slack-pill bad">Creative fatigue</span></div>
-                  <p>Ad set <code>SKU-447</code> health dropped to <b>24</b>. Frequency 11.2×, CTR −38%. Three refresh variants queued — predicted lift +18%.</p>
+                  <p>Ad set <code>SKU-447</code> health dropped to <b>24</b>. Frequency 8.4×, CTR −38%. Three refresh variants queued — predicted lift +18%.</p>
                   <div className="cp-slack-actions">
                     <button className="cp-slack-btn primary">Apply refresh</button>
                     <button className="cp-slack-btn">Open in dashboard</button>
@@ -480,7 +480,7 @@ export default function CopilotPage() {
                 <div className="cp-slack-avatar">🤖</div>
                 <div className="cp-slack-body">
                   <div className="cp-slack-line"><b>MemoLogs Co-Pilot</b><em>10:08 AM</em><span className="cp-slack-pill bad">Inflation drift</span></div>
-                  <p>Branded SEM inflation factor moved <b>9.4× → 11.2×</b> over the last 14 days. Reallocation plan auto-generated.</p>
+                  <p>Branded SEM inflation factor moved <b>9.6× → 11.2×</b> over the last 14 days. Reallocation plan auto-generated.</p>
                   <div className="cp-slack-actions">
                     <button className="cp-slack-btn primary">Open plan</button>
                   </div>
@@ -506,7 +506,7 @@ export default function CopilotPage() {
         <div className="wrap">
           <div className="section-head">
             <h2 className="section-title">Cited, not <em>hallucinated.</em></h2>
-            <p className="section-sub">Every claim links back to the data view it came from. Click any citation to verify in the underlying dashboard. Hover any number to see how it was computed.</p>
+            <p className="section-sub">Every number the Co-Pilot shows comes from your data — pulled deterministically from SQL and the IQ modules, never written by the language model. Three hard rules keep it honest: numbers come from your data and are never invented, every claim cites the module and timestamp it drew from, and if the available data can&apos;t cover at least 70% of your question the Co-Pilot says so instead of guessing. The narration runs on our own fine-tuned model — the Causal Reasoning Translator — not GPT, not Claude.</p>
           </div>
 
           <div className="cp-trust-grid">
@@ -528,7 +528,7 @@ export default function CopilotPage() {
                 <ol className="cp-cite-list">
                   <li>
                     <span>[1]</span>
-                    <div><b>Creative IQ · Health Score</b><em>SKU-447 · 24/100 · 7-signal model</em></div>
+                    <div><b>Creative IQ · Health Score</b><em>SKU-447 · 24/100 · 9-signal model</em></div>
                     <a className="cp-cite-go">Open ↗</a>
                   </li>
                   <li>
@@ -552,7 +552,7 @@ export default function CopilotPage() {
               </header>
               <div className="cp-report">
                 <div className="cp-report-head">
-                  <div><b>Q4 · October 2026</b><span>Performance digest · auto-generated</span></div>
+                  <div><b>Q4 · October 2026</b><span>Performance digest · auto-generated · illustrative</span></div>
                   <span className="cp-report-stamp">PDF · ready</span>
                 </div>
                 <div className="cp-report-rows">

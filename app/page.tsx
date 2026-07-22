@@ -454,7 +454,7 @@ export default function Home() {
                     ) : (
                       <tr className="ct-row" key={"r-" + r.cap}>
                         <td className="ct-cap"><b>{r.cap}</b>{r.sub ? <span>{r.sub}</span> : null}</td>
-                        {[["a", r.adim], ["b", r.bdim], ["c", r.cdim]].map(([k, dim]) => (
+                        {([["a", r.adim], ["b", r.bdim], ["c", r.cdim]] as Array<["a" | "b" | "c", boolean | undefined]>).map(([k, dim]) => (
                           <td className={"ct-comp" + (dim ? " dim" : "")} key={k}>
                             {r.plain ? r[k] : (
                               <span className="cell"><span className={"cmp-ic " + (dim ? "none" : "part")}></span><span>{r[k]}</span></span>

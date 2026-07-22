@@ -384,7 +384,6 @@ input, select, textarea { font: inherit; color: inherit; }
 
 /* Hero carousel (replaces hero-spot) */
 .hero-carousel,
-.hero-visual,
 .hero-spot {
   background: var(--ink-card);
   color: var(--bg);
@@ -395,7 +394,6 @@ input, select, textarea { font: inherit; color: inherit; }
   overflow: hidden;
 }
 .hero-carousel::before,
-.hero-visual::before,
 .hero-spot::before {
   content: ""; position: absolute; inset: 0;
   background:
@@ -404,11 +402,15 @@ input, select, textarea { font: inherit; color: inherit; }
   pointer-events: none;
 }
 .hero-carousel > *,
-.hero-visual > *,
 .hero-spot > * { position: relative; }
 
-/* Single hero visual: memory-centric architecture */
+/* Single hero visual: containerless signal-graph scene that blends into the page */
 .hero-visual {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -449,6 +451,19 @@ input, select, textarea { font: inherit; color: inherit; }
   max-width: 460px;
   display: block;
 }
+/* 3D signal-graph scene — containerless, blends into the page */
+.hv-canvas-wrap {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  margin: -8px 0 -16px;
+  overflow: visible;
+}
+.hv-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .hv-foot {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -466,13 +481,8 @@ input, select, textarea { font: inherit; color: inherit; }
 .hv-foot-item b { color: var(--ink); font-weight: 600; }
 
 @media (max-width: 720px) {
-  .hero-visual { padding: 20px; }
-  .hv-head { padding-bottom: 14px; margin-bottom: 14px; }
-  .hv-label { font-size: 10px; }
-  .hv-tag { display: none; }
-  .hv-stage { min-height: 0; }
-  .hv-foot { grid-template-columns: 1fr; gap: 6px; padding-top: 14px; margin-top: 8px; }
-  .hv-foot-item { font-size: 12px; }
+  .hero-visual { padding: 0; }
+  .hv-canvas-wrap { height: 420px; margin: 0; }
   .arch-node-name { font-size: 13px; }
   .arch-node-role { display: none; }
   .arch-hub-lab { font-size: 12px; }
@@ -1415,7 +1425,14 @@ input[type="range"]::-moz-range-thumb {
 
 
 
-.results { padding: 72px 0; border-top: 1px solid var(--rule-soft); }
+.results {
+  padding: 72px 0;
+  background:
+    radial-gradient(1000px 420px at 50% -10%, rgba(0,255,194,0.07), transparent 60%),
+    linear-gradient(180deg, #18233F 0%, #141C31 100%);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
 
 .results-hero {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
@@ -2197,7 +2214,9 @@ input[type="range"]::-moz-range-thumb {
    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 /* Orbit diagram: 8 symptoms → 1 root cause */
 .diag-orbit {
-  background: var(--bg);
+  background:
+    radial-gradient(720px 360px at 50% 40%, rgba(0,255,194,0.05), transparent 62%),
+    var(--bg);
   padding: 48px 0 72px;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
@@ -2297,7 +2316,9 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .diag {
-  background: var(--bg);
+  background:
+    radial-gradient(760px 320px at 12% -6%, rgba(255,107,91,0.055), transparent 62%),
+    var(--ink-card);
   padding: 72px 0;
   border-bottom: 1px solid var(--rule);
   border-top: 1px solid var(--rule);
@@ -3346,7 +3367,7 @@ input[type="range"]::-moz-range-thumb {
   .demo-head{display: block;}
   .demo-title{display: block; width: 100%; margin-top: 10px;}
   .geo-grid{padding: 15px;}
-  .hero-grid{gap: 4Other tools answer 0px; padding-bottom: 20px;}
+  .hero-grid{gap: 40px; padding-bottom: 20px;}
   .hero-carousel{padding: 20px;}
   .spot-grid{display: flex; flex-wrap: wrap; align-items: flex-start;}
   .spot-cell{width: calc(50% - 10px); text-align: center;}

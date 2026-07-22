@@ -56,13 +56,6 @@ export default function Home() {
                 <span className="sep">·</span>
                 <span><b>Compound</b> the rest.</span>
               </div>
-              <div className="hero-micro hero-micro-meta">
-                <span>Flat fee — never % of spend</span>
-                <span className="sep">·</span>
-                <span>Causal proof by week 5</span>
-                <span className="sep">·</span>
-                <span>Sits alongside your stack</span>
-              </div>
             </div>
             <HeroCarousel />
           </div>

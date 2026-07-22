@@ -7,7 +7,7 @@ import HomeTimelineScroll from "@/components/HomeTimelineScroll";
 import Link from "next/link";
 
 export default function Home() {
-  const CMP = [
+  const CMP: Array<{ g?: string; cap?: string; sub?: string; plain?: boolean; a?: string; b?: string; c?: string; m?: string; adim?: boolean; bdim?: boolean; cdim?: boolean }> = [
     { g: "The truth layer" },
     { cap: "Causal measurement", sub: "Is the “what worked” causal, or self-reported?", a: "Self-attributed — structurally inflated", adim: true, b: "Real, but a periodic point-in-time read", c: "Bespoke, manual, slow to run", m: "Always-on tri-model consensus (GeoTwin · CausalCore · DiffLens) + trust state" },
     { cap: "Attribution inflation, exposed", sub: "How much each platform over-claims", a: "It is the inflation", adim: true, b: "Partial — “incrementality factors”", c: "Not measured", cdim: true, m: "Per-channel AIF — claimed vs. measured lift, auto-populated" },
@@ -46,7 +46,7 @@ export default function Home() {
                 Causal measurement, creative AI, audience activation, an experiment-anchored budget planner, and a decision memory — all on one signal graph, all grounded in causal proof. We don&apos;t just store your data; we store the <em>decisions behind it.</em>
               </p>
               <div className="cta-row">
-                <PilotCTA className="btn btn-primary btn-lg">Start a 90-day pilot</PilotCTA>
+                <PilotCTA className="btn btn-primary btn-lg hide-mobile">Start a 90-day pilot</PilotCTA>
                 <a href="#calculator" className="btn btn-ghost btn-lg">See your inflation factor →</a>
               </div>
               <div className="hero-micro hero-micro-imperatives">
@@ -408,27 +408,29 @@ export default function Home() {
               .ctbl tbody tr.ct-row:hover td{background:rgba(255,255,255,0.04)}
               .ctbl tbody tr.ct-row:hover td.ct-memo{background:rgba(0,255,194,0.12)}
 
-              .cmp-cards{display:flex;flex-direction:column;gap:10px;margin-top:16px}
-              .cmp-div{margin:16px 2px 2px;font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:rgba(0,255,194,0.74);display:flex;align-items:center;gap:9px}
-              .cmp-div:before{content:"";width:15px;height:2px;border-radius:2px;background:#00FFC2}
-              .cmp-div:first-child{margin-top:0}
-              .cmp-card{border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:15px 16px;background:rgba(255,255,255,0.02)}
-              .cmp-cap b{display:block;color:#FBFBFD;font-weight:700;font-size:14.5px;line-height:1.3}
-              .cmp-cap span{display:block;margin-top:3px;font-size:12px;color:rgba(255,255,255,0.48);line-height:1.4}
-              .cmp-memo{display:flex;gap:11px;align-items:flex-start;margin:13px 0 12px;padding:12px 13px;border-radius:11px;background:rgba(0,255,194,0.08);border:1px solid rgba(0,255,194,0.22)}
-              .cmp-memo .cmp-ic{margin-top:1px}
-              .cmp-memo b{display:block;font-size:9.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#00FFC2;margin-bottom:4px}
-              .cmp-memo p{margin:0;font-size:13.5px;line-height:1.5;color:#EAFFF9}
-              .cmp-others{display:flex;flex-wrap:wrap;gap:9px 18px}
-              .cmp-others>span{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.6)}
-              .cmp-others.plain{flex-direction:column;gap:7px}
-              .cmp-others.plain>span{color:rgba(255,255,255,0.72)}
-              .cmp-others.plain em{font-style:normal;color:rgba(255,255,255,0.4);min-width:94px;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em}
+              .cmp-scroll{margin-top:16px;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid rgba(255,255,255,0.09);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0))}
+              .cmp-mtbl{border-collapse:separate;border-spacing:0;width:max-content;min-width:100%}
+              .cmp-mtbl th,.cmp-mtbl td{border-bottom:1px solid rgba(255,255,255,0.06)}
+              .cmp-mtbl tbody tr:last-child th,.cmp-mtbl tbody tr:last-child td{border-bottom:none}
+              .cmp-corner,.cmp-tool{position:sticky;left:0;z-index:3;background:#0c1322;text-align:left;min-width:134px;max-width:134px;padding:11px 12px;border-right:1px solid rgba(255,255,255,0.11)}
+              .cmp-corner{z-index:4;vertical-align:bottom;border-bottom:1px solid rgba(255,255,255,0.14)}
+              .cmp-swipe{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+              .cmp-tool b{display:block;font-size:12px;font-weight:700;color:#FBFBFD;line-height:1.25}
+              .cmp-tool span{display:block;margin-top:2px;font-size:8.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.34)}
+              .cmp-feat{min-width:104px;max-width:104px;padding:11px 9px;vertical-align:bottom;text-align:center;font-size:10.5px;font-weight:600;color:rgba(255,255,255,0.74);line-height:1.28;background:#0c1322;border-bottom:1px solid rgba(255,255,255,0.14)}
+              .cmp-cell{min-width:104px;max-width:104px;padding:13px 9px;text-align:center;vertical-align:middle}
+              .cmp-cell .cmp-ic{width:19px;height:19px;flex-basis:19px;font-size:11px}
+              .cmp-txt{font-size:11px;line-height:1.35;color:rgba(255,255,255,0.62)}
+              .cmp-mrow.is-memo th.cmp-tool{background:linear-gradient(180deg,#00FFC2,#04e0ac);border-right-color:rgba(0,255,194,0.4)}
+              .cmp-mrow.is-memo th.cmp-tool b{color:#052018;font-weight:800}
+              .cmp-mrow.is-memo th.cmp-tool span{color:rgba(5,32,24,0.66)}
+              .cmp-mrow.is-memo td.cmp-cell{background:rgba(0,255,194,0.06)}
+              .cmp-mrow.is-memo td.cmp-cell .cmp-txt{color:#EAFFF9;font-weight:600}
 
               .ctbl-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:16px 4px 0;font-size:11.5px;color:rgba(255,255,255,0.52)}
               .ctbl-legend span{display:inline-flex;align-items:center;gap:8px}
               .ctbl-foot{margin:9px 4px 0;font-size:11px;color:rgba(255,255,255,0.38);line-height:1.5}
-              @media(min-width:900px){.ctbl-wrap{display:block}.cmp-cards{display:none}}
+              @media(min-width:900px){.ctbl-wrap{display:block}.cmp-scroll{display:none}}
             `}</style>
 
             <div className="ctbl-wrap">
@@ -473,33 +475,43 @@ export default function Home() {
               </table>
             </div>
 
-            <div className="cmp-cards">
-              {CMP.map((r) =>
-                r.g ? (
-                  <div className="cmp-div" key={"cg-" + r.g}><span>{r.g}</span></div>
-                ) : (
-                  <div className="cmp-card" key={"cc-" + r.cap}>
-                    <div className="cmp-cap"><b>{r.cap}</b>{r.sub ? <span>{r.sub}</span> : null}</div>
-                    <div className="cmp-memo">
-                      <span className="cmp-ic full">✓</span>
-                      <div><b>MemoLogs</b><p>{r.m}</p></div>
-                    </div>
-                    {r.plain ? (
-                      <div className="cmp-others plain">
-                        <span><em>Dashboards</em>{r.a}</span>
-                        <span><em>Measurers</em>{r.b}</span>
-                        <span><em>Studies</em>{r.c}</span>
-                      </div>
-                    ) : (
-                      <div className="cmp-others">
-                        <span><span className={"cmp-ic " + (r.adim ? "none" : "part")}></span>Dashboards</span>
-                        <span><span className={"cmp-ic " + (r.bdim ? "none" : "part")}></span>Measurers</span>
-                        <span><span className={"cmp-ic " + (r.cdim ? "none" : "part")}></span>Studies</span>
-                      </div>
-                    )}
-                  </div>
-                )
-              )}
+            <div className="cmp-scroll" role="region" aria-label="Competitive comparison — swipe horizontally to see every capability">
+              <table className="cmp-mtbl">
+                <thead>
+                  <tr>
+                    <th className="cmp-corner" scope="col"><span className="cmp-swipe">Swipe&nbsp;→</span></th>
+                    {CMP.filter((r) => !r.g).map((r) => (
+                      <th className="cmp-feat" key={"mh-" + r.cap} scope="col">{r.cap}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {([
+                    { key: "a", name: "Attribution & analytics", arch: "The dashboards" },
+                    { key: "b", name: "Incrementality & MMM", arch: "The measurers" },
+                    { key: "c", name: "Consultants & agencies", arch: "The studies" },
+                    { key: "m", name: "★ MemoLogs", arch: "The system", memo: true },
+                  ] as Array<{ key: "a" | "b" | "c" | "m"; name: string; arch: string; memo?: boolean }>).map((tool) => (
+                    <tr className={tool.memo ? "cmp-mrow is-memo" : "cmp-mrow"} key={"mr-" + tool.key}>
+                      <th className="cmp-tool" scope="row"><b>{tool.name}</b><span>{tool.arch}</span></th>
+                      {CMP.filter((r) => !r.g).map((r) => {
+                        const memo = tool.key === "m";
+                        const val = tool.key === "a" ? r.a : tool.key === "b" ? r.b : tool.key === "c" ? r.c : r.m;
+                        const dim = tool.key === "a" ? r.adim : tool.key === "b" ? r.bdim : tool.key === "c" ? r.cdim : false;
+                        return (
+                          <td className={"cmp-cell" + (memo ? " memo" : "")} key={"mc-" + tool.key + "-" + r.cap}>
+                            {r.plain ? (
+                              <span className="cmp-txt">{val}</span>
+                            ) : (
+                              <span className={"cmp-ic " + (memo ? "full" : dim ? "none" : "part")}>{memo ? "✓" : ""}</span>
+                            )}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
 
             <div className="ctbl-legend">
@@ -628,6 +640,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ═══════════ MOBILE STICKY CTA ═══════════ */}
+      <div className="mobile-cta-bar">
+        <PilotCTA
+          className="btn btn-primary mobile-cta-btn"
+          modalTitle="Schedule a call"
+          modalSubtitle="Tell us about your account. We'll reach out within one business day to schedule your call."
+        >
+          Schedule Call
+        </PilotCTA>
+      </div>
     </>
   );
 }

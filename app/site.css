@@ -480,6 +480,10 @@ input, select, textarea { font: inherit; color: inherit; }
 }
 .hv-foot-item b { color: var(--ink); font-weight: 600; }
 
+/* Mobile sticky "Schedule Call" CTA — hidden on desktop */
+.mobile-cta-bar { display: none; }
+.mobile-cta-btn { width: 100%; justify-content: center; }
+
 @media (max-width: 720px) {
   .hero-visual { padding: 0; }
   .hv-canvas-wrap { height: 420px; margin: 0; }
@@ -487,6 +491,34 @@ input, select, textarea { font: inherit; color: inherit; }
   .arch-node-role { display: none; }
   .arch-hub-lab { font-size: 12px; }
   .arch-hub-sub { display: none; }
+
+  /* hide the in-hero primary pilot CTA on mobile */
+  .hide-mobile { display: none !important; }
+
+  /* fixed bottom Schedule Call bar */
+  .mobile-cta-bar {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: rgba(7, 11, 22, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--rule);
+  }
+  .mobile-cta-btn {
+    display: flex;
+    padding: 15px 22px;
+    font-size: 16px;
+  }
+
+  /* clear the fixed bar so the footer's last row is never hidden (homepage only) */
+  body:has(.mobile-cta-bar) {
+    padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px));
+  }
 }
 
 /* Carousel slide stacking */

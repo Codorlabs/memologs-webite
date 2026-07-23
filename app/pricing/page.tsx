@@ -3,8 +3,9 @@ import Link from "next/link";
 import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
-  title: "Pricing — MemoLogs",
-  description: "Flat fee. Never % of spend. Pilot $25K, Growth $15–35K/mo, Enterprise custom.",
+  alternates: { canonical: "/pricing" },
+  title: "Pricing — Flat Fee, Never % of Spend",
+  description: "Creative IQ is self-serve — start free. Full platform: $25K 90-day pilot, Growth $15–35K/mo flat, Enterprise custom. We never charge a % of your spend.",
 };
 
 export default function PricingPage() {
@@ -16,6 +17,7 @@ export default function PricingPage() {
           <div className="eyebrow"><span className="dot"></span> Flat fee · never % of spend</div>
           <h1>Simple, transparent,<br /><em>aligned with you.</em></h1>
           <p className="lede">Most measurement vendors charge a percentage of media spend — which means the more money you waste, the more they earn. We charge a flat fee. When you cut ghost conversions, we don&apos;t lose revenue. We win the next pilot.</p>
+          <p className="lede" style={{ marginTop: 14 }}>Just want to try Creative IQ? It&apos;s self-serve — <a href="https://app.memologs.com/" style={{ color: "var(--teal)", fontWeight: 600 }}>connect your Meta account</a> and start free. The tiers below are for the full platform.</p>
         </div>
       </section>
 

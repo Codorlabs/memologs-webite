@@ -13,9 +13,15 @@ export const googleAdsAdapter: Adapter = {
     ensureGtag(analyticsConfig.googleAds.conversionId);
   },
 
-  identify() {
-    // Enhanced conversions for Google Ads are configured via gtag('set','user_data')
-    // in the GA4 adapter; nothing extra needed here.
+  identify(user) {
+    // Enhanced conversions: attach hashed-by-gtag customer data to conversions.
+    // Set here too (not only in the GA4 adapter) so it works when GA4 is off.
+    if (typeof window === 'undefined' || !window.gtag) return;
+    window.gtag('set', 'user_data', {
+      email: user.email,
+      phone_number: user.phone,
+      address: { first_name: user.firstName, last_name: user.lastName },
+    });
   },
 
   track(event) {

@@ -76,7 +76,7 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; cursor: pointer; border: none; background: none; }
 input, select, textarea { font: inherit; color: inherit; }
 /* Creative IQ — 1a "Bone & Ink" hero responsive */
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   .cq-hero-1a-inner { padding: 56px 32px 72px !important; }
   .cq-hero-1a-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
 }
@@ -874,6 +874,7 @@ input, select, textarea { font: inherit; color: inherit; }
 .cq-hero-aurora { display: none; }
 .cq-hero-engine { display: none; }
 .cq-hero-sub-short { display: none; }
+.cq-h1-tail-short { display: none; }
 
 @media (max-width: 640px) {
   .cq-iq-page .cq-hero-1a { position: relative; overflow: hidden; }
@@ -916,6 +917,8 @@ input, select, textarea { font: inherit; color: inherit; }
   /* Center the lead content, trim copy */
   .cq-iq-page .cq-hero-lead { text-align: center; display: flex; flex-direction: column; align-items: center; }
   .cq-iq-page .cq-hero-lead h1 { margin-top: 18px !important; }
+  .cq-iq-page .cq-h1-tail { display: none; }
+  .cq-iq-page .cq-h1-tail-short { display: inline; }
   .cq-iq-page .cq-hero-sub { display: none; }
   .cq-iq-page .cq-hero-sub-short {
     display: block; margin: 16px auto 0; max-width: 340px;

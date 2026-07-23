@@ -18,33 +18,76 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MemoLogs — AI Marketing Intelligence Platform | Causal Measurement, Creative & Audience AI",
+  metadataBase: new URL("https://memologs.com"),
+  title: {
+    default: "MemoLogs — AI Marketing Intelligence Platform",
+    template: "%s | MemoLogs",
+  },
   description:
-    "MemoLogs is an AI marketing intelligence platform that proves causal impact, detects creative fatigue, finds high-LTV audiences, and remembers every decision. Average 37% lower CPI, 80% faster execution, 45% lower agency cost across $300M+ managed spend.",
+    "Prove causal impact, catch creative fatigue before your CPA does, and find high-LTV buyers. Five AI products on one decision memory that compounds.",
   keywords:
     "AI marketing platform, causal measurement, incrementality testing, marketing mix modeling alternative, creative fatigue detection, audience intelligence, marketing attribution, GeoTwin, CausalCore, DiffLens, tri-model consensus, media optimization, MemoLogs",
+  applicationName: "MemoLogs",
   authors: [{ name: "MEMO AI, Inc." }],
-  robots: "index, follow, max-image-preview:large, max-snippet:-1",
-  alternates: { canonical: "https://memologs.ai/" },
+  creator: "MEMO AI, Inc.",
+  publisher: "MEMO AI, Inc.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: "MemoLogs",
     title: "MemoLogs — AI Marketing Intelligence Platform",
     description:
       "Prove causal impact. Kill creative fatigue early. Find buyers, not lookalikes. One platform, five AI products, backed by a decision memory that compounds.",
-    url: "https://memologs.ai/",
-    images: [{ url: "https://memologs.ai/assets/og-image.png", width: 1200, height: 630 }],
+    url: "/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "MemoLogs — AI Marketing Intelligence Platform" }],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@memologs",
     title: "MemoLogs — AI Marketing Intelligence Platform",
     description:
       "Causal measurement, creative AI, audience AI, and a decision memory that makes every recommendation smarter than the last.",
-    images: ["https://memologs.ai/assets/og-image.png"],
+    images: ["/og-image.png"],
   },
   other: { "theme-color": "#0A0F1D" },
+};
+
+// Organization + WebSite schema. Google uses `logo` to pick the search-result
+// icon, and AI answer engines lean on this block to attribute claims to a named
+// entity — so it carries both SEO and GEO weight.
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://memologs.com/#organization",
+      name: "MemoLogs",
+      legalName: "MEMO AI, Inc.",
+      url: "https://memologs.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://memologs.com/icon.svg",
+        width: 128,
+        height: 128,
+      },
+      description:
+        "MemoLogs is an AI marketing intelligence platform for causal measurement, creative fatigue detection, and audience intelligence.",
+      email: "hello@memologs.com",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://memologs.com/#website",
+      url: "https://memologs.com",
+      name: "MemoLogs",
+      publisher: { "@id": "https://memologs.com/#organization" },
+      inLanguage: "en-US",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -55,9 +98,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
-        <link
-          rel="icon"
-          href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A0F1D'/%3E%3Cg stroke='%2300FFC2' stroke-width='2.4' stroke-linecap='round'%3E%3Cline x1='16' y1='6' x2='16' y2='26'/%3E%3Cline x1='6' y1='16' x2='26' y2='16'/%3E%3Cline x1='9' y1='9' x2='23' y2='23'/%3E%3Cline x1='23' y1='9' x2='9' y2='23'/%3E%3C/g%3E%3Ccircle cx='16' cy='16' r='3' fill='%230A0F1D' stroke='%2300FFC2' stroke-width='2'/%3E%3C/svg%3E"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body>

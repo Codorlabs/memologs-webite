@@ -3,7 +3,8 @@ import Link from "next/link";
 import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
-  title: "Memory IQ — Proprietary Signal Layer | MemoLogs",
+  alternates: { canonical: "/memory-iq" },
+  title: "Memory IQ — The Decision Memory Layer",
   description: "Every strategic decision remembered alongside its measured causal outcome. Cross-campaign memory that makes every experiment smarter than the last.",
 };
 

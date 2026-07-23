@@ -3,8 +3,9 @@ import Link from "next/link";
 import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
-  title: "Case Studies — MemoLogs",
-  description: "Real pilots. Measured with geo-lift. Across fintech, retail, DTC, consumer tech, health, and QSR.",
+  alternates: { canonical: "/case-studies" },
+  title: "Case Studies — Real Pilots, Measured With Geo-Lift",
+  description: "Real pilots measured with geo-lift across fintech, retail, DTC, consumer tech, health, and QSR — including the Creative IQ luggage fatigue story.",
 };
 
 export default function CaseStudiesPage() {

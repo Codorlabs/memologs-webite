@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | MemoLogs",
+  title: "Terms and Conditions",
   description:
     "Terms and Conditions for MEMO AI, Inc. and the MemoLogs website and services.",
-  alternates: { canonical: "https://memologs.ai/terms" },
+  alternates: { canonical: "/terms" },
 };
 
 const sections = [

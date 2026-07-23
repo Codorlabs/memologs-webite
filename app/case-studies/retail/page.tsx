@@ -3,8 +3,9 @@ import Link from "next/link";
 import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
-  title: "Multi-brand Retail Case Study — MemoLogs",
-  description: "How a multi-brand watch retailer hit 4.9× ROAS (a 1.6× lift) and 40% YoY revenue growth.",
+  alternates: { canonical: "/case-studies/retail" },
+  title: "Retail Case Study — 4.9× ROAS Across Multiple Brands",
+  description: "How a multi-brand watch retailer reached 4.9× ROAS (a 1.6× measured lift) and 40% YoY revenue growth with causal measurement.",
 };
 
 export default function RetailCaseStudyPage() {

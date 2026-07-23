@@ -5,9 +5,10 @@ import ReadinessRing from "@/components/ReadinessRing";
 import CarouselDots from "@/components/CarouselDots";
 
 export const metadata: Metadata = {
-  title: "Creative IQ — Closed-loop creative decision OS | MemoLogs",
+  alternates: { canonical: "/creative-iq" },
+  title: "Creative IQ — Meta Ads Cost More. Your Creative Is Why",
   description:
-    "Creative IQ is the decision OS for paid social creative. A 9-signal Andromeda fatigue model, a Diversity Gap Map, and an AI Top Brief generator — every decision logged, every outcome measured.",
+    "Since Andromeda, Meta's AI picks who sees your ads based on your creative. Creative IQ spots fatigue before your CPA does, and tells you what to make next.",
   keywords:
     "creative decision OS, ad fatigue, Andromeda Readiness Score, diversity gap map, AI creative brief, Meta ads, MemoLogs",
 };
@@ -26,10 +27,12 @@ export default function CreativeIQPage() {
           <div className="cq-hero-1a-grid" style={{ display: "grid", gridTemplateColumns: "1fr 620px", gap: 64, alignItems: "center" }}>
             <div className="cq-hero-lead">
               <span className="cq-hero-eyebrow" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: "1px solid #E0DDD2", background: "#FFFFFF", borderRadius: 999, padding: "7px 14px", fontSize: 12.5, fontWeight: 600, color: "#43464C" }}>
-                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#0B7B5A" }}></span>Creative decision OS
+                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#0B7B5A" }}></span>Every creative decision, closed-loop.
               </span>
-              <h1 id="cq-h1" style={{ margin: "22px 0 0", fontSize: 60, lineHeight: 1.04, fontWeight: 650, letterSpacing: "-0.035em" }}>
-                Every creative decision, <span style={{ color: "#0B7B5A" }}>closed-loop</span>.
+              <h1 id="cq-h1" style={{ margin: "22px 0 0", fontSize: 46, lineHeight: 1.06, fontWeight: 650, letterSpacing: "-0.035em" }}>
+                Meta ads keep getting <span style={{ color: "#0B7B5A" }}>more expensive</span>.{" "}
+                <span className="cq-h1-tail">Your creative is the reason — and the fix.</span>
+                <span className="cq-h1-tail-short">Your creative is why.</span>
               </h1>
 
               {/* Mobile-only animated closed-loop engine */}
@@ -141,9 +144,9 @@ export default function CreativeIQPage() {
               </div>
 
               <p className="cq-hero-sub" style={{ margin: "22px 0 0", fontSize: 18, lineHeight: 1.6, color: "#5F6368", maxWidth: 540 }}>
-                We don&apos;t generate ads. We close the loop on the ones you&apos;re already running — spotting fatigue before your CPA does, surfacing the audience gaps you never enter, and turning every signal into your next brief.
+                Since Andromeda, Meta&apos;s AI decides who sees your ads — and it decides on your creative. We don&apos;t generate ads. We close the loop on the ones you&apos;re already running — spotting fatigue before your CPA does, surfacing the audience gaps you never enter, and turning every signal into your next brief.
               </p>
-              <p className="cq-hero-sub-short">We close the loop on the ads you&apos;re already running — spotting fatigue before your CPA does, and turning every signal into your next brief.</p>
+              <p className="cq-hero-sub-short">Since Andromeda, Meta&apos;s AI decides who sees your ads — and it decides on your creative. Creative IQ spots fatigue before your CPA does.</p>
 
               <div className="cq-hero-features" style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 30 }}>
                 <div className="cq-hero-feat" style={{ display: "flex", alignItems: "center", gap: 12 }}>

@@ -3,7 +3,8 @@ import Link from "next/link";
 import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
-  title: "Media Copilot — AI Campaign Command | MemoLogs",
+  alternates: { canonical: "/copilot" },
+  title: "Media Copilot — AI Campaign Command Center",
   description: "One AI analyst. Every channel. Real-time decisions. Your cross-channel performance in one command center — with natural-language Q&A.",
 };
 

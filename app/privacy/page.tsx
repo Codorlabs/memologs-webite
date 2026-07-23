@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | MemoLogs",
+  title: "Privacy Policy",
   description:
     "Privacy Policy for MEMO AI, Inc., the company behind MemoLogs.",
-  alternates: { canonical: "https://memologs.ai/privacy" },
+  alternates: { canonical: "/privacy" },
 };
 
 const sections = [

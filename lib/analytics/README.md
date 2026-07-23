@@ -118,6 +118,33 @@ Cloudflare → Zaraz:
 > Note: Zaraz itself is injected by Cloudflare at the edge — we never load it.
 > In local dev `window.zaraz` is absent, so only the browser Pixel fires.
 
+## GA4 + Google Ads (client + server)
+
+**Client-side (code):** set the env vars — `NEXT_PUBLIC_GA4_MEASUREMENT_ID`,
+`NEXT_PUBLIC_GOOGLE_ADS_ID`, and a conversion label per event
+(`NEXT_PUBLIC_GOOGLE_ADS_LABEL_LEAD`,
+`NEXT_PUBLIC_GOOGLE_ADS_LABEL_COMPLETE_REGISTRATION`). The `ga4` and
+`google-ads` adapters then load gtag, fire `page_view` on route change, map
+events (`Lead → generate_lead`, `CompleteRegistration → sign_up`), and fire Ads
+conversions with `transaction_id = event_id` for cross-channel dedup. Enhanced
+conversions ride along via `gtag('set','user_data', …)`.
+
+**Server-side (Zaraz dashboard):** the `zaraz` sink already ships `event_id`,
+plain user keys (`email/phone/first_name/last_name`), `value`, `currency`, etc.
+Reuse the same per-event triggers (Event Name = `Lead` / `CompleteRegistration`
+/ `PageView`):
+
+- **Google Ads** → add the Google Ads tool, action per conversion, map the
+  **Order ID / transaction_id → `{{ client.event_id }}`**. Google Ads dedupes
+  the server conversion against the client one on this id — same clean model as
+  Meta. Map value/currency + user data for enhanced conversions.
+- **GA4** → ⚠️ **pick one side, not both.** GA4 has no Meta-style event dedup;
+  a Measurement-Protocol event from Zaraz is **additive** and will double-count
+  against the client-side `page_view`/events (only `purchase` dedupes, on
+  `transaction_id`). Recommended: keep GA4 **client-side only** (leave the GA4
+  tool out of Zaraz). Only add GA4 to Zaraz if you also disable the browser
+  `ga4` adapter.
+
 ## Adding another platform later
 
 Set its env var (see `.env.example`) and it activates — no code change:

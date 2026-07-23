@@ -35,6 +35,18 @@ export interface AnalyticsConfig {
 
 const env = (key: string): string => process.env[key] || '';
 
+// Google Ads conversion labels (the part after the slash in gtag `send_to`),
+// keyed by canonical event name. Env-driven so no code edit is needed to wire a
+// conversion. Only events with a label fire a Google Ads conversion.
+const googleAdsLabels = (): Record<string, string> => {
+  const labels: Record<string, string> = {};
+  const lead = env('NEXT_PUBLIC_GOOGLE_ADS_LABEL_LEAD');
+  const completeReg = env('NEXT_PUBLIC_GOOGLE_ADS_LABEL_COMPLETE_REGISTRATION');
+  if (lead) labels.Lead = lead;
+  if (completeReg) labels.CompleteRegistration = completeReg;
+  return labels;
+};
+
 export const analyticsConfig: AnalyticsConfig = {
   meta: {
     // Meta is the only platform wired on by default.
@@ -48,7 +60,7 @@ export const analyticsConfig: AnalyticsConfig = {
   googleAds: {
     enabled: !!env('NEXT_PUBLIC_GOOGLE_ADS_ID'),
     conversionId: env('NEXT_PUBLIC_GOOGLE_ADS_ID'),
-    labels: {},
+    labels: googleAdsLabels(),
   },
   tiktok: {
     enabled: !!env('NEXT_PUBLIC_TIKTOK_PIXEL_ID'),

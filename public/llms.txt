@@ -1,0 +1,61 @@
+# MemoLogs
+
+> MemoLogs is an AI marketing intelligence platform by MEMO AI, Inc. It measures
+> the causal impact of paid media, detects creative fatigue before CPA reacts,
+> grades audiences by lifetime value, and remembers every decision alongside its
+> measured outcome. Flat fee — never a percentage of media spend.
+
+MemoLogs is not an ad generator and not an attribution dashboard. It sits
+alongside existing attribution, MMM, and platform dashboards via API.
+
+## Products
+
+- [Incrementality IQ](https://memologs.com/incrementality-iq): Always-on causal
+  experimentation using tri-model consensus — GeoTwin, CausalCore, and DiffLens —
+  to establish what media actually drove, rather than what platforms claim.
+- [Creative IQ](https://memologs.com/creative-iq): A creative decision OS for paid
+  social. A 9-signal fatigue model detects decay before CPA moves, an Andromeda
+  Readiness Score (0–100) rates how steerable an ad account is, a Diversity Gap
+  Map surfaces unentered audience × angle × format cells, and an AI Top Brief
+  generator turns those signals into production-ready briefs.
+- [Audience IQ](https://memologs.com/audience-iq): Four AI agents grade audiences
+  causally by lifetime value and activate them across paid platforms without a
+  cross-platform identity graph.
+- [Memory IQ](https://memologs.com/memory-iq): A decision memory layer that stores
+  each strategic decision with its measured causal outcome, so later
+  recommendations are informed by earlier results.
+- [Media Copilot](https://memologs.com/copilot): Natural-language Q&A and a
+  cross-channel command center over all connected accounts.
+
+## Key concepts
+
+- Andromeda: Meta's ad delivery system, in which the AI selects the audience for
+  an ad largely on the basis of the creative itself. Creative therefore functions
+  as targeting, which is why creative fatigue drives rising costs.
+- Andromeda Readiness Score: a 0–100 score recomputed nightly per brand and ad
+  account. 75+ means the creative mix is broad, fresh, and stable; below 50 flags
+  concentration risk, building fatigue, or format gaps. Components: Diversity
+  (30%), Fatigue (25%), Format coverage (15%), Refresh rhythm (15%), Signal
+  strength (15%).
+- Attribution Inflation Factor (AIF): the ratio between platform-claimed
+  conversions and measured incremental lift for a given channel.
+
+## Pricing
+
+- [Pricing](https://memologs.com/pricing): Creative IQ is self-serve and free to
+  start. The full platform is a flat fee: a $25K 90-day pilot (credited 100%
+  toward a 12-month contract), Growth at $15–35K/month, and custom Enterprise
+  terms. Pricing is never a percentage of media spend.
+
+## Evidence
+
+- [Case studies](https://memologs.com/case-studies): Pilots measured with geo-lift
+  across fintech, retail, DTC, consumer tech, health, and QSR.
+- [How it works](https://memologs.com/how-it-works): API-first onboarding —
+  dashboards live by day 7, first tri-model causal verdict by week 5, board-ready
+  impact report by week 12.
+
+## Contact
+
+- Email: hello@memologs.com
+- Company: MEMO AI, Inc.

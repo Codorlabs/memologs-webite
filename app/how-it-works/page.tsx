@@ -4,8 +4,9 @@ import HowItWorksScroll from "@/components/HowItWorksScroll";
 import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
-  title: "How It Works — The 90-Day MemoLogs Pilot | MemoLogs",
-  description: "API-first. No rip and replace. First dashboards live by day 7. First tri-model causal verdict by week 5. A board-ready impact report by week 12. Here's how the first 90 days actually play out.",
+  alternates: { canonical: "/how-it-works" },
+  title: "How It Works — The 90-Day Pilot",
+  description: "API-first, no rip and replace. Dashboards live by day 7, first tri-model causal verdict by week 5, board-ready impact report by week 12.",
 };
 
 export default function HowItWorksPage() {

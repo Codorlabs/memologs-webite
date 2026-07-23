@@ -3,8 +3,9 @@ import Link from "next/link";
 import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
-  title: "Audience IQ — Buyer-Graded Segments | MemoLogs",
-  description: "Four AI agents working in parallel. Causal, LTV-graded audiences activated across your paid platforms — no cross-platform identity graph. Find the customers who actually convert.",
+  alternates: { canonical: "/audience-iq" },
+  title: "Audience IQ — Buyer-Graded Segments",
+  description: "Four AI agents in parallel. Causal, LTV-graded audiences activated across your paid platforms — no identity graph required. Find buyers, not lookalikes.",
 };
 
 export default function AudienceIQPage() {

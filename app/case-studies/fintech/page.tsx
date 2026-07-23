@@ -3,8 +3,9 @@ import Link from "next/link";
 import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
-  title: "Fintech Case Study — MemoLogs",
-  description: "How a unicorn fintech cut CPI 37% in one quarter.",
+  alternates: { canonical: "/case-studies/fintech" },
+  title: "Fintech Case Study — 37% Lower CPI in One Quarter",
+  description: "How a unicorn fintech cut cost per install 37% in a single quarter using geo-lift causal measurement instead of platform-reported attribution.",
 };
 
 export default function FintechCaseStudyPage() {

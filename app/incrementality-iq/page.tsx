@@ -4,7 +4,8 @@ import GeoLiftDemo from "@/components/GeoLiftDemo";
 import PilotCTA from "@/components/PilotCTA";
 
 export const metadata: Metadata = {
-  title: "Incrementality IQ — Causal Measurement | MemoLogs",
+  alternates: { canonical: "/incrementality-iq" },
+  title: "Incrementality IQ — Causal Measurement, Not Attribution",
   description: "Always-on causal experimentation. Tri-model consensus: GeoTwin™ + CausalCore™ + DiffLens™. Know what your media actually drove.",
 };
 

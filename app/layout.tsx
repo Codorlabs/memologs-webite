@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://memologs.com"),
   title: {
-    default: "MemoLogs — AI Marketing Intelligence Platform",
+    default: "MemoLogs - The AI Marketing Decision Platform",
     template: "%s | MemoLogs",
   },
   description:
@@ -40,16 +40,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "MemoLogs",
-    title: "MemoLogs — AI Marketing Intelligence Platform",
+    title: "MemoLogs - The AI Marketing Decision Platform",
     description:
       "Prove causal impact. Kill creative fatigue early. Find buyers, not lookalikes. One platform, five AI products, backed by a decision memory that compounds.",
     url: "/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "MemoLogs — AI Marketing Intelligence Platform" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "MemoLogs - The Marketing Decision Platform" }],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MemoLogs — AI Marketing Intelligence Platform",
+    title: "MemoLogs - The AI Marketing Decision Platform",
     description:
       "Causal measurement, creative AI, audience AI, and a decision memory that makes every recommendation smarter than the last.",
     images: ["/og-image.png"],
@@ -71,9 +71,9 @@ const organizationSchema = {
       url: "https://memologs.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://memologs.com/icon.svg",
-        width: 128,
-        height: 128,
+        url: "https://memologs.com/brand/memologs-icon.png",
+        width: 256,
+        height: 256,
       },
       description:
         "MemoLogs is an AI marketing intelligence platform for causal measurement, creative fatigue detection, and audience intelligence.",

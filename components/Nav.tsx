@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import PilotCTA from "@/components/PilotCTA";
 
@@ -28,7 +29,7 @@ export default function Nav() {
             </g>
             <circle cx="16" cy="16" r="3.6" fill="#070B16" stroke="url(#bm-g)" strokeWidth="1.6" />
           </svg> */}
-          <svg className="brand-mark" width="34" height="34" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><g stroke="#2FFFD6" strokeWidth="6" strokeLinecap="round"><line x1="64" y1="64" x2="64" y2="28"></line><line x1="64" y1="64" x2="96" y2="44"></line><line x1="64" y1="64" x2="96" y2="84"></line><line x1="64" y1="64" x2="64" y2="100"></line><line x1="64" y1="64" x2="32" y2="84"></line><line x1="64" y1="64" x2="32" y2="44"></line></g><g fill="#2FFFD6"><circle cx="64" cy="64" r="12"></circle><circle cx="64" cy="28" r="8"></circle><circle cx="96" cy="44" r="8"></circle><circle cx="96" cy="84" r="8"></circle><circle cx="64" cy="100" r="8"></circle><circle cx="32" cy="84" r="8"></circle><circle cx="32" cy="44" r="8"></circle></g></svg>
+          <Image className="brand-mark" src="/brand/memologs-mark.png" width={34} height={34} alt="" aria-hidden="true" priority />
           <span>
             MemoLogs<span className="dot-accent">.</span>
           </span>

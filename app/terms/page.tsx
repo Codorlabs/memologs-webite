@@ -534,8 +534,8 @@ export default function TermsPage() {
             Inc.
           </p>
           <div className="privacy-meta" aria-label="Terms metadata">
-            <span>Version 1.0</span>
-            <span>Last updated July 14, 2026</span>
+            <span>Version 1.1</span>
+            <span>Last updated October 19, 2026</span>
             <a href="mailto:hello@memologs.com">hello@memologs.com</a>
           </div>
         </div>

@@ -34,6 +34,7 @@ const sections = [
           MEMO AI, that agreement controls to the extent it conflicts with these
           Terms for the applicable services.
         </p>
+        <p>Use or authorization of the public Shopify analytics connection also incorporates the <Link href="/shopify-privacy">Shopify Analytics Privacy and Data Processing Terms</Link>. Those terms control for Shopify data where these general Terms or the general Privacy Policy permit broader processing. The Shopify analytics report is free; unrelated products may have separate pricing.</p>
       </>
     ),
   },

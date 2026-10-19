@@ -34,6 +34,7 @@ const sections = [
           MEMO AI, that agreement controls to the extent it conflicts with these
           Terms for the applicable services.
         </p>
+        <p>Use or authorization of the public Shopify analytics connection also incorporates the <Link href="/shopify-privacy">Shopify Analytics Privacy and Data Processing Terms</Link>. Those terms control for Shopify data where these general Terms or the general Privacy Policy permit broader processing. The Shopify analytics report is free; unrelated products may have separate pricing.</p>
       </>
     ),
   },
@@ -533,8 +534,8 @@ export default function TermsPage() {
             Inc.
           </p>
           <div className="privacy-meta" aria-label="Terms metadata">
-            <span>Version 1.0</span>
-            <span>Last updated July 14, 2026</span>
+            <span>Version 1.1</span>
+            <span>Last updated October 19, 2026</span>
             <a href="mailto:hello@memologs.com">hello@memologs.com</a>
           </div>
         </div>

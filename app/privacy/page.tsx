@@ -10,6 +10,12 @@ export const metadata: Metadata = {
 
 const sections = [
   {
+    id: "shopify",
+    label: "Shopify analytics",
+    title: "Specific terms for Shopify analytics",
+    content: <p>The free public Shopify analytics connection is governed by our <Link href="/shopify-privacy">Shopify Analytics Privacy and Data Processing Terms</Link>. Those terms control for Shopify data where this general policy permits broader processing, including advertising, external AI processing or product improvement.</p>,
+  },
+  {
     id: "summary",
     label: "Summary",
     title: "Summary of key points",
@@ -522,7 +528,7 @@ export default function PrivacyPage() {
             products, integrations, and AI-powered services.
           </p>
           <div className="privacy-meta" aria-label="Privacy policy metadata">
-            <span>Last updated July 14, 2026</span>
+            <span>Last updated October 19, 2026</span>
             <a href="mailto:hello@memologs.com">hello@memologs.com</a>
           </div>
         </div>

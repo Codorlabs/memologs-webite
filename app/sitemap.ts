@@ -18,6 +18,7 @@ const routes: Array<{ path: string; priority: number; changeFrequency: MetadataR
   { path: "/case-studies/fintech", priority: 0.6, changeFrequency: "monthly" },
   { path: "/case-studies/retail", priority: 0.6, changeFrequency: "monthly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/shopify-privacy", priority: 0.3, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
 ];
 
